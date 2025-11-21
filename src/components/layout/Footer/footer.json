@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "type": "Mailbox",
+      "value": "401 Hawthorne Lane Suite 110\nCharlotte, NC 28204\nMailbox #114"
+    },
+    {
+      "type": "Email",
+      "value": "info@terratechsolutions.net",
+      "href": "mailto:info@terratechsolutions.net"
+    },
+    {
+      "type": "Inquiries",
+      "value": "+1 980-310-6340",
+      "href": "tel:+19803106340"
+    }
+  ],
+  "socials": [
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/TerraTechsolut/"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/terratechsol/#"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/company/terratech-sol"
+    }
+  ],
+  "navSections": [
+    {
+      "title": "Home",
+      "items": [
+        { "label": "Home", "href": "/" },
+        { "label": "Sinkholes", "href": "/services/sinkholes" },
+        { "label": "Stormwater infrastructure", "href": "/StormwaterInfrastructure" },
+        { "label": "Roadway Repair", "href": "/RoadwayRepair" },
+        { "label": "Structural Stabilization", "href": "/StructuralStabilization" },
+        { "label": "Slope Stabilization", "href": "/SlopeStabilization" },
+        { "label": "3d scanning and detection", "href": "/scanningAndDetection" },
+        { "label": "About Us", "href": "/about" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    }
+  ]
+}

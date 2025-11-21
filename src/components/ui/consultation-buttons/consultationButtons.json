@@ -1,0 +1,19 @@
+{
+  "buttons": [
+    {
+      "href": "/about",
+      "ariaLabel": "Read About Our Mission",
+      "smallText": "Learn More",
+      "bigText": "Read About Our Mission",
+      "style": "light"
+    },
+    {
+      "href": "/contact",
+      "ariaLabel": "Inquire now",
+      "smallText": "Get solutions",
+      "bigText": "Inquire now",
+      "arrow": true,
+      "style": "dark"
+    }
+  ]
+}

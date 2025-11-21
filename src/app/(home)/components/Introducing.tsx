@@ -1,18 +1,44 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import home from '../home.json';
+
 const Introducing = () => {
+  const { title, value, cta } = home.introducing;
+  const { part1, part2, part3, part4 } = title;
   return (
     <section className="relative overflow-hidden">
-      <div className="flex w-full h-[710px] bg-[url('/home/home-top-image.png')] bg-cover bg-center bg-no-repeat absolute z-1"></div>
-      <div className="grid relative grid-flow-row pt-56 px-23.5 max-sm:px-10 pb-30 font-poppins z-10 max-w-[1440] mx-auto">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/home/home-top-image.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
+      <div className="grid relative grid-flow-row pt-56 px-23.5 max-sm:px-10 pb-30 z-10 max-w-[1440] mx-auto">
         <p className="text-[78px]/[90px] max-lg:text-[50px]/[70px] max-md:text-[40px]/[65px] max-sm:text-[34px]/[50px] font-normal">
-          <span className="text-true-red">Elevating</span> <br />
-          Infrastructure. <br />
-          <span className="text-true-red">Restoring</span> Stability.
+          <span className="text-true-red">{part1}</span> <br />
+          {part2} <br />
+          <span className="text-true-red">{part3}</span> {part4}
         </p>
 
-        <p className="text-[22px]/[150%] font-light mt-7.5 ">
-          Polymer injection solutions for <br />
-          concrete stabilization and infrastructure repair.
-        </p>
+        <p className="text-[22px]/[150%] font-light mt-7.5 ">{value}</p>
+        <div className="mt-10 flex gap-4 max-sm:flex-col">
+          <Link
+            href={cta.freeQuote.href}
+            className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:max-w-[300px]"
+          >
+            <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
+          </Link>
+          <Link
+            href={cta.call.href}
+            className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:max-w-[200px]"
+          >
+            {cta.call.content}
+          </Link>
+        </div>
       </div>
     </section>
   );

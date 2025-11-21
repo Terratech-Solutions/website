@@ -1,7 +1,8 @@
 /**
- * @type {import('prettier').Options}
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Options}
  */
-export default {
+const config = {
   printWidth: 100,
   tabWidth: 2,
   useTabs: false,
@@ -14,5 +15,7 @@ export default {
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   importOrderParserPlugins: ['decorators', 'typescript', 'jsx', 'tsx'],
-  plugins: ["@ianvs/prettier-plugin-sort-imports"]
-}
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+};
+
+export default config;

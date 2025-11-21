@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -26,10 +26,7 @@
   --color-terra-dash: var(--terra-dash);
   --color-graphite: var(--graphite);
   --color-dark-green: var(--dark-green);
-  --font-poppins: var(--font-poppins);
-  --font-inter: var(--font-inter);
 }
-
 
 /*@media (prefers-color-scheme: light) {*/
 /*  :root {*/

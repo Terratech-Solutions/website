@@ -1,0 +1,18 @@
+{
+  "homeMeta": {
+    "title": "Home",
+    "description": "Leading provider of soil and environmental engineering services."
+  },
+  "aboutMeta": {
+    "title": "About Us",
+    "description": "Discover Terratech’s mission, vision, and values."
+  },
+  "contactMeta": {
+    "title": "Contact",
+    "description": "Contact"
+  },
+  "sinkholesMeta": {
+    "title": "Sinkholes",
+    "description": "Sinkholes"
+  }
+}

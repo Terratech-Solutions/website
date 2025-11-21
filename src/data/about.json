@@ -1,0 +1,68 @@
+{
+  "introducing": {
+    "title": {
+      "part1": "Building",
+      "part2": "the",
+      "part3": "Future of",
+      "part4": "Construction"
+    },
+    "value1": "Creating sustainable foundations for the",
+    "value2": "communities we serve."
+  },
+  "community": {
+    "eyebrow": "OUR MISSION & VISION",
+    "title": {
+      "left": "Community",
+      "right": "Sustainability",
+      "amp": "&"
+    },
+    "value": "As a family-owned business in Charlotte, North Carolina, our mission is to serve our community and beyond with solutions that stand the test of time, creating a legacy of excellence for generations to come.",
+    "imageAlt": "Community image"
+  },
+  "innovation": {
+    "title": {
+      "part1": "Innovation That",
+      "highlight": "Lasts"
+    },
+    "paragraphs": [
+      "We saw an opportunity to change how construction materials and processes impact both the environment and long-term performance. Our proprietary materials deliver greater durability, environmental efficiency, and lower lifetime costs than leading brands.",
+      "We’re constantly researching, testing, and improving — because innovation isn’t a trend. It’s who we are."
+    ],
+    "imageAlt": "Innovation image"
+  },
+  "whyTerratech": {
+    "eyebrow": "WHY TERRATECH",
+    "title": "What Sets us Apart",
+    "cards": [
+      {
+        "heading": "Our Focus",
+        "image": { "src": "/about/our-focus.svg", "alt": "Our Focus" },
+        "text": "We don’t just build, we innovate. Our team leverages modern technology to enhance every phase of construction, from material selection to final inspection."
+      },
+      {
+        "heading": "Our Experience",
+        "image": { "src": "/about/our-experience.svg", "alt": "Our Experience" },
+        "text": "With over 17 years of combined expertise, we’ve managed projects ranging from crawlspaces and foundations to full-scale renovations & concrete repair."
+      },
+      {
+        "heading": "Our Commitment",
+        "image": { "src": "/about/our-commitment.svg", "alt": "Our Commitment" },
+        "text": "We believe in lasting relationships as much as lasting results. Every project we take on is treated as an opportunity to strengthen trust and community."
+      }
+    ]
+  },
+  "started": {
+    "title": {
+      "part1": "How it",
+      "highlight": "started"
+    },
+    "paragraphs": [
+      "After years in the construction industry, we founded TerraTech Solutions with a simple goal: to build a company that makes a lasting impact—on people, on projects, and on the planet.",
+      "Rather than being just another construction firm, we envisioned something different: a construction technology company. By combining our hands-on expertise with innovation, we’re redefining what it means to build with precision, durability, and sustainability."
+    ],
+    "image": {
+      "src": "/about/started.svg",
+      "alt": "Started"
+    }
+  }
+}
