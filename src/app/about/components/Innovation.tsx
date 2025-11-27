@@ -17,7 +17,7 @@ const Innovation = () => {
       ))}
 
       <div className="relative flex w-full h-[640px] max-sm:h-[350px] max-xl:h-[550px] max-lg:h-[450px] mt-4">
-        <Image src="/about/innovation.svg" alt={imageAlt} fill />
+        <Image src="/about/innovation.jpg" alt={imageAlt} fill />
       </div>
     </section>
   );

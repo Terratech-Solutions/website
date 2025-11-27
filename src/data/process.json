@@ -68,16 +68,16 @@
         "title": "Seeing Beneath the Surface",
         "images": [
           {
-            "src": "/process/innovative/surface-1.svg",
+            "src": "/process/innovative/surface-1.png",
             "alt": "Surface 1",
-            "width": 300,
-            "height": 185
+            "width": 249,
+            "height": 184
           },
           {
-            "src": "/process/innovative/surface-2.svg",
+            "src": "/process/innovative/surface-2.png",
             "alt": "Surface 2",
-            "width": 160,
-            "height": 158
+            "width": 148,
+            "height": 157
           }
         ],
         "lead": "3D scanning and detection tools map voids, instability, and weak strata.",
@@ -89,13 +89,13 @@
         "title": "From Complex Data to Actionable Analysis",
         "images": [
           {
-            "src": "/process/innovative/geo-data.svg",
+            "src": "/process/innovative/geo-data.png",
             "alt": "Raw Geotechnical Data",
             "width": 220,
             "height": 170
           },
           {
-            "src": "/process/innovative/geo-data-2.svg",
+            "src": "/process/innovative/geo-data-2.png",
             "alt": "Clear, Efficient Strategies.",
             "width": 138,
             "height": 170
@@ -109,7 +109,7 @@
         "title": "Minimal Impact, Maximum Precision.",
         "images": [
           {
-            "src": "/process/innovative/drill.svg",
+            "src": "/process/innovative/drill.png",
             "alt": "Precision Drilling",
             "width": 325,
             "height": 300
@@ -124,7 +124,7 @@
         "title": "Strength Where It Matters Most",
         "images": [
           {
-            "src": "/process/innovative/polymer.svg",
+            "src": "/process/innovative/polymer.png",
             "alt": "Polymer Injection",
             "width": 900,
             "height": 265
@@ -157,7 +157,7 @@
             "title": "Immediate Results",
             "text": "Polymer cures in minutes, restoring load-bearing strength so roads and facilities reopen with minimal downtime.",
             "image": {
-              "src": "/process/innovative/infographic-placeholder.svg",
+              "src": "/process/innovative/infographic-placeholder.jpg",
               "alt": "Infographic",
               "width": 130,
               "height": 170
@@ -167,7 +167,7 @@
             "title": "Proof You Can Act On",
             "text": "Concise reports combine test data and injection logs into clear, defensible documentation—without the clutter of traditional engineering reports.",
             "image": {
-              "src": "/process/innovative/infographic-placeholder.svg",
+              "src": "/process/innovative/infographic-placeholder.jpg",
               "alt": "Infographic",
               "width": 130,
               "height": 170

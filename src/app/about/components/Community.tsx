@@ -19,7 +19,7 @@ const Community = () => {
         <p className="text-[20px] max-lg:text-[16px] mt-8 tracking-[1px]">{value}</p>
 
         <div className="relative flex w-full h-[440px] mt-8 max-lg:h-[350px] max-sm:h-[100px]">
-          <Image src="/about/community.svg" alt={imageAlt} fill />
+          <Image src="/about/community.jpg" alt={imageAlt} fill />
         </div>
       </div>
     </section>

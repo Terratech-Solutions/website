@@ -16,7 +16,7 @@
       "Customized Solutions"
     ],
     "image": {
-      "src": "/services/graphic-1.svg",
+      "src": "/services/sinkholes-2.png",
       "alt": "Graphic 1",
       "width": 860,
       "height": 483
@@ -34,28 +34,28 @@
       {
         "label": "Stage 1",
         "image": {
-          "src": "/services/stage-1.svg",
+          "src": "/services/stage-1.png",
           "alt": "Stage 1",
-          "width": 320,
-          "height": 460
+          "width": 321,
+          "height": 480
         }
       },
       {
         "label": "Stage 2",
         "image": {
-          "src": "/services/stage-2.svg",
+          "src": "/services/stage-2.png",
           "alt": "Stage 2",
-          "width": 320,
-          "height": 460
+          "width": 321,
+          "height": 480
         }
       },
       {
         "label": "Stage 3",
         "image": {
-          "src": "/services/stage-3.svg",
+          "src": "/services/stage-3.png",
           "alt": "Stage 3",
-          "width": 320,
-          "height": 460
+          "width": 321,
+          "height": 480
         }
       }
     ]
@@ -72,19 +72,19 @@
     },
     "images": [
       {
-        "src": "/services/slider-1.svg",
+        "src": "/services/slider-1.png",
         "alt": "Slider 1",
         "width": 330,
         "height": 435
       },
       {
-        "src": "/services/slider-2.svg",
+        "src": "/services/slider-2.png",
         "alt": "Slider 2",
         "width": 330,
         "height": 435
       },
       {
-        "src": "/services/slider-3.svg",
+        "src": "/services/slider-3.png",
         "alt": "Slider 3",
         "width": 330,
         "height": 435
@@ -105,7 +105,7 @@
       "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
     },
     "image": {
-      "src": "/services/scan-1.svg",
+      "src": "/services/sinkholes.png",
       "alt": "Scan 1",
       "width": 740,
       "height": 415
