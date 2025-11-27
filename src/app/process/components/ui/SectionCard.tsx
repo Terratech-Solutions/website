@@ -245,7 +245,7 @@ const SectionCard = () => {
                         src={section.images?.[0]?.src || ''}
                         alt={section.images?.[0]?.alt || ''}
                         fill
-                        sizes="100vw"
+                        sizes="(max-width: 768px) 100vw, 66.6vw"
                       />
                     </div>
                     <div className="pt-6 pl-10 text-[14px]">{section.lead}</div>

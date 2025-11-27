@@ -26,6 +26,7 @@ const Sinkhole = () => {
                     width={stage.image.width}
                     height={stage.image.height}
                     loading="lazy"
+                    style={{ width: 'auto', height: 'auto' }}
                   />
                 </div>
                 <div className="pt-2">{stage.label}</div>
