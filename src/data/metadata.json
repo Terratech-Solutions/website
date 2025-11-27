@@ -1,0 +1,30 @@
+{
+  "siteName": "Terratech",
+  "business": {
+    "email": "info@terratechsolutions.net",
+    "telephone": "+1 980-310-6340",
+    "address": {
+      "streetAddress": "401 Hawthorne Lane Suite 110, Mailbox #114",
+      "addressLocality": "Charlotte",
+      "addressRegion": "NC",
+      "postalCode": "28204",
+      "addressCountry": "US"
+    },
+    "socialMedia": [
+      "https://www.facebook.com/TerraTechsolut/",
+      "https://www.instagram.com/terratechsol/",
+      "https://www.linkedin.com/company/terratech-sol"
+    ],
+    "areaServed": {
+      "type": "State",
+      "name": "North Carolina"
+    }
+  },
+  "seo": {
+    "defaultOgImage": "/logo.svg",
+    "searchAction": {
+      "target": "/?q={search_term_string}",
+      "queryInput": "required name=search_term_string"
+    }
+  }
+}

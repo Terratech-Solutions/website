@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import metadataConfig from '@/data/metadata.json';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL!;
-const SITE_NAME = 'Terratech';
-const DEFAULT_OG_IMAGE = new URL('/logo.svg', SITE_URL).toString();
+const SITE_NAME = metadataConfig.siteName;
+const DEFAULT_OG_IMAGE = new URL(metadataConfig.seo.defaultOgImage, SITE_URL).toString();
 
 interface PageMetadataInput {
   title: string;
@@ -17,8 +18,8 @@ export const websiteSchema = {
   url: SITE_URL,
   potentialAction: {
     '@type': 'SearchAction',
-    target: `${SITE_URL}/?q={search_term_string}`,
-    'query-input': 'required name=search_term_string',
+    target: `${SITE_URL}${metadataConfig.seo.searchAction.target}`,
+    'query-input': metadataConfig.seo.searchAction.queryInput,
   },
 };
 
@@ -28,21 +29,17 @@ export const localBusinessSchema = {
   name: SITE_NAME,
   image: DEFAULT_OG_IMAGE,
   url: SITE_URL,
-  email: 'info@terratechsolutions.net',
-  telephone: '+1 980-310-6340',
+  email: metadataConfig.business.email,
+  telephone: metadataConfig.business.telephone,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '401 Hawthorne Lane Suite 110, Mailbox #114',
-    addressLocality: 'Charlotte',
-    addressRegion: 'NC',
-    postalCode: '28204',
-    addressCountry: 'US',
+    streetAddress: metadataConfig.business.address.streetAddress,
+    addressLocality: metadataConfig.business.address.addressLocality,
+    addressRegion: metadataConfig.business.address.addressRegion,
+    postalCode: metadataConfig.business.address.postalCode,
+    addressCountry: metadataConfig.business.address.addressCountry,
   },
-  sameAs: [
-    'https://www.facebook.com/TerraTechsolut/',
-    'https://www.instagram.com/terratechsol/',
-    'https://www.linkedin.com/company/terratech-sol',
-  ],
+  sameAs: metadataConfig.business.socialMedia,
 };
 
 export const buildServiceSchema = ({ title, description, path }: PageMetadataInput) => {
@@ -58,10 +55,10 @@ export const buildServiceSchema = ({ title, description, path }: PageMetadataInp
       '@type': 'LocalBusiness',
       name: SITE_NAME,
       url: SITE_URL,
-      telephone: '+1 980-310-6340',
+      telephone: metadataConfig.business.telephone,
       areaServed: {
-        '@type': 'State',
-        name: 'North Carolina',
+        '@type': metadataConfig.business.areaServed.type,
+        name: metadataConfig.business.areaServed.name,
       },
     },
     serviceType: title,
