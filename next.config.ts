@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   compress: true,
+  experimental: {
+    // Optimize package imports
+    optimizePackageImports: ['motion', 'framer-motion', 'react-hook-form'],
+  },
 };
 
 export default nextConfig;
