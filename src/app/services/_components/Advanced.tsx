@@ -6,7 +6,7 @@ const Advanced = () => {
   const { section, points, image } = advanced;
 
   return (
-    <div className="max-w-[1440] mx-auto px-4 md:px-23.5 pt-20 pb-20">
+    <div className="max-w-[1440] mx-auto px-10 md:px-23.5 pt-20 pb-20">
       <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
 
       <div className="flex flex-col pt-10">

@@ -6,7 +6,7 @@
   },
   "approach": {
     "section": {
-      "sectionLabel": "Innovative Solutions",
+      "sectionLabel": "Our Approach",
       "title": {
         "beforeHighlight": "The",
         "highlight": "Future",
@@ -139,7 +139,7 @@
         "title": "Live Data, Informed Adjustments",
         "images": [
           {
-            "src": "/process/innovative/infographic-placeholder.svg",
+            "src": "/process/innovative/infographic-placeholder.jpg",
             "alt": "Infographic",
             "width": 900,
             "height": 290

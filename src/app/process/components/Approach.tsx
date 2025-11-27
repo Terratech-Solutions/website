@@ -8,7 +8,7 @@ const Approach = () => {
   const { section } = approach;
 
   return (
-    <section className="flex flex-col px-23.5 pb-30 mx-auto max-w-[1440] max-lg:px-2.5">
+    <section className="flex flex-col px-23.5 pb-30 mx-auto max-w-[1440] max-md:px-[50px]">
       <div className="pt-24">
         <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
       </div>

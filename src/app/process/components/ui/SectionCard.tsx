@@ -108,10 +108,6 @@ const SectionCard = () => {
       </div>
 
       <div className="flex col-span-2 flex-col w-[66.6%] pt-40 max-md:pt-7 max-md:w-full">
-        <SectionAnchorLabel className="max-md:block hidden mb-5">
-          {sectionCard.sectionLabel}
-        </SectionAnchorLabel>
-
         {sections.map((section) => {
           const isActive = activeId === section.id;
           const ref = refs[section.id as SectionId];
