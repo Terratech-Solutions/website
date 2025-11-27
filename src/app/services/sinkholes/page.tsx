@@ -7,9 +7,9 @@ import dynamic from 'next/dynamic';
 import Script from 'next/script';
 
 // Lazy load below-the-fold components for better initial page load
-const Sinkhole = dynamic(() => import('@/app/services/_components/Sinkhole'));
-const Advanced = dynamic(() => import('@/app/services/_components/Advanced'));
-const Solution = dynamic(() => import('@/app/services/_components/Solution'));
+// const Sinkhole = dynamic(() => import('@/app/services/_components/Sinkhole'));
+// const Advanced = dynamic(() => import('@/app/services/_components/Advanced'));
+// const Solution = dynamic(() => import('@/app/services/_components/Solution'));
 
 export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
@@ -23,9 +23,9 @@ const Sinkholes = () => {
       </Script>
       <Title />
       <Warnings />
-      <Sinkhole />
-      <Advanced />
-      <Solution />
+      {/*<Sinkhole />*/}
+      {/*<Advanced />*/}
+      {/*<Solution />*/}
     </>
   );
 };
