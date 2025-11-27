@@ -1,5 +1,6 @@
 'use client';
 
+import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { sectionCard } from '@/data/process.json';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -107,7 +108,9 @@ const SectionCard = () => {
       </div>
 
       <div className="flex col-span-2 flex-col w-[66.6%] pt-40 max-md:pt-7 max-md:w-full">
-        <div className="max-md:block hidden mb-5">{sectionCard.eyebrow}</div>
+        <SectionAnchorLabel className="max-md:block hidden mb-5">
+          {sectionCard.sectionLabel}
+        </SectionAnchorLabel>
 
         {sections.map((section) => {
           const isActive = activeId === section.id;
@@ -131,6 +134,7 @@ const SectionCard = () => {
                         src={section.images?.[0]?.src || ''}
                         alt={section.images?.[0]?.alt || ''}
                         fill
+                        sizes="(max-width: 1024px) 100vw, 300px"
                       />
                     </div>
                     <div className="relative w-[160px] h-[158px] ml-18 max-lg:ml-0 max-lg:mt-10">
@@ -138,6 +142,7 @@ const SectionCard = () => {
                         src={section.images?.[1]?.src || ''}
                         alt={section.images?.[1]?.alt || ''}
                         fill
+                        sizes="(max-width: 1024px) 100vw, 160px"
                       />
                     </div>
                   </div>
@@ -166,6 +171,7 @@ const SectionCard = () => {
                           src={section.images?.[0]?.src || ''}
                           alt={section.images?.[0]?.alt || ''}
                           fill
+                          sizes="(max-width: 1280px) 100vw, 220px"
                         />
                       </div>
                       <div className="flex relative pt-2 text-[14px]">
@@ -178,6 +184,7 @@ const SectionCard = () => {
                           src={section.images?.[1]?.src || ''}
                           alt={section.images?.[1]?.alt || ''}
                           fill
+                          sizes="(max-width: 1280px) 100vw, 138px"
                         />
                       </div>
                       <div className="flex relative pt-2 text-[14px]">
@@ -208,6 +215,7 @@ const SectionCard = () => {
                         src={section.images?.[0]?.src || ''}
                         alt={section.images?.[0]?.alt || ''}
                         fill
+                        sizes="(max-width: 1280px) 100vw, 325px"
                       />
                     </div>
                     <div className="flex flex-col pl-16 pt-16 max-xl:p-0">
@@ -237,6 +245,7 @@ const SectionCard = () => {
                         src={section.images?.[0]?.src || ''}
                         alt={section.images?.[0]?.alt || ''}
                         fill
+                        sizes="100vw"
                       />
                     </div>
                     <div className="pt-6 pl-10 text-[14px]">{section.lead}</div>
@@ -269,6 +278,7 @@ const SectionCard = () => {
                       src={section.images?.[0]?.src || ''}
                       alt={section.images?.[0]?.alt || ''}
                       fill
+                      sizes="(max-width: 1280px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -292,7 +302,12 @@ const SectionCard = () => {
                       <div className="pt-5 max-w-[350px] text-[14px]">{block.text}</div>
                     </div>
                     <div className="relative w-[130px] h-[170px] ml-13 mt-5 max-lg:ml-0">
-                      <Image src={block.image?.src || ''} alt={block.image?.alt || ''} fill />
+                      <Image
+                        src={block.image?.src || ''}
+                        alt={block.image?.alt || ''}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 130px"
+                      />
                     </div>
                   </div>
                 ))}

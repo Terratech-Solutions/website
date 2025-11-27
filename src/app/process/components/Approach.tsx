@@ -1,3 +1,4 @@
+import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { approach } from '@/data/process.json';
 import dynamic from 'next/dynamic';
 
@@ -8,7 +9,9 @@ const Approach = () => {
 
   return (
     <section className="flex flex-col px-23.5 pb-30 mx-auto max-w-[1440] max-lg:px-2.5">
-      <div className="pt-24">{section.eyebrow}</div>
+      <div className="pt-24">
+        <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
+      </div>
 
       <div className="flex flex-col pt-10">
         <div className="text-[50px]/[60px] whitespace-pre-line">

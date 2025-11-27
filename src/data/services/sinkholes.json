@@ -6,7 +6,7 @@
   },
   "advanced": {
     "section": {
-      "eyebrow": "☰ Informed Methodology",
+      "sectionLabel": "Informed Methodology",
       "title": "Advanced 3D\nGround Imaging"
     },
     "points": [
@@ -24,7 +24,7 @@
   },
   "sinkhole": {
     "section": {
-      "eyebrow": "☰ Informed Methodology",
+      "sectionLabel": "Informed Methodology",
       "title": {
         "highlight": "Sinkhole",
         "rest": "Formation Process"
@@ -62,7 +62,7 @@
   },
   "solution": {
     "section": {
-      "eyebrow": "☰ Informed Methodology",
+      "sectionLabel": "Informed Methodology",
       "title": {
         "main": "Our Solution",
         "highlight": "Without",
@@ -113,7 +113,7 @@
   },
   "warnings": {
     "section": {
-      "eyebrow": "☰ Innovative Solutions",
+      "sectionLabel": "Innovative Solutions",
       "title": {
         "main": "Early",
         "highlight": "Warning Signs",

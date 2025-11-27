@@ -2,7 +2,15 @@ import type { Metadata } from 'next';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 const SITE_NAME = 'Terratech';
-const DEFAULT_OG_IMAGE = new URL('/logo.svg', SITE_URL).toString();
+
+// Defer URL construction to avoid invalid URL errors during build
+const getDefaultOgImage = () => {
+  try {
+    return new URL('/logo.svg', SITE_URL).toString();
+  } catch {
+    return `${SITE_URL}/logo.svg`;
+  }
+};
 
 interface PageMetadataInput {
   title: string;
@@ -26,7 +34,7 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: SITE_NAME,
-  image: DEFAULT_OG_IMAGE,
+  image: getDefaultOgImage(),
   url: SITE_URL,
   email: 'info@terratechsolutions.net',
   telephone: '+1 980-310-6340',
@@ -46,7 +54,12 @@ export const localBusinessSchema = {
 };
 
 export const buildServiceSchema = ({ title, description, path }: PageMetadataInput) => {
-  const url = new URL(path, SITE_URL).toString();
+  let url: string;
+  try {
+    url = new URL(path, SITE_URL).toString();
+  } catch {
+    url = `${SITE_URL}${path.startsWith('/') ? path : '/' + path}`;
+  }
 
   return {
     '@context': 'https://schema.org',
@@ -69,7 +82,14 @@ export const buildServiceSchema = ({ title, description, path }: PageMetadataInp
 };
 
 export const buildPageMetadata = ({ title, description, path }: PageMetadataInput): Metadata => {
-  const url = new URL(path, SITE_URL).toString();
+  let url: string;
+  try {
+    url = new URL(path, SITE_URL).toString();
+  } catch {
+    url = `${SITE_URL}${path.startsWith('/') ? path : '/' + path}`;
+  }
+
+  const ogImage = getDefaultOgImage();
 
   return {
     title,
@@ -85,7 +105,7 @@ export const buildPageMetadata = ({ title, description, path }: PageMetadataInpu
       siteName: SITE_NAME,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `${SITE_NAME} logo`,
@@ -96,9 +116,9 @@ export const buildPageMetadata = ({ title, description, path }: PageMetadataInpu
       card: 'summary_large_image',
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
   };
 };
 
-export { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL };
+export { getDefaultOgImage as DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL };

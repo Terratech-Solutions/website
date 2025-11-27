@@ -1,12 +1,12 @@
 'use client';
 
+import { phoneFormData } from '@/data/contact.json';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { phoneFormData } from '@/data/contact.json';
 import { submitContactForm } from '../actions';
 
 const schema = z.object({
@@ -157,9 +157,7 @@ const PhoneForm = () => {
           {status === 'ok' && (
             <p className="text-sm text-green-400">{phoneFormData.form.messages.success}</p>
           )}
-          {status === 'error' && (
-            <p className="text-sm text-red-400">{error}</p>
-          )}
+          {status === 'error' && <p className="text-sm text-red-400">{error}</p>}
         </form>
 
         <div
@@ -169,7 +167,13 @@ const PhoneForm = () => {
           {phoneFormData.contacts.map((item) => (
             <div key={item.type} className="flex mt-3 max-md:mt-4">
               <div className="flex relative">
-                <Image src={item.icon} alt={item.type} width={23} height={23} className="w-auto h-auto" />
+                <Image
+                  src={item.icon}
+                  alt={item.type}
+                  width={23}
+                  height={23}
+                  className="w-auto h-auto"
+                />
               </div>
               <div className="flex flex-col pl-3">
                 <div>{item.label}</div>

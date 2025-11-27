@@ -1,4 +1,5 @@
 import ConsultationButtons from '@/components/ui/consultation-buttons/ConsultationButtons';
+import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { solution } from '@/data/services/sinkholes.json';
 import Image from 'next/image';
 
@@ -7,7 +8,7 @@ const Solution = () => {
 
   return (
     <div className="max-w-[1440] mx-auto px-4 md:px-23.5 pt-20 pb-20">
-      <div>{section.eyebrow}</div>
+      <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
 
       <div className="flex flex-col pt-10">
         <div className="text-[60px]/[80px] max-md:text-[40px]/[50px] max-sm:text-[24px]/[30px] whitespace-pre-line">

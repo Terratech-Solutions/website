@@ -19,6 +19,7 @@ export function Footer() {
               src="/logo.svg"
               alt="Company logo"
               fill
+              sizes="(max-width: 768px) 150px, (max-width: 1024px) 190px, 230px"
               className="h-auto w-[150px] md:w-[190px] lg:w-[230px]"
             />
           </Link>

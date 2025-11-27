@@ -1,3 +1,4 @@
+import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { innovative } from '@/data/process.json';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -10,7 +11,7 @@ const Innovative = () => {
   return (
     <section className="px-13.5 max-md:px-2.5 pt-17 pb-23">
       <div className="flex flex-col mx-auto max-w-[1440] bg-foreground max-sm:px-5 max-lg:px-10 px-23.5 pt-7 pb-7">
-        <div className="">{section.eyebrow}</div>
+        <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
 
         <div className="flex justify-between pt-10 max-md:flex-col">
           <div

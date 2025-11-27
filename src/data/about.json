@@ -15,7 +15,7 @@
     "value2": "communities we serve."
   },
   "community": {
-    "eyebrow": "OUR MISSION & VISION",
+    "sectionLabel": "OUR MISSION & VISION",
     "title": {
       "left": "Community",
       "right": "Sustainability",
@@ -36,7 +36,7 @@
     "imageAlt": "Innovation image"
   },
   "whyTerratech": {
-    "eyebrow": "WHY TERRATECH",
+    "sectionLabel": "WHY TERRATECH",
     "title": "What Sets us Apart",
     "cards": [
       {

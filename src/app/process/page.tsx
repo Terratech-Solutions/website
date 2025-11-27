@@ -10,12 +10,12 @@ export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
 const Process = () => {
   return (
-    <div>
+    <>
       <Injection />
       <Innovative />
       <Approach />
       <Consultation />
-    </div>
+    </>
   );
 };
 

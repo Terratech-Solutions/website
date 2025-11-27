@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { connect } from '@/data/contact.json';
+import Image from 'next/image';
 
 const Connect = () => {
   const { background, title, subtitle } = connect;

@@ -1,3 +1,4 @@
+import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { advanced } from '@/data/services/sinkholes.json';
 import Image from 'next/image';
 
@@ -6,7 +7,7 @@ const Advanced = () => {
 
   return (
     <div className="max-w-[1440] mx-auto px-4 md:px-23.5 pt-20 pb-20">
-      <div>{section.eyebrow}</div>
+      <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
 
       <div className="flex flex-col pt-10">
         <div className="text-[60px]/[80px] max-md:text-[40px]/[60px] whitespace-pre-line">

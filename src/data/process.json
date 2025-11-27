@@ -6,7 +6,7 @@
   },
   "approach": {
     "section": {
-      "eyebrow": "☰ Innovative Solutions",
+      "sectionLabel": "Innovative Solutions",
       "title": {
         "beforeHighlight": "The",
         "highlight": "Future",
@@ -32,7 +32,7 @@
   },
   "innovative": {
     "section": {
-      "eyebrow": "☰ Innovative Solutions",
+      "sectionLabel": "Innovative Solutions",
       "title": "A <span class='text-lemon-green'>New Way</span> to <br /> assess and <br /> remediate.",
       "description": "We rapidly assess structural issues using state of the art early detection methods. We deploy advanced 3D scanning, provide substantive analysis, and conduct in depth reporting.",
       "badgeIcon": "/process/innovative/cross.svg"
@@ -59,7 +59,7 @@
     ]
   },
   "sectionCard": {
-    "eyebrow": "☰ Innovative Solutions",
+    "sectionLabel": "Innovative Solutions",
     "sideTitle": "Why Our Process Works",
     "sections": [
       {
