@@ -8,10 +8,10 @@ const Solutions = () => {
     <section className="pt-33.5 font-sans px-23.5 max-sm:px-10 max-w-[1440] mx-auto">
       <div className="grid grid-cols-40 max-xl:grid-cols-1 border-solid border-y-3 border-terra-dash">
         <div className="col-span-22 pt-24 max-xl:pb-5">
-          <h2 className="text-[50px]/[60px] max-sm:text-[35px]/[45px] tracking-[1px] font-semibold whitespace-pre-line">
+          <h2 className="text-[50px]/[60px] max-sm:text-[35px]/[45px] font-semibold whitespace-pre-line">
             {intro.title}
           </h2>
-          <p className="mt-9 text-[23px]/[37px] max-sm:text-[18px]/[25px] tracking-[0px] whitespace-pre-line">
+          <p className="mt-9 text-[23px]/[37px] max-sm:text-[18px]/[25px] whitespace-pre-line">
             {intro.text}
           </p>
         </div>
@@ -21,9 +21,7 @@ const Solutions = () => {
       </div>
 
       <div className="border-solid border-b-3 border-terra-dash">
-        <p className="pt-15 text-[50px] max-sm:text-[35px] font-semibold tracking-[0.9px]">
-          {whyChoose.title}
-        </p>
+        <p className="pt-15 text-[50px] max-sm:text-[35px] font-semibold">{whyChoose.title}</p>
         <div className="flex max-xl:flex-col max-xl:items-baseline max-xl:gap-3 pt-10 pb-18 text-[27px] max-sm:text-[18px] justify-between">
           {whyChoose.items.map((item) => (
             <div key={item.label} className="flex justify-center items-center">

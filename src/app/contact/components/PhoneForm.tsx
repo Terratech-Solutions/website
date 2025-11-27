@@ -149,7 +149,7 @@ const PhoneForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full uppercase tracking-wide font-semibold py-4 rounded-sm bg-[#c44237] hover:bg-[#b53a30] disabled:opacity-60"
+            className="w-full uppercase font-semibold py-4 rounded-sm bg-[#c44237] hover:bg-[#b53a30] disabled:opacity-60"
           >
             {isSubmitting ? phoneFormData.form.button.loading : phoneFormData.form.button.default}
           </button>

@@ -20,7 +20,7 @@ const SetsUp = () => {
               <div className="relative w-[75px] h-[75px] mb-12.5 mt-8">
                 <Image src={card.image.src} alt={card.image.alt} fill sizes="75px" />
               </div>
-              <div className="text-[18px] tracking-[0.5px]">{card.text}</div>
+              <div className="text-[18px]">{card.text}</div>
             </div>
           </div>
         ))}
