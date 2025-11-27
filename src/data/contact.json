@@ -61,7 +61,7 @@
     "map": {
       "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.3548384761657!2d-80.8243044!3d35.2146051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a04318ac68b1%3A0xf68cb7fcdedb38a7!2s401%20Hawthorne%20Ln%20Suite%20110%2C%20Charlotte%2C%20NC%2028204%2C%20USA!5e0!3m2!1sen!2sua!4v1731179100000!5m2!1sen!2sua",
       "width": "545px",
-      "heightClass": "h-[476px] max-sm:h-[400px]"
+      "heightClass": "h-[700px] max-sm:h-[400px] transition-all duration-500"
     }
   }
 }

@@ -83,7 +83,7 @@ const PhoneForm = () => {
     'w-full bg-[#1d1d1d] text-white placeholder-zinc-400 border border-white/30 focus:border-white/60 outline-none rounded-sm px-4 py-4 transition-colors';
 
   return (
-    <div className="flex justify-around items-center py-20 px-30 max-md:px-3 max-xl:flex-col  mx-auto max-w-[1440]">
+    <div className="flex justify-around items-center py-20 px-30 max-md:px-3 max-xl:flex-col  mx-auto max-w-[1440] min-h-[860px]">
       <div className="flex flex-col w-full">
         <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-5 w-full" noValidate>
           <div>
