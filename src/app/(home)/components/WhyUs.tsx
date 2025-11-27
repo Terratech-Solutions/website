@@ -7,10 +7,10 @@ const WhyUs = () => {
   const { section, cards } = whyUs;
 
   return (
-    <section className="relative max-sm:py-[40px] pt-39 pb-20 px-23.5 max-sm:px-10 max-w-[1440] mx-auto bg-linear-to-b from-[#111316] to-[#111216]">
+    <section className="relative py-[40px] lg:pt-39 lg:pb-20 md:px-23.5 px-10 max-w-[1440] mx-auto bg-linear-to-b from-[#111316] to-[#111216]">
       <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
-      <p className="text-[28px]/[150%] md:text-[60px] lg:text-[60px] mt-2">{section.title}</p>
-      <p className="mt-4 text-[30px] max-sm:text-[18px] text-[#C7D1DA] whitespace-pre-line">
+      <div className="text-[30px]/[150%] lg:text-[60px] mt-2">{section.title}</div>
+      <p className="mt-4 text-[18px] lg:text-[30px] text-[#C7D1DA] whitespace-pre-line">
         {section.subtitle}
       </p>
 
@@ -29,12 +29,8 @@ const WhyUs = () => {
                   height={item.iconHeight}
                 />
               </div>
-              <p className="text-[32px]/[38px] max-sm:text-[24px]/[30px] font-medium min-h-[114px]">
-                {item.title}
-              </p>
-              <p className="mt-5 text-[24px]/[33px] max-sm:text-[18px]/[24px]">
-                {item.description}
-              </p>
+              <p className="text-[24px] min-h-[70px] font-medium md-min-h-[114px]">{item.title}</p>
+              <p className="mt-5 text-[18px] lg:text-[2`0px]">{item.description}</p>
             </div>
 
             <Link

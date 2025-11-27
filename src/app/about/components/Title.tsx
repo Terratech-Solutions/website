@@ -16,7 +16,7 @@ const Title = () => {
           sizes="100vw"
         />
       </div>
-      <div className="grid relative grid-flow-row pt-56 px-23.5 max-sm:px-10 pb-30 z-10 max-w-[1440] mx-auto">
+      <div className="grid relative grid-flow-row pt-56 md:px-23.5 px-10 pb-30 z-10 max-w-[1440] mx-auto">
         <p className="text-[78px]/[90px] max-lg:text-[50px]/[70px] max-md:text-[40px]/[65px] max-sm:text-[34px]/[50px] font-normal">
           <span className="text-true-red">{part1} </span>
           {part2} <br />

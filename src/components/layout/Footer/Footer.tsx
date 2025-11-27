@@ -11,8 +11,8 @@ export function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="bg-foreground h-[500px] max-sm:h-full max-sm:pb-5">
-      <div className="pt-21 max-md:pt-10 flex max-md:flex-col justify-between items-baseline px-23.5 max-sm:px-10">
+    <footer className="bg-foreground min-h-[500px] max-sm:h-full pb-5">
+      <div className="pt-21 max-md:pt-10 flex max-md:flex-col justify-between items-baseline md:px-23.5 px-10">
         <div className="flex items-baseline">
           <Link href="/" className="flex items-center relative w-[278] h-[62px]">
             <Image
