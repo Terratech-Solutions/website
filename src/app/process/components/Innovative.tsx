@@ -21,7 +21,7 @@ const Innovative = () => {
 
           <div className="relative text-[16px] max-w-[300px] pt-7 mr-30">
             <div className="absolute -top-8 -left-10 max-md:hidden">
-              <Image src={section.badgeIcon} alt="cross image" width={35} height={35} />
+              <Image src={section.badgeIcon} alt="Decorative badge icon" width={35} height={35} />
             </div>
             {section.description}
           </div>

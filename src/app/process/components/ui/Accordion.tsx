@@ -111,7 +111,7 @@ const Accordion = ({
                           <Image
                             className="w-full h-auto"
                             src={image}
-                            alt="placeholder"
+                            alt={title}
                             width={300}
                             height={300}
                           />
