@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-terra-black">
       <body className={`antialiased bg-terra-black`}>
-        {typeof gaId === 'string' && <GoogleAnalytics gaId={gaId} />}
+        {Boolean(gaId) && <GoogleAnalytics gaId={gaId!} />}
         <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(websiteSchema)}
         </Script>

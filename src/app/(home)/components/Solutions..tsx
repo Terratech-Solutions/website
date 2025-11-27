@@ -22,6 +22,7 @@ const Solutions = () => {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
           />
         </div>
       </div>

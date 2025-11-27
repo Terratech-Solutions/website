@@ -13,6 +13,7 @@ const Introducing = () => {
           alt="Background"
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-center"
           sizes="100vw"
         />
