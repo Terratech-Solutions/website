@@ -22,7 +22,8 @@
       "amp": "&"
     },
     "value": "As a family-owned business in Charlotte, North Carolina, our mission is to serve our community and beyond with solutions that stand the test of time, creating a legacy of excellence for generations to come.",
-    "imageAlt": "Community image"
+    "imageAlt": "Community image",
+    "imageSrc": "/about/community.jpg"
   },
   "innovation": {
     "title": {
@@ -33,7 +34,8 @@
       "We saw an opportunity to change how construction materials and processes impact both the environment and long-term performance. Our proprietary materials deliver greater durability, environmental efficiency, and lower lifetime costs than leading brands.",
       "We’re constantly researching, testing, and improving — because innovation isn’t a trend. It’s who we are."
     ],
-    "imageAlt": "Innovation image"
+    "imageAlt": "Innovation image",
+    "imageSrc": "/about/innovation.jpg"
   },
   "whyTerratech": {
     "sectionLabel": "WHY TERRATECH",

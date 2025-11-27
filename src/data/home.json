@@ -9,7 +9,11 @@
   },
   "expertise": {
     "title": "Backed by engineering expertise.",
-    "description": "Over 20 years of combined engineering and field \nexperience in soil stabilization and polymer injection across multiple regions."
+    "description": "Over 20 years of combined engineering and field \nexperience in soil stabilization and polymer injection across multiple regions.",
+    "image": {
+      "src": "/home/expertise/road.jpg",
+      "alt": "Engineering expertise"
+    }
   },
   "introducing": {
     "title": {
