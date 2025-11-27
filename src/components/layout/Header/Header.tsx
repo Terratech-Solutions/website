@@ -48,6 +48,7 @@ export function Header() {
               alt="Company logo"
               width={230}
               height={51}
+              priority
               className="h-auto w-[150px] md:w-[190px] lg:w-[230px]"
             />
           </Link>
