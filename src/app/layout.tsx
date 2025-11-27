@@ -1,8 +1,7 @@
 import {
-  DEFAULT_OG_IMAGE,
+  buildPageMetadata,
   localBusinessSchema,
   SITE_NAME,
-  SITE_URL,
   websiteSchema,
 } from '@/app/metadata';
 import { Footer } from '@/components/layout/Footer/Footer';
@@ -13,35 +12,11 @@ import Script from 'next/script';
 import { ReactNode } from 'react';
 import './globals.css';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
-  },
-  description: 'Terratech',
-  openGraph: {
-    type: 'website',
-    url: SITE_URL,
-    title: SITE_NAME,
-    description: 'Terratech',
-    siteName: SITE_NAME,
-    images: [
-      {
-        url: DEFAULT_OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: `${SITE_NAME} logo`,
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: SITE_NAME,
-    description: 'Terratech',
-    images: [DEFAULT_OG_IMAGE],
-  },
-};
+export const metadata: Metadata = buildPageMetadata({
+  title: SITE_NAME,
+  description: 'Terratech Process',
+  path: '/'
+});
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
