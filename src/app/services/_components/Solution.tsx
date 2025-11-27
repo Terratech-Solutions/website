@@ -32,7 +32,7 @@ const Solution = () => {
         </div>
 
         <div className="flex justify-end pt-10">
-          <div className="text-[24px]/[58px] max-sm:text-[16px] whitespace-pre-line max-sm:whitespace-normal text-right max-md:text-center">
+          <div className="text-[16px] sm:text-[24px] whitespace-pre-line max-sm:whitespace-normal text-right max-md:text-center">
             {section.description}
           </div>
         </div>
