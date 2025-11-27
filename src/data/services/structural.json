@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "title": "Sinkhole & Void Filling Experts | Terratech",
+    "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
+    "path": "/services/structural"
+  },
+  "advanced": {
+    "section": {
+      "eyebrow": "☰ Informed Methodology",
+      "title": "Advanced 3D\nGround Imaging"
+    },
+    "points": [
+      "Early Detection",
+      "Precision & Safety",
+      "Minimal Disruption",
+      "Customized Solutions"
+    ],
+    "image": {
+      "src": "/services/graphic-1.svg",
+      "alt": "Graphic 1",
+      "width": 860,
+      "height": 483
+    }
+  },
+  "sinkhole": {
+    "section": {
+      "eyebrow": "☰ Informed Methodology",
+      "title": {
+        "highlight": "Sinkhole",
+        "rest": "Formation Process"
+      }
+    },
+    "stages": [
+      {
+        "label": "Stage 1",
+        "image": {
+          "src": "/services/stage-1.svg",
+          "alt": "Stage 1",
+          "width": 320,
+          "height": 460
+        }
+      },
+      {
+        "label": "Stage 2",
+        "image": {
+          "src": "/services/stage-2.svg",
+          "alt": "Stage 2",
+          "width": 320,
+          "height": 460
+        }
+      },
+      {
+        "label": "Stage 3",
+        "image": {
+          "src": "/services/stage-3.svg",
+          "alt": "Stage 3",
+          "width": 320,
+          "height": 460
+        }
+      }
+    ]
+  },
+  "solution": {
+    "section": {
+      "eyebrow": "☰ Informed Methodology",
+      "title": {
+        "main": "Our Solution",
+        "highlight": "Without",
+        "after": "Excavation"
+      },
+      "description": "The use of eco-friendly poly-foam technology stabilizes any\nsinkhole faster and cheaper than traditional remediation."
+    },
+    "images": [
+      {
+        "src": "/services/slider-1.svg",
+        "alt": "Slider 1",
+        "width": 330,
+        "height": 435
+      },
+      {
+        "src": "/services/slider-2.svg",
+        "alt": "Slider 2",
+        "width": 330,
+        "height": 435
+      },
+      {
+        "src": "/services/slider-3.svg",
+        "alt": "Slider 3",
+        "width": 330,
+        "height": 435
+      }
+    ]
+  },
+  "title": {
+    "background": {
+      "from": "#131313",
+      "to": "#1D1D1D"
+    },
+    "text": {
+      "title": {
+        "lines": ["Sinkhole &", "Void Filling", "Experts", "."],
+        "highlight": "Experts",
+        "highlightColor": "text-true-red"
+      },
+      "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
+    },
+    "image": {
+      "src": "/services/scan-1.svg",
+      "alt": "Scan 1",
+      "width": 740,
+      "height": 415
+    }
+  },
+  "warnings": {
+    "section": {
+      "eyebrow": "☰ Innovative Solutions",
+      "title": {
+        "main": "Early",
+        "highlight": "Warning Signs",
+        "after": "of a Sinkhole"
+      },
+      "description": "Along with on site assessment and detailed visual observation of the area, Terratech’s 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
+    },
+    "items": [
+      {
+        "title": "Rapidly Appearing Holes",
+        "iconSrc": "/services/sinkholes/rapidly.svg",
+        "iconWidth": 70,
+        "iconHeight": 70
+      },
+      {
+        "title": "Buckling Concrete or Asphalt",
+        "iconSrc": "/services/sinkholes/buckling.svg",
+        "iconWidth": 70,
+        "iconHeight": 70
+      },
+      {
+        "title": "Standing Surface Water",
+        "iconSrc": "/services/sinkholes/standing.svg",
+        "iconWidth": 70,
+        "iconHeight": 70
+      },
+      {
+        "title": "Cracks Forming in the Ground",
+        "iconSrc": "/services/sinkholes/cracks.svg",
+        "iconWidth": 70,
+        "iconHeight": 70
+      },
+      {
+        "title": "Ground Depressions",
+        "iconSrc": "/services/sinkholes/ground.svg",
+        "iconWidth": 70,
+        "iconHeight": 70
+      }
+    ]
+  }
+}

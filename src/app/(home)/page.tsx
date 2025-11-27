@@ -3,16 +3,14 @@ import Expertise from '@/app/(home)/components/Expertise';
 import Introducing from '@/app/(home)/components/Introducing';
 import Solutions from '@/app/(home)/components/Solutions';
 import WhyUs from '@/app/(home)/components/WhyUs';
-import { Metadata } from 'next';
+import { buildPageMetadata } from '@/app/metadata';
 import dynamic from 'next/dynamic';
-import { homeMeta } from '../../data/meta.json';
+import page from '@/data/home.json';
+import type { Metadata } from 'next';
 
 const Techniques = dynamic(() => import('@/app/(home)/components/Techniques'));
 
-export const metadata: Metadata = {
-  title: homeMeta.title ?? 'Home',
-  description: homeMeta.description ?? 'Welcome to Terratech.',
-};
+export const generateMetadata = (): Metadata =>  buildPageMetadata(page.meta);
 
 const Home = () => {
   return (

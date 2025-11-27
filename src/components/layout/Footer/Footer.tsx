@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
-import footerData from './footer.json';
+import footerData from '@/data/footer.json';
 
 export function Footer() {
   const { contacts, socials, navSections } = footerData;
@@ -53,7 +54,7 @@ export function Footer() {
           {navSections.map((section) => (
             <ul key={section.title} className="list-none flex flex-col gap-5">
               {section.items.map((item) => (
-                <li className={`${pathname === item.href ? "text-blue-500 text-lg font-bold": ''}`} key={item.href}>
+                <li className={clsx({'text-blue-500 text-lg font-bold': pathname === item.href})} key={item.href}>
                   <Link href={item.href}>{item.label}</Link>
                 </li>
               ))}

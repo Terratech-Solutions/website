@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { phoneFormData } from '../contact.json';
+import { phoneFormData } from '../../../data/contact.json';
 
 const schema = z.object({
   name: z.string().trim().min(1, phoneFormData.validation.nameRequired),

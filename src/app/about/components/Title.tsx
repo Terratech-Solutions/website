@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import about from '../../../data/about.json';
+import page from '@/data/about.json';
 
 const Title = () => {
-  const { title, value1, value2 } = about.introducing;
+  const { title, value1, value2 } = page.introducing;
   const { part1, part2, part3, part4 } = title;
   return (
     <section className="relative overflow-hidden">

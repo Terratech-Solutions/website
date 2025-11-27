@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import about from '../../../data/about.json';
+import page from '@/data/about.json';
 
 const Started = () => {
-  const { title, paragraphs, image } = about.started;
+  const { title, paragraphs, image } = page.started;
 
   return (
     <section className="flex flex-col pt-39 pb-20 px-23.5 max-sm:px-10 max-w-[1440px] mx-auto">

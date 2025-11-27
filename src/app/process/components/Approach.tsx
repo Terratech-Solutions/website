@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { approach } from '../process.json';
+import { approach } from '@/data/process.json';
 
 const SectionCard = dynamic(() => import('@/app/process/components/ui/SectionCard'));
 

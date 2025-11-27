@@ -1,8 +1,8 @@
 import Image from "next/image";
-import home from "../home.json";
+import page from "@/data/home.json";
 
 const Solutions = () => {
-  const { intro, whyChoose } = home.solutions;
+  const { intro, whyChoose } = page.solutions;
 
   return (
       <section className="pt-33.5 font-sans px-23.5 max-sm:px-10 max-w-[1440] mx-auto">

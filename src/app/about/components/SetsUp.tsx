@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import about from '../../../data/about.json';
+import page from '@/data/about.json';
 
 const SetsUp = () => {
-  const { eyebrow, title, cards } = about.whyTerratech;
+  const { eyebrow, title, cards } = page.whyTerratech;
 
   return (
     <section className="flex flex-col pt-25 max-md:pt-4 pb-20 px-23.5 max-sm:px-10 max-w-[1440] mx-auto">

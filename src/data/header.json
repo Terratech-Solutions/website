@@ -1,0 +1,20 @@
+{
+  "items": [
+    { "href": "/", "label": "Home" },
+    { "href": "/process", "label": "The Process" },
+    {
+      "href": "/services",
+      "label": "Services",
+      "children": [
+        { "href": "/services/sinkholes", "label": "Sinkholes" },
+        { "href": "/services/stormwater", "label": "Stormwater infrastructure" },
+        { "href": "/services/roadway", "label": "Roadway Repair" },
+        { "href": "/services/structural", "label": "Structural Stabilization" },
+        { "href": "/services/slope", "label": "Slope Stabilization" },
+        { "href": "/services/scanning", "label": "3D Scanning / Detection" }
+      ]
+    },
+    { "href": "/about", "label": "About" }
+  ],
+  "contact": { "href": "/contact", "label": "Contact" }
+}

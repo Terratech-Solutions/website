@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "About Us",
+    "description": "Discover Terratech’s mission, vision, and values.",
+    "url": "/about"
+  },
   "introducing": {
     "title": {
       "part1": "Building",

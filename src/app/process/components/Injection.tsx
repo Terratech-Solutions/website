@@ -1,4 +1,4 @@
-import { injection } from '../process.json';
+import { injection } from '@/data/process.json';
 
 const Injection = () => {
   const { background, title, subtitle } = injection;

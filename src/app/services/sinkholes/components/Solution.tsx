@@ -1,6 +1,6 @@
 import ConsultationButtons from '@/components/ui/consultation-buttons/ConsultationButtons';
 import Image from 'next/image';
-import { solution } from '../services.json';
+import { solution } from '../../../../data/services/sinkholes.json';
 
 const Solution = () => {
   const { section, images } = solution;

@@ -1,21 +1,17 @@
 'use client';
 
+import { techniques } from '@/data/home.json';
 import Image from 'next/image';
-import { useState } from 'react';
-import { techniques } from '../home.json';
+import Link from 'next/link';
 
 type Technique = {
   title: string;
   description: string;
   iconSrc: string;
-  readMore: string;
+  href: string;
 };
 
-const TechniqueItem = ({ title, description, iconSrc, readMore }: Technique) => {
-  const [showText, setShowText] = useState(false);
-
-  const handleShowText = () => setShowText((prev) => !prev);
-
+const TechniqueItem = ({ href, title, description, iconSrc }: Technique) => {
   return (
     <div className="flex flex-col border-b border-solid border-concrete pb-14">
       <div className="grid grid-flow-row-dense pt-24 pr-17 max-sm:pr-0">
@@ -23,19 +19,18 @@ const TechniqueItem = ({ title, description, iconSrc, readMore }: Technique) => 
           <p className="flex items-center justify-center text-[28px]/[150%] font-normal whitespace-pre-line">
             {title}
           </p>
-          <Image src={iconSrc} alt={title} width={79} height={79} />
+          <Image src={iconSrc} alt={title} width={79} height={79} className="w-auto h-auto" />
         </div>
 
         <p className="mb-6 text-[17px]/[100%] font-light">{description}</p>
 
-        <button
+        <Link
           className="flex text-[11px]/[150%] font-light underline underline-offset-4 decoration-true-red"
-          onClick={handleShowText}
+          href={href}
         >
-          {showText ? 'Less text' : 'Read More'}
-        </button>
+          Read More
+        </Link>
       </div>
-      {showText && <div className="mt-2">{readMore}</div>}
     </div>
   );
 };

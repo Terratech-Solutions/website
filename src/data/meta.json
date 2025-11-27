@@ -11,8 +11,32 @@
     "title": "Contact",
     "description": "Contact"
   },
+  "processMeta": {
+    "title": "Our Process",
+    "description": "Learn about Terratech's injection approach and innovative solutions."
+  },
   "sinkholesMeta": {
     "title": "Sinkholes",
     "description": "Sinkholes"
+  },
+  "RoadwayMeta": {
+    "title": "Roadway Repair",
+    "description": "Roadway Repair"
+  },
+  "StormwaterMeta": {
+    "title": "Stormwater infrastructure",
+    "description": "Stormwater infrastructure"
+  },
+  "StructuralMeta": {
+    "title": "Structural Stabilization",
+    "description": "Structural Stabilization"
+  },
+  "SlopeMeta": {
+    "title": "Slope Stabilization",
+    "description": "Slope Stabilization"
+  },
+  "scanningMeta": {
+    "title": "3d scanning and detection",
+    "description": "3d scanning and detection"
   }
 }

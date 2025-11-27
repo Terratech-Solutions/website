@@ -3,14 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import navItems from './header.json';
+import navItems from '../../../data/header.json';
 
 export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(true);
 
-  const toggleDropdown = () => setOpenDropdown((isOpen) => !isOpen);
+  const handleDropdownEnter = () => setOpenDropdown(true);
+  const handleDropdownLeave = () => setOpenDropdown(false);
   const toggleMobileDropdown = () => setOpenMobileDropdown((isOpen) => !isOpen);
 
   const dropdownRef = useRef<HTMLElement>(null);
@@ -68,11 +69,14 @@ export function Header() {
               }
 
               return (
-                <li key={item.href} ref={dropdownRef} className="relative">
-                  <button
-                    onClick={toggleDropdown}
-                    className="flex items-center gap-1 transition-colors hover:text-concrete cursor-pointer"
-                  >
+                <li
+                  key={item.href}
+                  ref={dropdownRef}
+                  className="relative"
+                  onMouseEnter={handleDropdownEnter}
+                  onMouseLeave={handleDropdownLeave}
+                >
+                  <button className="flex items-center gap-1 transition-colors hover:text-concrete cursor-pointer">
                     {item.label}
                     <span className="text-xs">{openDropdown ? '▴' : '▾'}</span>
                   </button>

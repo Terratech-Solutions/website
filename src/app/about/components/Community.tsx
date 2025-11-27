@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import about from '../../../data/about.json';
+import page from '@/data/about.json';
 
 const Community = () => {
-  const { eyebrow, title, value, imageAlt } = about.community;
+  const { eyebrow, title, value, imageAlt } = page.community;
 
   return (
     <section className="flex flex-col pt-39 max-md:pt-12 pb-20 px-23.5 max-sm:px-10 max-w-[1440px] mx-auto">

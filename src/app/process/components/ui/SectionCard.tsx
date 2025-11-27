@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MouseEvent, useLayoutEffect, useRef, useState } from 'react';
-import { sectionCard } from '../../process.json';
+import { sectionCard } from '@/data/process.json';
 
 interface ListItemProps {
   section: string;

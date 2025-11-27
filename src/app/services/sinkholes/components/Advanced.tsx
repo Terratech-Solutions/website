@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { advanced } from '../services.json';
+import { advanced } from '../../../../data/services/sinkholes.json';
 
 const Advanced = () => {
   const { section, points, image } = advanced;

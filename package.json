@@ -14,6 +14,7 @@
     "@next/third-parties": "^16.0.3",
     "@sendgrid/mail": "^8.1.6",
     "@tailwindcss/cli": "^4.1.16",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
     "gsap": "^3.13.0",
     "motion": "^12.23.24",

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { title } from '../services.json';
+import { title } from '../../../../data/services/sinkholes.json';
 
 const Title = () => {
   const { background, text, image } = title;
