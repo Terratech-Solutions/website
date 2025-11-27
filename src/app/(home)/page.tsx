@@ -4,13 +4,13 @@ import Introducing from '@/app/(home)/components/Introducing';
 import Solutions from '@/app/(home)/components/Solutions';
 import WhyUs from '@/app/(home)/components/WhyUs';
 import { buildPageMetadata } from '@/app/metadata';
-import dynamic from 'next/dynamic';
 import page from '@/data/home.json';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 const Techniques = dynamic(() => import('@/app/(home)/components/Techniques'));
 
-export const generateMetadata = (): Metadata =>  buildPageMetadata(page.meta);
+export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
 const Home = () => {
   return (

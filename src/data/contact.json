@@ -28,12 +28,7 @@
         "success": "Thanks! We’ll get back to you.",
         "error": "Something went wrong. Please try again."
       },
-      "sources": [
-        "Google",
-        "Social media",
-        "Friend/colleague",
-        "Other"
-      ]
+      "sources": ["Google", "Social media", "Friend/colleague", "Other"]
     },
     "validation": {
       "nameRequired": "Name field is required",
@@ -69,6 +64,4 @@
       "heightClass": "h-[700px] max-sm:h-[400px]"
     }
   }
-
-
 }

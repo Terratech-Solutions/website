@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import metadataConfig from '@/data/metadata.json';
+import type { Metadata } from 'next';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL!;
 const SITE_NAME = metadataConfig.siteName;

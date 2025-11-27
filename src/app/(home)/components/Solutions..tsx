@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Solutions = () => {
   return (
@@ -26,7 +26,9 @@ const Solutions = () => {
         </div>
       </div>
       <div className="border-solid border-b-3 border-terra-dash">
-        <p className="pt-15 text-[50px] max-sm:text-[35px] font-semibold tracking-[0.9px]">Why Choose Terratech?</p>
+        <p className="pt-15 text-[50px] max-sm:text-[35px] font-semibold tracking-[0.9px]">
+          Why Choose Terratech?
+        </p>
         <div className="flex max-xl:flex-col max-xl:items-baseline max-xl:gap-3 pt-10 pb-18 text-[27px] max-sm:text-[18px] justify-between">
           <div className="flex justify-center items-center">
             <Image

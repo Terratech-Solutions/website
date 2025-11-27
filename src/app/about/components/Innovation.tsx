@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import page from '@/data/about.json';
+import Image from 'next/image';
 
 const Innovation = () => {
   const { title, paragraphs, imageAlt } = page.innovation;

@@ -1,7 +1,4 @@
 import GAProvider from '@/app/ga-provider';
-import { Footer } from '@/components/layout/Footer/Footer';
-import { Header } from '@/components/layout/Header/Header';
-import RecaptchaProvider from '@/components/RecaptchaProvider';
 import {
   DEFAULT_OG_IMAGE,
   localBusinessSchema,
@@ -9,6 +6,9 @@ import {
   SITE_URL,
   websiteSchema,
 } from '@/app/metadata';
+import { Footer } from '@/components/layout/Footer/Footer';
+import { Header } from '@/components/layout/Header/Header';
+import RecaptchaProvider from '@/components/RecaptchaProvider';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';

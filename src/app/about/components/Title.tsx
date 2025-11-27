@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import page from '@/data/about.json';
+import Image from 'next/image';
 
 const Title = () => {
   const { title, value1, value2 } = page.introducing;

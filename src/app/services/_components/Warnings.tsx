@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { warnings } from '@/data/services/sinkholes.json';
+import Image from 'next/image';
 
 const Warnings = () => {
   const { section, items } = warnings;

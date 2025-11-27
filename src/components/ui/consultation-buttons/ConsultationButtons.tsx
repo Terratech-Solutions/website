@@ -1,5 +1,5 @@
-import Link from "next/link";
-import buttonsData from "./consultationButtons.json";
+import Link from 'next/link';
+import buttonsData from './consultationButtons.json';
 
 const ConsultationButtons = () => {
   return (
@@ -13,9 +13,9 @@ const ConsultationButtons = () => {
         >
           <div
             className={
-              btn.style === "light"
-                ? "h-full w-full bg-lemon-green group-hover:bg-zinc-200"
-                : "h-full w-full bg-gradient-to-r from-dark-green to-terra-black group-hover:from-white"
+              btn.style === 'light'
+                ? 'h-full w-full bg-lemon-green group-hover:bg-zinc-200'
+                : 'h-full w-full bg-gradient-to-r from-dark-green to-terra-black group-hover:from-white'
             }
           >
             <div className="text-sm font-medium pt-[18px] pl-[15px] group-hover:text-terra-black">
@@ -23,7 +23,7 @@ const ConsultationButtons = () => {
             </div>
             <div
               className={`mt-1 text-[23px] font-semibold pb-[20px] pl-[15px] ${
-                btn.style === "light" ? "pr-22" : "pr-14"
+                btn.style === 'light' ? 'pr-22' : 'pr-14'
               } group-hover:text-terra-black`}
             >
               {btn.bigText}

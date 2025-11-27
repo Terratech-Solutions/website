@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import page from '@/data/home.json';
+import Image from 'next/image';
 
 const Expertise = () => {
   return (

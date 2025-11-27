@@ -1,6 +1,6 @@
+import { innovative } from '@/data/process.json';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { innovative } from '@/data/process.json';
 
 const Accordion = dynamic(() => import('@/app/process/components/ui/Accordion'));
 

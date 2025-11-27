@@ -1,7 +1,7 @@
 import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
+import { whyUs } from '@/data/home.json';
 import Image from 'next/image';
 import Link from 'next/link';
-import { whyUs } from '@/data/home.json';
 
 const WhyUs = () => {
   const { section, cards } = whyUs;

@@ -1,6 +1,6 @@
+import page from '@/data/home.json';
 import Image from 'next/image';
 import Link from 'next/link';
-import page from '@/data/home.json';
 
 const Introducing = () => {
   const { title, value, cta } = page.introducing;

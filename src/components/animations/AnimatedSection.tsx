@@ -1,9 +1,16 @@
 'use client';
 
-import { ReactNode } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { ReactNode } from 'react';
 
-type AnimationType = 'fade' | 'fadeUp' | 'fadeDown' | 'fadeLeft' | 'fadeRight' | 'scale' | 'slideUp';
+type AnimationType =
+  | 'fade'
+  | 'fadeUp'
+  | 'fadeDown'
+  | 'fadeLeft'
+  | 'fadeRight'
+  | 'scale'
+  | 'slideUp';
 
 interface AnimatedSectionProps {
   children: ReactNode;

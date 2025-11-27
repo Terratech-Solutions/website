@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { title } from '@/data/services/sinkholes.json';
+import Image from 'next/image';
 
 const Title = () => {
   const { background, text, image } = title;
@@ -34,7 +34,13 @@ const Title = () => {
         </div>
 
         <div className="flex relative">
-          <Image src={image.src} priority alt={image.alt} width={image.width} height={image.height} />
+          <Image
+            src={image.src}
+            priority
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+          />
         </div>
       </div>
     </section>
