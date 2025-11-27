@@ -68,37 +68,37 @@
     },
     "items": [
       {
-        "title": "Concrete Lifting \n and Stabilization",
+        "title": "Concrete Lifting and Stabilization",
         "description": "Lift and level settled slabs with minimal disruption.",
         "iconSrc": "/home/techniques/lifting.svg",
         "href": "/services/sinkholes"
       },
       {
-        "title": "Sinkhole \n Remediation",
+        "title": "Sinkhole Remediation",
         "description": "Fill voids quickly to stabilize collapsing ground.",
         "iconSrc": "/home/techniques/sinkhole.svg",
         "href": "/services/structural"
       },
       {
-        "title": "Roadway \n Repair",
+        "title": "Roadway Repair",
         "description": "Restore undermined pavement.",
         "iconSrc": "/home/techniques/roadway.svg",
         "href": "/services/roadway"
       },
       {
-        "title": "Structural \n Stabilization",
+        "title": "Structural Stabilization",
         "description": "Inject polymers beneath foundations to improve strength.",
         "iconSrc": "/home/techniques/stabilization.svg",
         "href": "/services/slope"
       },
       {
-        "title": "Stormwater \n Infrastructure",
+        "title": "Stormwater Infrastructure",
         "description": "Seal and reinforce around drainage assets.",
         "iconSrc": "/home/techniques/stormwater.svg",
         "href": "/services/stormwater"
       },
       {
-        "title": "3D Scanning and \n Detection",
+        "title": "3D Scanning and Detection",
         "description": "Advanced scanning locates voids for precise repairs.",
         "iconSrc": "/home/techniques/scanning.svg",
         "href": "/services/scanning"

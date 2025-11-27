@@ -7,9 +7,9 @@ const WhyUs = () => {
   const { section, cards } = whyUs;
 
   return (
-    <section className="relative pt-39 pb-20 px-23.5 max-sm:px-10 max-w-[1440] mx-auto bg-linear-to-b from-[#111316] to-[#111216]">
+    <section className="relative max-sm:py-[40px] pt-39 pb-20 px-23.5 max-sm:px-10 max-w-[1440] mx-auto bg-linear-to-b from-[#111316] to-[#111216]">
       <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
-      <p className="text-[60px] tracking-[-1.5px] max-sm:text-[35px] mt-2">{section.title}</p>
+      <p className="text-[28px]/[150%] md:text-[60px] lg:text-[60px] mt-2">{section.title}</p>
       <p className="mt-4 text-[30px] max-sm:text-[18px] tracking-[-0.8px] text-[#C7D1DA] whitespace-pre-line">
         {section.subtitle}
       </p>

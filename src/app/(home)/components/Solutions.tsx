@@ -11,7 +11,7 @@ const Solutions = () => {
           <h2 className="text-[50px]/[60px] max-sm:text-[35px]/[45px] tracking-[1px] font-semibold whitespace-pre-line">
             {intro.title}
           </h2>
-          <p className="mt-9 text-[23px]/[37px] max-sm:text-[18px]/[25px] font-semibold tracking-[0px] whitespace-pre-line">
+          <p className="mt-9 text-[23px]/[37px] max-sm:text-[18px]/[25px] tracking-[0px] whitespace-pre-line">
             {intro.text}
           </p>
         </div>

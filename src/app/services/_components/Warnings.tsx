@@ -27,6 +27,7 @@ const Warnings = () => {
           {items.map((item) => (
             <div key={item.title} className="flex items-center">
               <Image
+                className="w-[70px]"
                 src={item.iconSrc}
                 alt={item.title}
                 width={item.iconWidth}
