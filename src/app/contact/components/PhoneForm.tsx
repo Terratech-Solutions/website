@@ -7,15 +7,11 @@ import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { phoneFormData } from '../../../data/contact.json';
+import { submitContactForm } from '../actions';
 
 const schema = z.object({
   name: z.string().trim().min(1, phoneFormData.validation.nameRequired),
-  email: z
-    .string()
-    .trim()
-    .email(phoneFormData.validation.emailInvalid)
-    .optional()
-    .or(z.literal('')),
+  email: z.email(phoneFormData.validation.emailInvalid).optional().or(z.literal('')),
   phone: z
     .string()
     .trim()
@@ -58,17 +54,13 @@ const PhoneForm = () => {
     };
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const result = await submitContactForm(payload);
 
-      if (res.ok) {
+      if (result.success) {
         setStatus('ok');
         reset();
       } else {
-        throw new Error('Request failed');
+        throw new Error(result.error || 'Request failed');
       }
     } catch {
       setStatus('error');
