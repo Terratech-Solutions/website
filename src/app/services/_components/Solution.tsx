@@ -19,7 +19,13 @@ const Solution = () => {
         <div className="flex justify-between max-sm:gap-2 pt-20 max-md:flex-col max-md:items-center">
           {images.map((img) => (
             <div key={img.src} className="flex relative max-sm:px-15 max-sm:py-5">
-              <Image src={img.src} alt={img.alt} width={img.width} height={img.height} />
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

@@ -26,7 +26,13 @@ const Advanced = () => {
           </div>
 
           <div className="flex relative">
-            <Image src={image.src} alt={image.alt} width={image.width} height={image.height} />
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -37,6 +37,7 @@ const Title = () => {
           <Image
             src={image.src}
             priority
+            fetchPriority="high"
             alt={image.alt}
             width={image.width}
             height={image.height}

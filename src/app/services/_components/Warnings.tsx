@@ -30,6 +30,7 @@ const Warnings = () => {
                 alt={item.title}
                 width={item.iconWidth}
                 height={item.iconHeight}
+                loading="eager"
               />
               <div className="pl-4 lg:whitespace-nowrap">{item.title}</div>
             </div>
