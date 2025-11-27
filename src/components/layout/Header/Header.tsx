@@ -14,7 +14,7 @@ export function Header() {
   const handleDropdownLeave = () => setOpenDropdown(false);
   const toggleMobileDropdown = () => setOpenMobileDropdown((isOpen) => !isOpen);
 
-  const dropdownRef = useRef<HTMLElement>(null);
+  const dropdownRef = useRef<HTMLLIElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export function Header() {
                     }`}
                   >
                     <ul className="py-3">
-                      {item.children.map((child) => (
+                      {item.children?.map((child) => (
                         <li key={child.href}>
                           <Link
                             href={child.href}
@@ -187,7 +187,7 @@ export function Header() {
                         openMobileDropdown ? 'block opacity-100' : 'hidden opacity-0'
                       }`}
                     >
-                      {item.children.map((child) => (
+                      {item.children?.map((child) => (
                         <li key={child.href}>
                           <Link
                             href={child.href}

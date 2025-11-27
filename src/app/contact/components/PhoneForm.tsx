@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { phoneFormData } from '../../../data/contact.json';
+import { phoneFormData } from '@/data/contact.json';
 import { submitContactForm } from '../actions';
 
 const schema = z.object({

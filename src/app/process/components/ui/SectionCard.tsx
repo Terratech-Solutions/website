@@ -16,8 +16,10 @@ interface ListItemProps {
   last: boolean;
 }
 
+type SectionId = 'section-1' | 'section-2' | 'section-3' | 'section-4' | 'section-5' | 'section-6';
+
 const SectionCard = () => {
-  const refs = {
+  const refs: Record<SectionId, React.RefObject<HTMLElement | null>> = {
     'section-1': useRef<HTMLElement | null>(null),
     'section-2': useRef<HTMLElement | null>(null),
     'section-3': useRef<HTMLElement | null>(null),
@@ -38,7 +40,7 @@ const SectionCard = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     sections.forEach((section) => {
-      const el = refs[section.id].current;
+      const el = refs[section.id as SectionId].current;
       if (!el) return;
       ScrollTrigger.create({
         trigger: el,
@@ -109,7 +111,7 @@ const SectionCard = () => {
 
         {sections.map((section) => {
           const isActive = activeId === section.id;
-          const ref = refs[section.id];
+          const ref = refs[section.id as SectionId];
 
           if (section.id === 'section-1') {
             return (
@@ -125,10 +127,18 @@ const SectionCard = () => {
                   <div className="pl-7 text-[24px]">{section.title}</div>
                   <div className="flex items-center pt-7 max-lg:flex-col">
                     <div className="relative w-[300px] h-[185px] ml-[35px] max-lg:m-0">
-                      <Image src={section.images[0].src} alt={section.images[0].alt} fill />
+                      <Image
+                        src={section.images?.[0]?.src || ''}
+                        alt={section.images?.[0]?.alt || ''}
+                        fill
+                      />
                     </div>
                     <div className="relative w-[160px] h-[158px] ml-18 max-lg:ml-0 max-lg:mt-10">
-                      <Image src={section.images[1].src} alt={section.images[1].alt} fill />
+                      <Image
+                        src={section.images?.[1]?.src || ''}
+                        alt={section.images?.[1]?.alt || ''}
+                        fill
+                      />
                     </div>
                   </div>
                   <div className="pt-7 pl-7 text-[14px]">{section.lead}</div>
@@ -152,15 +162,27 @@ const SectionCard = () => {
                   <div className="flex items-center pt-10 max-xl:flex-col">
                     <div className="flex flex-col items-center pl-5 max-xl:p-0">
                       <div className="flex flex-col relative w-[220px] h-[170px]">
-                        <Image src={section.images[0].src} alt={section.images[0].alt} fill />
+                        <Image
+                          src={section.images?.[0]?.src || ''}
+                          alt={section.images?.[0]?.alt || ''}
+                          fill
+                        />
                       </div>
-                      <div className="flex relative pt-2 text-[14px]">{section.images[0].alt}</div>
+                      <div className="flex relative pt-2 text-[14px]">
+                        {section.images?.[0]?.alt}
+                      </div>
                     </div>
                     <div className="flex flex-col pl-32 items-center max-xl:pl-0 max-xl:pt-5">
                       <div className="flex relative w-[138px] h-[170px]">
-                        <Image src={section.images[1].src} alt={section.images[1].alt} fill />
+                        <Image
+                          src={section.images?.[1]?.src || ''}
+                          alt={section.images?.[1]?.alt || ''}
+                          fill
+                        />
                       </div>
-                      <div className="flex relative pt-2 text-[14px]">{section.images[1].alt}</div>
+                      <div className="flex relative pt-2 text-[14px]">
+                        {section.images?.[1]?.alt}
+                      </div>
                     </div>
                   </div>
                   <div className="flex pt-12 max-w-[640px]">{section.text}</div>
@@ -182,7 +204,11 @@ const SectionCard = () => {
                   <div className="text-[24px] font-semibold pl-11">{section.title}</div>
                   <div className="flex max-xl:flex-col justify-center items-center">
                     <div className="flex relative w-[325px] h-[300px] mt-10 ml-17 max-xl:w-full max-xl:m-0">
-                      <Image src={section.images[0].src} alt={section.images[0].alt} fill />
+                      <Image
+                        src={section.images?.[0]?.src || ''}
+                        alt={section.images?.[0]?.alt || ''}
+                        fill
+                      />
                     </div>
                     <div className="flex flex-col pl-16 pt-16 max-xl:p-0">
                       <div className="flex text-[14px] max-xl:hidden">{section.lead}</div>
@@ -207,7 +233,11 @@ const SectionCard = () => {
                   <div className="text-[24px] pl-[40px] font-semibold">{section.title}</div>
                   <div className="flex flex-col pt-5">
                     <div className="relative w-full h-[265px]">
-                      <Image src={section.images[0].src} alt={section.images[0].alt} fill />
+                      <Image
+                        src={section.images?.[0]?.src || ''}
+                        alt={section.images?.[0]?.alt || ''}
+                        fill
+                      />
                     </div>
                     <div className="pt-6 pl-10 text-[14px]">{section.lead}</div>
                   </div>
@@ -235,7 +265,11 @@ const SectionCard = () => {
                     <div className="pt-23 max-w-[770px] max-xl:max-w-[500px]">{section.text}</div>
                   </div>
                   <div className="relative w-full mt-5 h-[290px]">
-                    <Image src={section.images[0].src} alt={section.images[0].alt} fill />
+                    <Image
+                      src={section.images?.[0]?.src || ''}
+                      alt={section.images?.[0]?.alt || ''}
+                      fill
+                    />
                   </div>
                 </div>
               </motion.section>
@@ -258,7 +292,7 @@ const SectionCard = () => {
                       <div className="pt-5 max-w-[350px] text-[14px]">{block.text}</div>
                     </div>
                     <div className="relative w-[130px] h-[170px] ml-13 mt-5 max-lg:ml-0">
-                      <Image src={block.image.src} alt={block.image.alt} fill />
+                      <Image src={block.image?.src || ''} alt={block.image?.alt || ''} fill />
                     </div>
                   </div>
                 ))}
