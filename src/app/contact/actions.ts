@@ -6,7 +6,7 @@ import { z } from 'zod';
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required').max(100, 'Name is too long'),
   email: z.email({ message: 'Invalid email address' }).optional().or(z.literal('')),
-  message: z.string().min(1, 'Message is required').max(1000, 'Message is too long'),
+  // message: z.string().min(1, 'Message is required').max(1000, 'Message is too long'),
   phone: z.string().optional(),
   token: z.string().min(1, 'reCAPTCHA token is required'),
 });
@@ -15,7 +15,7 @@ export async function submitContactForm(formData: {
   name: string;
   email?: string;
   phone?: string;
-  message?: string;
+  // message?: string;
   token: string;
 }) {
   try {
@@ -27,6 +27,7 @@ export async function submitContactForm(formData: {
         field: err.path.join('.'),
         message: err.message,
       }));
+
       return {
         success: false,
         error: 'Validation failed',
@@ -34,7 +35,7 @@ export async function submitContactForm(formData: {
       };
     }
 
-    const { name, email, message, phone, token } = validationResult.data;
+    const { name, email, phone, token } = validationResult.data;
 
     // Verify reCAPTCHA
     const params = new URLSearchParams();
@@ -70,11 +71,6 @@ From: ${name}
 Email: ${email || 'Not provided'}
 ${phone ? `Phone: ${phone}` : ''}
 
-Message:
-────────────────────────────────
-${message || 'Not provided'}
-────────────────────────────────
-
 This message was sent via your website contact form.
     `.trim();
 
@@ -88,7 +84,7 @@ This message was sent via your website contact form.
     });
 
     return { success: true };
-  } catch (error: any) {
+  } catch (error) {
     console.error('Contact form error:', error);
     return {
       success: false,

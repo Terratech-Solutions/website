@@ -10,10 +10,10 @@ export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
 const Contact = () => {
   return (
-    <div>
+    <>
       <Connect />
       <PhoneForm />
-    </div>
+    </>
   );
 };
 

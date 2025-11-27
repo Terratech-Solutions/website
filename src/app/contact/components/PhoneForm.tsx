@@ -25,6 +25,7 @@ type FormValues = z.infer<typeof schema>;
 const PhoneForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [status, setStatus] = useState<'idle' | 'pending' | 'ok' | 'error'>('idle');
+  const [error, setError] = useState<string | null>(null);
   const [showIframe, setShowIframe] = useState(false);
 
   setTimeout(() => {
@@ -39,7 +40,12 @@ const PhoneForm = () => {
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormValues) => {
-    if (!executeRecaptcha) return alert('reCAPTCHA not yet loaded');
+    if (!executeRecaptcha) {
+      setError('reCAPTCHA not yet available');
+      return;
+    }
+
+    setError(null);
     setStatus('pending');
     const { name, email, phone, source } = data;
 
@@ -60,9 +66,15 @@ const PhoneForm = () => {
         setStatus('ok');
         reset();
       } else {
-        throw new Error(result.error || 'Request failed');
+        setError(result.error || 'Request failed');
+        setStatus('error');
       }
-    } catch {
+    } catch (error: unknown) {
+      if (typeof error === 'object' && error !== null && 'message' in error) {
+        setError(String((error as { message?: unknown }).message));
+      } else {
+        setError('An unexpected error occurred');
+      }
       setStatus('error');
     }
   };
@@ -146,7 +158,7 @@ const PhoneForm = () => {
             <p className="text-sm text-green-400">{phoneFormData.form.messages.success}</p>
           )}
           {status === 'error' && (
-            <p className="text-sm text-red-400">{phoneFormData.form.messages.error}</p>
+            <p className="text-sm text-red-400">{error}</p>
           )}
         </form>
 
@@ -157,7 +169,7 @@ const PhoneForm = () => {
           {phoneFormData.contacts.map((item) => (
             <div key={item.type} className="flex mt-3 max-md:mt-4">
               <div className="flex relative">
-                <Image src={item.icon} alt={item.type} width={23} height={23} />
+                <Image src={item.icon} alt={item.type} width={23} height={23} className="w-auto h-auto" />
               </div>
               <div className="flex flex-col pl-3">
                 <div>{item.label}</div>
