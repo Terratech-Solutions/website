@@ -363,7 +363,7 @@ const ListItem = ({ section, label, active, scrollTo, last }: ListItemProps) => 
         </div>
       </div>
 
-      {!last && <div className="max-md:hidden absolute text-[20px] left-[6px] top-[22px]">↓</div>}
+      {!last && <div className="max-md:hidden absolute text-[20px] left-[4px] top-[22px]">↓</div>}
     </Link>
   );
 };
