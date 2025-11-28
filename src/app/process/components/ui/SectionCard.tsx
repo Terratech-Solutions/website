@@ -341,7 +341,7 @@ const ListItem = ({ section, label, active, scrollTo, last }: ListItemProps) => 
     <Link
       href={href}
       onClick={scrollTo}
-      className="flex relative max-sm:text-[14px] text-[18px] max-md:flex-col justify-center"
+      className="flex relative max-sm:text-[14px] text-[18px]/[23px] max-md:flex-col justify-center"
     >
       <span className="flex-none relative mr-3 flex h-[23px] w-[23px] items-center justify-center rounded-full border border-white/70">
         <AnimatePresence mode="wait">
@@ -363,7 +363,11 @@ const ListItem = ({ section, label, active, scrollTo, last }: ListItemProps) => 
         </div>
       </div>
 
-      {!last && <div className="max-md:hidden absolute text-[20px] left-[4px] top-[23px]">↓</div>}
+      {!last && (
+        <div className="max-md:hidden absolute left-[8px] top-[30px]">
+          <Image src="/process/arrow-down.svg" height={11} width={8} alt="Arrow" />
+        </div>
+      )}
     </Link>
   );
 };
