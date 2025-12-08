@@ -29,15 +29,15 @@ const Introducing = () => {
         <div className="mt-10 flex gap-4 max-sm:flex-col">
           <Link
             href={cta.freeQuote.href}
-            className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:max-w-[300px]"
+            className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
           >
             <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
           </Link>
           <Link
-            href={cta.call.href}
-            className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:max-w-[200px]"
+            href={cta.learnProcess.href}
+            className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 max-sm:px-4 max-sm:py-3 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:w-full w-auto"
           >
-            {cta.call.content}
+            {cta.learnProcess.content}
           </Link>
         </div>
       </div>

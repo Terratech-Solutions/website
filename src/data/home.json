@@ -28,9 +28,9 @@
         "content": "Get a Free Quote",
         "href": "/contact"
       },
-      "call": {
-        "content": "Call Now",
-        "href": "tel:0354321234"
+      "learnProcess": {
+        "content": "Learn About Our Process",
+        "href": "/process"
       }
     }
   },

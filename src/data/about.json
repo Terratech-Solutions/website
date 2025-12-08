@@ -12,8 +12,18 @@
       "part4": "Construction"
     },
     "value1": "Creating sustainable foundations for the",
-    "value2": "communities we serve."
-  },
+    "value2": "communities we serve.",
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      },
+      "learnProcess": {
+        "content": "Learn About Our Process",
+        "href": "/process"
+      }
+    }
+    },
   "community": {
     "sectionLabel": "OUR MISSION & VISION",
     "title": {

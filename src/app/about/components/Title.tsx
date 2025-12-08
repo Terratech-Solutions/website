@@ -1,8 +1,9 @@
 import page from '@/data/about.json';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Title = () => {
-  const { title, value1, value2 } = page.introducing;
+  const { title, value1, value2, cta } = page.introducing;
   const { part1, part2, part3, part4 } = title;
   return (
     <section className="relative overflow-hidden">
@@ -29,6 +30,20 @@ const Title = () => {
           {value1} <br />
           {value2}
         </p>
+        <div className="mt-10 flex gap-4 max-sm:flex-col">
+          <Link
+            href={cta.freeQuote.href}
+            className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+          >
+            <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
+          </Link>
+          <Link
+            href={cta.learnProcess.href}
+            className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 max-sm:px-4 max-sm:py-3 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:w-full w-auto"
+          >
+            {cta.learnProcess.content}
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -10,7 +10,13 @@
       "text": "Get in",
       "highlight": "Touch"
     },
-    "subtitle": "Connect with our engineers to discuss\ninspections, quotes, or project planning today."
+    "subtitle": "Connect with our engineers to discuss\ninspections, quotes, or project planning today.",
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      }
+    }
   },
   "phoneFormData": {
     "form": {

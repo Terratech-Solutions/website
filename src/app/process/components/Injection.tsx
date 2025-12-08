@@ -1,7 +1,8 @@
 import { injection } from '@/data/process.json';
+import Link from 'next/link';
 
 const Injection = () => {
-  const { background, title, subtitle } = injection;
+  const { background, title, subtitle, cta } = injection;
 
   return (
     <section
@@ -17,6 +18,14 @@ const Injection = () => {
         />
 
         <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line">{subtitle}</p>
+        <div className="mt-10 flex gap-4 max-sm:flex-col max-sm:items-center">
+          <Link
+            href={cta.freeQuote.href}
+            className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+          >
+            <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
+          </Link>
+        </div>
       </div>
     </section>
   );

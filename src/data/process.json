@@ -28,7 +28,13 @@
         "for <span class='text-true-red'>Every Project.</span>"
       ]
     },
-    "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
+    "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair.",
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      }
+    }
   },
   "innovative": {
     "section": {

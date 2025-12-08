@@ -1,8 +1,9 @@
 import { title } from '@/data/services/sinkholes.json';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Title = () => {
-  const { background, text, image } = title;
+  const { background, text, image, cta } = title;
 
   return (
     <section
@@ -31,6 +32,14 @@ const Title = () => {
           <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line">
             {text.subtitle}
           </p>
+          <div className="mt-10 flex gap-4 max-sm:flex-col max-sm:items-center">
+            <Link
+              href={cta.freeQuote.href}
+              className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+            >
+              <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
+            </Link>
+          </div>
         </div>
 
         <div className="flex relative">

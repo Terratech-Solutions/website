@@ -104,6 +104,12 @@
       },
       "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
     },
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      }
+    },
     "image": {
       "src": "/services/sinkholes.png",
       "alt": "Scan 1",
