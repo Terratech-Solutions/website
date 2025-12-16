@@ -78,24 +78,24 @@ const Accordion = ({
                 }}
                 whileHover={{ width: isActive ? '74%' : '14%' }}
                 transition={{ duration: 0.5 }}
-                className="
-      cursor-default
-      flex-start
-      items-center
-      bg-transparent
-      min-h-[400px]
-      max-h-[400px]
-      lg:px-4
-      px-1
-      py-3
-      flex
-      relative
-      overflow-visible
-      focus:outline-none
-      border-l-2
-      border-white
-      border-solid
-      "
+                className={`
+    ${!isActive ? 'cursor-pointer' : 'cursor-default'}
+    flex-start
+    items-center
+    bg-transparent
+    min-h-[400px]
+    max-h-[400px]
+    lg:px-4
+    px-1
+    py-3
+    flex
+    relative
+    overflow-visible
+    focus:outline-none
+    border-l-2
+    border-white
+    border-solid 
+  `}
               >
                 <AnimatePresence initial={false}>
                   {isActive && (

@@ -10,10 +10,22 @@
       "title": "Advanced 3D\nGround Imaging"
     },
     "points": [
-      "Early Detection",
-      "Precision & Safety",
-      "Minimal Disruption",
-      "Customized Solutions"
+      {
+        "title": "Early Detection",
+        "description": "Identify potential sinkholes before they become critical threats using advanced subsurface scanning technology."
+      },
+      {
+        "title": "Precision & Safety",
+        "description": "Accurate mapping and monitoring ensure structural integrity and protect lives with millimeter-level precision."
+      },
+      {
+        "title": "Minimal Disruption",
+        "description": "Non-invasive imaging methods allow continuous monitoring without interrupting daily operations or infrastructure use."
+      },
+      {
+        "title": "Customized Solutions",
+        "description": "Tailored assessment strategies designed specifically for your site conditions and risk management needs."
+      }
     ],
     "image": {
       "src": "/services/sinkholes-2.png",
@@ -38,7 +50,9 @@
           "alt": "Stage 1",
           "width": 321,
           "height": 480
-        }
+        },
+        "title": "Compaction Grouting",
+        "text": "This technique uses a low-mobility, thick grout injected under high pressure to displace and densify loose granular soils, increase bearing capacity, and fill voids."
       },
       {
         "label": "Stage 2",
@@ -47,7 +61,9 @@
           "alt": "Stage 2",
           "width": 321,
           "height": 480
-        }
+        },
+        "title": "Permeation Grouting",
+        "text": "This process injects low-viscosity grout into soil without disturbing its natural structure, filling the pores to increase bearing capacity and reduce permeability. It is suitable for granular soils like sand and gravel."
       },
       {
         "label": "Stage 3",
@@ -56,7 +72,9 @@
           "alt": "Stage 3",
           "width": 321,
           "height": 480
-        }
+        },
+        "title": "Chemical (polymer) Grouting",
+        "text": "This involves injecting a chemical solution, such as an expanding polymer or grout, to consolidate or lift concrete slabs and stabilize soil. Expanding polymer fills voids and compacts soil."
       }
     ]
   },
