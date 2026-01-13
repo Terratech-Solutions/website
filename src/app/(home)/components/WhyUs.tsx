@@ -1,3 +1,6 @@
+'use client';
+
+import { sendGAEvent } from '@/app/utils/ga';
 import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { whyUs } from '@/data/home.json';
 import Image from 'next/image';
@@ -36,6 +39,14 @@ const WhyUs = () => {
             <Link
               href={item.href}
               className="text-[25px] max-sm:text-[18px] mt-6 hover:text-concrete text-[#87acc6]"
+              onClick={() => {
+                sendGAEvent({
+                  event: 'whyus_cta_click',
+                  button_text: item.cta,
+                  location: 'whyus_section',
+                  card_title: item.title,
+                });
+              }}
             >
               {item.cta}
             </Link>

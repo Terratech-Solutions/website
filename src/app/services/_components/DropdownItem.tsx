@@ -15,7 +15,7 @@ const DropdownItem = ({ title, description }: DropdownItemProps) => {
   return (
     <div>
       <div
-        className="text-[26px]/[60px] lg:text-[36px]/[80px] w-full lg:w-[500px] xl:w-[500px] border-b-2 border-zinc-200 pb-2 flex items-center justify-between cursor-pointer"
+        className="text-[26px]/[60px] lg:text-[32px]/[70px] w-full lg:w-[500px] xl:w-[500px] border-b-2 border-zinc-200 pb-2 flex items-center justify-between cursor-pointer"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <span>{title}</span>

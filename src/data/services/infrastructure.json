@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Solutions for Critical Infrastructure | Terratech",
+    "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
+    "path": "/services/infrastructure"
+  },
+  "title": {
+    "background": {
+      "from": "#131313",
+      "to": "#1D1D1D"
+    },
+    "text": {
+      "title": {
+        "lines": [
+          "Solutions",
+          "for Critical",
+          "Infrastructure"
+        ],
+        "highlight": ["Critical", "Infrastructure"],
+        "highlightColor": "text-true-red"
+      },
+      "subtitle": "We provide innovative solutions for concrete stabilization and infrastructure repair."
+    },
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      }
+    },
+    "image": {
+      "src": "/services/infrastructure/infrastructure.png",
+      "alt": "Scan 1",
+      "width": 800,
+      "height": 460
+    }
+  },
+  "effectiveRepair": {
+    "section": {
+      "sectionLabel": "Innovative Solutions",
+      "title": {
+        "lines": ["Effective Repair", "for Commercial &", "Residential."],
+        "highlight": ["Effective", "Repair"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Along with on site assessment and detailed visual observation of the area, Terratech's 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
+    },
+    "image": {
+      "src": "/services/infrastructure/Infrastructure-1.mp4",
+      "alt": "Graphic 2",
+      "width": 650,
+      "height": 400
+    }
+  },
+  "reinforceMitigate": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Sinkhole", "Formation Process"],
+        "highlight": ["Sinkhole"],
+        "highlightColor": "text-lemon-green"
+      },
+      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+    },
+    "image": {
+      "src": "/services/infrastructure/sinkhole.png",
+      "alt": "Graphic 1",
+      "width": 860,
+      "height": 483
+    }
+  },
+  "crumbling": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Crumbling Infrastructure"],
+        "highlight": [],
+        "highlightColor": "text-true-red"
+      }
+    },
+    "points": [
+      {
+        "title": "Early Detection",
+        "description": "Early signs of structural breakdown are identified before visible damage spreads, helping you address problems, saving you time, money and risk."
+      },
+      {
+        "title": "Precision & Safety",
+        "description": "Repairs target the specific areas of deterioration, improving safety and performance without unnecessary removal or overcorrection."
+      },
+      {
+        "title": "Minimal Disruption",
+        "description": "Stabilization is completed with limited impact to structures and operations. Allowing infrastructure to remain functional during repairs."
+      },
+      {
+        "title": "Customized Solutions",
+        "description": "Each solution is designed around your site's specific conditions, delivering long-term stability without delays."
+      }
+    ],
+    "image": {
+      "src": "/services/infrastructure/crumbling.png",
+      "alt": "Graphic 1",
+      "width": 700,
+      "height": 300
+    }
+  },
+  "solution": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Our Solution", "Without Excavation"],
+        "highlight": ["Without", "Excavation"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+    },
+    "images": [
+      {
+        "src": "/services/infrastructure/solution-1.png",
+        "alt": "Slider 1",
+        "width": 800,
+        "height": 480
+      },
+      {
+        "src": "/services/infrastructure/solution-2.png",
+        "alt": "Slider 2",
+        "width": 800,
+        "height": 480
+      }
+    ]
+  }
+}

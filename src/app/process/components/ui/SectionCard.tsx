@@ -1,6 +1,5 @@
 'use client';
 
-import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { sectionCard } from '@/data/process.json';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
