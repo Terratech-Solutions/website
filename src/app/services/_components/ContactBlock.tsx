@@ -4,9 +4,15 @@ import { sendGAEvent } from '@/app/utils/ga';
 import ConsultationButtons from '@/components/ui/consultation-buttons/ConsultationButtons';
 import Link from 'next/link';
 
-const ContactBlock = () => (
-  <div className="px-4 md:px-13.5 pt-13">
-    <div className="flex max-lg:flex-col max-w-[1440px] mx-auto bg-foreground max-sm:px-4 px-25.5 pt-7 pb-7">
+interface ContactBlockProps {
+  showBackground?: boolean;
+}
+
+const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
+  <div className={showBackground ? 'px-4 md:px-13.5 pt-13' : 'py-8 px-20'}>
+    <div
+      className={`flex max-lg:flex-col max-w-[1440px] mx-auto ${showBackground ? 'bg-foreground max-sm:px-4 px-25.5 pt-7 pb-7' : ''}`}
+    >
       <div
         className="
           bg-black text-white flex flex-col
