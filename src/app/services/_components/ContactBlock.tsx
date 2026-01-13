@@ -9,7 +9,7 @@ interface ContactBlockProps {
 }
 
 const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
-  <div className={showBackground ? 'px-4 md:px-13.5 pt-13' : 'py-8 px-20'}>
+  <div className={showBackground ? 'px-4 md:px-13.5 pt-13' : ''}>
     <div
       className={`flex max-lg:flex-col max-w-[1440px] mx-auto ${showBackground ? 'bg-foreground max-sm:px-4 px-25.5 pt-7 pb-7' : ''}`}
     >
