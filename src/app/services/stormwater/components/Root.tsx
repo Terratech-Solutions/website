@@ -31,85 +31,37 @@ const Root = () => {
             />
           </div>
           <div
-            className="flex justify-around items-center w-full pt-20 max-lg:flex-col max-lg:gap-8 rounded-[15px] gap-8"
+            className="flex justify-around items-end w-full pt-20 max-lg:flex-col max-lg:gap-8 max-lg:items-center rounded-[15px] gap-8"
             style={{
               background: 'linear-gradient(180deg, #272727 0%, #000000 100%)',
             }}
           >
-            <div className="flex flex-col items-center w-full max-w-[420px] mx-2">
-              <div
-                className={`flex flex-col items-center w-full transition-transform duration-300 ease-in-out group
-      ${!isMobile ? 'hover:scale-105' : ''}
-      ${isMobile && activeIndex === 0 ? 'scale-105' : ''}
-    `}
-                onClick={() => handleClick(0)}
-                style={{ cursor: isMobile ? 'pointer' : 'default' }}
-              >
-                <Image
-                  src={stages[0].image.src}
-                  alt={stages[0].image.alt}
-                  width={stages[0].image.width}
-                  height={stages[0].image.height}
-                  loading="lazy"
-                  className="max-w-[220px] md:max-w-[320px] w-full h-auto"
-                />
-                <div className="pt-2 w-full flex justify-center">
-                  <div className="text-center text-base font-medium max-w-[260px]">
-                    {stages[0].label}
+            {stages.map((stage, idx) => (
+              <div key={idx} className="flex flex-col w-full max-w-[420px] mx-2 items-center">
+                <div
+                  className={`flex flex-col w-full transition-transform duration-300 ease-in-out group items-center
+                    ${!isMobile ? 'hover:scale-105' : ''}
+                    ${isMobile && activeIndex === idx ? 'scale-105' : ''}
+                  `}
+                  onClick={() => handleClick(idx)}
+                  style={{ cursor: isMobile ? 'pointer' : 'default' }}
+                >
+                  <Image
+                    src={stage.image.src}
+                    alt={stage.image.alt}
+                    width={stage.image.width}
+                    height={stage.image.height}
+                    loading="lazy"
+                    className="max-w-[220px] md:max-w-[320px] w-full h-auto"
+                  />
+                  <div className="pt-2 w-full flex justify-center mt-[-30px] pb-[10px] items-center">
+                    <div className="text-center text-base font-medium max-w-[260px]">
+                      {stage.label}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex flex-col items-center w-full max-w-[420px] mx-2">
-              <div
-                className={`flex flex-col items-center w-full transition-transform duration-300 ease-in-out group mb-[21px]
-      ${!isMobile ? 'hover:scale-105' : ''}
-      ${isMobile && activeIndex === 1 ? 'scale-105' : ''}
-    `}
-                onClick={() => handleClick(1)}
-                style={{ cursor: isMobile ? 'pointer' : 'default' }}
-              >
-                <Image
-                  src={stages[1].image.src}
-                  alt={stages[1].image.alt}
-                  width={stages[1].image.width}
-                  height={stages[1].image.height}
-                  loading="lazy"
-                  className="max-w-[220px] md:max-w-[320px] w-full h-auto"
-                />
-                <div className="pt-2 w-full flex justify-center">
-                  <div className="text-center text-base font-medium max-w-[260px]">
-                    {stages[1].label}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center w-full max-w-[420px] mx-2">
-              <div
-                className={`flex flex-col items-center w-full transition-transform duration-300 ease-in-out group mb-[7px]
-      ${!isMobile ? 'hover:scale-105' : ''}
-      ${isMobile && activeIndex === 2 ? 'scale-105' : ''}
-    `}
-                onClick={() => handleClick(2)}
-                style={{ cursor: isMobile ? 'pointer' : 'default' }}
-              >
-                <Image
-                  src={stages[2].image.src}
-                  alt={stages[2].image.alt}
-                  width={stages[2].image.width}
-                  height={stages[2].image.height}
-                  loading="lazy"
-                  className="max-w-[220px] md:max-w-[320px] w-full h-auto"
-                />
-                <div className="pt-2 w-full flex justify-center">
-                  <div className="text-center text-base font-medium max-w-[260px]">
-                    {stages[2].label}
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import HighlightedText from '@/components/HighlightedText';
 import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
-import Image from 'next/image';
 import { useMediaQuery } from 'usehooks-ts';
 
 type ImageWithDescriptionProps = {
@@ -57,7 +56,7 @@ const VideoWithDescriptionCol = ({ section, image }: ImageWithDescriptionProps) 
                   aria-label={image.alt}
                 />
               </div>
-              <div className="whitespace-pre-line text-base sm:text-lg md:text-xl text-neutral-200 max-w-full text-left">
+              <div className="text-[18px] md:text-[22px] max-w-full text-left whitespace-pre-line text-neutral-200">
                 {section.description}
               </div>
             </div>
