@@ -6,10 +6,10 @@ const RepairSolutions = () => {
   const { section, image } = repairSolutions;
 
   return (
-    <section className="max-sm:pt-10 pt-33">
+    <section className="px-4 md:px-13.5 max-sm:pt-10 pt-33">
       <div className="max-w-[1440px] mx-auto max-sm:px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-7 pb-7">
-          <div className="flex flex-col px-6 lg:px-23.5 md:mx-10 py-8 lg:py-13 justify-between bg-foreground">
+          <div className="flex flex-col px-6 lg:px-23.5 md:mx-10 lg:mx-0 py-8 lg:py-13 justify-between bg-foreground">
             <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
             <div className="flex flex-col">
               <div className="text-[60px]/[80px] max-xl:text-[40px]/[55px]">
