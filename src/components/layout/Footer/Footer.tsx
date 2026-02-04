@@ -1,6 +1,6 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import footerData from '@/data/footer.json';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ export function Footer() {
   const pathname = usePathname();
 
   const handleNavClick = (item: { href: string; label: string }) => {
-    sendGAEvent({
+    sendGTMEvent({
       event: 'footer_nav_click',
       href: item.href,
       label: item.label,
@@ -21,7 +21,7 @@ export function Footer() {
   };
 
   const handleSocialClick = (social: { href: string; label: string }) => {
-    sendGAEvent({
+    sendGTMEvent({
       event: 'footer_social_click',
       href: social.href,
       label: social.label,
@@ -30,7 +30,7 @@ export function Footer() {
   };
 
   const handleContactClick = (contact: { type: string; href: string; value: string }) => {
-    sendGAEvent({
+    sendGTMEvent({
       event: 'footer_contact_click',
       contact_type: contact.type,
       href: contact.href,

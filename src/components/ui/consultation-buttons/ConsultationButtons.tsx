@@ -1,6 +1,6 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import Link from 'next/link';
 import buttonsData from './consultationButtons.json';
 
@@ -16,7 +16,7 @@ const ConsultationButtons = () => {
             btn.style === 'light' ? 'flex-[2_2_0%]' : 'flex-[1.3_1.3_0%]'
           }`}
           onClick={() => {
-            sendGAEvent({
+            sendGTMEvent({
               event: 'consultation_button_click',
               value: 1,
               button_text: btn.bigText,

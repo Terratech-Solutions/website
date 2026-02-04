@@ -1,6 +1,6 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { whyUs } from '@/data/home.json';
 import Image from 'next/image';
@@ -40,7 +40,7 @@ const WhyUs = () => {
               href={item.href}
               className="text-[25px] max-sm:text-[18px] mt-6 hover:text-concrete text-[#87acc6]"
               onClick={() => {
-                sendGAEvent({
+                sendGTMEvent({
                   event: 'whyus_cta_click',
                   button_text: item.cta,
                   location: 'whyus_section',

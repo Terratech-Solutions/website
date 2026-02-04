@@ -1,6 +1,6 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import ConsultationButtons from '@/components/ui/consultation-buttons/ConsultationButtons';
 import contact from '@/data/contact.json';
 
@@ -37,7 +37,7 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
             sm:mb-6 sm:px-5 sm:py-2.5 sm:text-sm
           "
           onClick={() => {
-            sendGAEvent({
+            sendGTMEvent({
               event: 'call_us_click',
               button_text: 'Call Us',
               location: 'contact_block_section',

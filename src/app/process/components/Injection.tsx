@@ -1,6 +1,6 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import contactData from '@/data/contact.json';
 import { injection } from '@/data/process.json';
 
@@ -19,7 +19,7 @@ const Injection = () => {
   const phoneContact = contacts.find((c) => c.type === 'Phone');
 
   const handleCtaClick = () => {
-    sendGAEvent({
+    sendGTMEvent({
       event: 'process_injection_cta_click',
       cta_id: 'freeQuote',
       cta_label: cta.freeQuote.content,

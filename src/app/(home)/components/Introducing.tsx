@@ -1,6 +1,6 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import contactData from '@/data/contact.json';
 import page from '@/data/home.json';
 import Image from 'next/image';
@@ -44,7 +44,7 @@ const Introducing = () => {
           <a
             href={phoneContact?.href || '#'}
             onClick={() => {
-              sendGAEvent({
+              sendGTMEvent({
                 event: 'introducing_cta_click',
                 button_text: cta.freeQuote.content,
                 location: 'introducing_section',
@@ -58,7 +58,7 @@ const Introducing = () => {
             href={cta.learnProcess.href}
             className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 max-sm:px-4 max-sm:py-3 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:w-full w-auto"
             onClick={() => {
-              sendGAEvent({
+              sendGTMEvent({
                 event: 'learn_about_process',
                 button_text: cta.learnProcess.content,
                 location: 'introducing_section',

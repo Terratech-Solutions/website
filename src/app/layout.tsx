@@ -1,7 +1,7 @@
 import { buildPageMetadata, localBusinessSchema, SITE_NAME, websiteSchema } from '@/app/metadata';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { Header } from '@/components/layout/Header/Header';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
   path: '/',
 });
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-terra-black">
       <body className={`antialiased bg-terra-black`}>
-        {Boolean(gaId) && <GoogleAnalytics gaId={gaId!} />}
+        {Boolean(gtmId) && <GoogleTagManager gtmId="GTM-XYZ" />}
         {Boolean(clarityId) && (
           <Script id="clarity-script" strategy="afterInteractive">
             {`

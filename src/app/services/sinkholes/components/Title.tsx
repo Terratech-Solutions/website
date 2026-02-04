@@ -1,4 +1,4 @@
-import { sendGAEvent } from '@/app/utils/ga';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import { title } from '@/data/services/sinkholes.json';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -35,7 +35,7 @@ const Title = () => {
             <Link
               href={cta.freeQuote.href}
               onClick={() => {
-                sendGAEvent({
+                sendGTMEvent({
                   event: 'click_free_quote',
                   value: 1,
                   button_text: cta.freeQuote.content,
