@@ -33,7 +33,7 @@ const WhyUs = () => {
                 />
               </div>
               <p className="text-[24px] min-h-[70px] font-medium md-min-h-[114px]">{item.title}</p>
-              <p className="mt-5 text-[18px] lg:text-[2`0px]">{item.description}</p>
+              <p className="mt-5 text-[18px] lg:text-[20px]">{item.description}</p>
             </div>
 
             <Link

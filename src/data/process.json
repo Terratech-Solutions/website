@@ -8,9 +8,9 @@
     "section": {
       "sectionLabel": "Our Approach",
       "title": {
-        "beforeHighlight": "The",
-        "highlight": "Future",
-        "afterHighlight": "of Polymer\nInjection is Here."
+        "beforeHighlight": "How It Works",
+        "highlight": "",
+        "afterHighlight": ""
       },
       "description": "Fast, precise, and engineered for lasting stability."
     }
@@ -23,12 +23,10 @@
     "title": {
       "lines": [
         "Polymer Injection,",
-        "<span class='text-true-red'>Simplified</span>",
-        "Strong Foundations",
-        "for <span class='text-true-red'>Every Project.</span>"
+        "<span class='text-true-red'>Simplified</span>"
       ]
     },
-    "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair.",
+    "subtitle": "A straightforward process for identifying subsurface issues and stabilizing infrastructure from below.",
     "cta": {
       "freeQuote": {
         "content": "Get a Free Quote",
@@ -39,7 +37,7 @@
   "innovative": {
     "section": {
       "sectionLabel": "Innovative Solutions",
-      "title": "A <span class='text-lemon-green'>New Way</span> to <br /> assess and <br /> remediate.",
+      "title": "<span class='text-lemon-green'>Our Process</span>",
       "description": "We rapidly assess structural issues using state of the art early detection methods. We deploy advanced 3D scanning, provide substantive analysis, and conduct in depth reporting.",
       "badgeIcon": "/process/innovative/cross.svg"
     },
@@ -74,55 +72,55 @@
         "title": "Seeing Beneath the Surface",
         "images": [
           {
-            "src": "/process/innovative/surface-1.png",
+            "src": "/process/innovative/radar.jpg",
             "alt": "Surface 1",
-            "width": 249,
-            "height": 184
+            "width": 125,
+            "height": 132
           },
           {
-            "src": "/process/innovative/surface-2.png",
+            "src": "/process/innovative/radar_updated_2.png",
             "alt": "Surface 2",
-            "width": 148,
-            "height": 157
+            "width": 402,
+            "height": 200
           }
         ],
         "lead": "3D scanning and detection tools map voids, instability, and weak strata.",
-        "text": "Our process starts with a clear picture of the ground conditions. Using advanced scanning technologies, we identify subsurface anomalies that compromise stability—without excavation or disruption."
+        "text": "Using advanced scanning technologies, we identify subsurface anomalies that compromise stability—without excavation or disruption."
       },
       {
         "id": "section-2",
-        "navLabel": "3D Data Planning",
-        "title": "From Complex Data to Actionable Analysis",
+        "navLabel": "3D Data & Planning",
+        "title": "Intelligent Subsurface Targeting",
         "images": [
           {
-            "src": "/process/innovative/geo-data.png",
+            "src": "/process/innovative/SW_Diagram_1_1 2.png",
             "alt": "Raw Geotechnical Data",
-            "width": 220,
-            "height": 170
+            "width": 196,
+            "height": 158
           },
           {
-            "src": "/process/innovative/geo-data-2.png",
-            "alt": "Clear, Efficient Strategies.",
-            "width": 138,
-            "height": 170
+            "src": "/process/innovative/SW_Diagram_2_3.png",
+            "alt": "Actionable Subsurface Analysis",
+            "width": 196,
+            "height": 158
           }
         ],
-        "text": "Instead of over-engineered reports, we provide streamlined plans that pinpoint exactly where injection is needed, what volume is required, and how results will be measured. Every step is mapped out for clarity and speed."
+        "text": "Instead of over-engineered reports, we turn raw data into visible, smart-mapped action plans to pinpoint exactly where injection is needed, what volume is required, and how results are  measured. "
       },
       {
         "id": "section-3",
         "navLabel": "Targeted Drilling",
-        "title": "Minimal Impact, Maximum Precision.",
+        "title": "Minimal Impact, Maximum Results",
         "images": [
           {
-            "src": "/process/innovative/drill.png",
+            "src": "/process/innovative/Group_14.png",
             "alt": "Precision Drilling",
-            "width": 325,
-            "height": 300
+            "width": 239,
+            "height": 334
           }
         ],
-        "lead": "Small-diameter drill points access treatment zones with surgical accuracy.",
-        "text": "We eliminate the need for heavy equipment by drilling precise, unobtrusive injection holes. This ensures minimal surface disruption and keeps critical infrastructure operational throughout the process."
+        "lead": "Small-diameter drill points \naccess treatment zones with surgical accuracy.",
+        "text": "We eliminate the need for heavy equipment by drilling precise, unobtrusive injection holes. The result is minimal disruption and a fast, no excavation solution."
       },
       {
         "id": "section-4",
@@ -130,10 +128,10 @@
         "title": "Strength Where It Matters Most",
         "images": [
           {
-            "src": "/process/innovative/polymer.png",
+            "src": "/process/innovative/Group_15.png",
             "alt": "Polymer Injection",
-            "width": 900,
-            "height": 265
+            "width": 583,
+            "height": 356
           }
         ],
         "lead": "High-density polymer expands underground, compacting and stabilizing soil.",
@@ -145,39 +143,35 @@
         "title": "Live Data, Informed Adjustments",
         "images": [
           {
-            "src": "/process/innovative/infographic-placeholder.jpg",
+            "src": "/process/innovative/SS_sup_3.png",
             "alt": "Infographic",
-            "width": 900,
-            "height": 290
+            "width": 352,
+            "height": 359
           }
         ],
         "lead": "Sensors track flow, pressure, and displacement as injections occur.",
-        "text": "Our monitoring system provides immediate feedback, allowing on-the-fly adjustments that guarantee accuracy. Every injection is guided by data, not guesswork, ensuring reliable, reproducible outcomes."
+        "text": "Our monitoring system provides immediate feedback, allowing on-the-fly adjustments that guarantee accuracy and true, long-term solutions."
       },
       {
         "id": "section-6",
-        "navLabel": "Verification Reporting",
+        "navLabel": "Verification & Reporting",
         "title": "Immediate Results & Proof You Can Act On",
+        "image": {
+          "src": "/process/innovative/Radar_HG_4.png",
+          "alt": "Infographic",
+          "width": 487,
+          "height": 261
+        },
         "blocks": [
           {
             "title": "Immediate Results",
-            "text": "Polymer cures in minutes, restoring load-bearing strength so roads and facilities reopen with minimal downtime.",
-            "image": {
-              "src": "/process/innovative/infographic-placeholder.jpg",
-              "alt": "Infographic",
-              "width": 130,
-              "height": 170
-            }
+            "titleColor": "text-true-red",
+            "text": "Polymer cures in minutes, restoring load-bearing strength so roads and facilities reopen with minimal downtime."
           },
           {
             "title": "Proof You Can Act On",
-            "text": "Concise reports combine test data and injection logs into clear, defensible documentation—without the clutter of traditional engineering reports.",
-            "image": {
-              "src": "/process/innovative/infographic-placeholder.jpg",
-              "alt": "Infographic",
-              "width": 130,
-              "height": 170
-            }
+            "titleColor": "text-lemon-green",
+            "text": "Concise reports combine test data and injection logs into clear, defensible documentation—without the clutter of traditional engineering reports."
           }
         ]
       }

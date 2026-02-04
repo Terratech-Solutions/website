@@ -1,383 +1,210 @@
 'use client';
 
-import { sendGAEvent } from '@/app/utils/ga';
-import { sectionCard } from '@/data/process.json';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { AnimatePresence, motion } from 'motion/react';
+import { phoneFormData } from '@/data/contact.json';
+import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
-import Link from 'next/link';
-import { MouseEvent, useLayoutEffect, useRef, useState } from 'react';
+import { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { submitContactForm } from '../actions';
 
-interface ListItemProps {
-  section: string;
-  label: string;
-  active: boolean;
-  scrollTo: (e: MouseEvent) => void;
-  last: boolean;
-}
+const schema = z.object({
+  name: z.string().trim().min(1, phoneFormData.validation.nameRequired),
+  email: z.email(phoneFormData.validation.emailInvalid).optional().or(z.literal('')),
+  phone: z
+    .string()
+    .trim()
+    .min(1, phoneFormData.validation.phoneRequired)
+    .regex(/^[\d\s()+-]{6,}$/, phoneFormData.validation.phoneInvalid),
+  source: z.string().optional(),
+});
 
-type SectionId = 'section-1' | 'section-2' | 'section-3' | 'section-4' | 'section-5' | 'section-6';
+type FormValues = z.infer<typeof schema>;
 
-const SectionCard = () => {
-  const refs: Record<SectionId, React.RefObject<HTMLElement | null>> = {
-    'section-1': useRef<HTMLElement | null>(null),
-    'section-2': useRef<HTMLElement | null>(null),
-    'section-3': useRef<HTMLElement | null>(null),
-    'section-4': useRef<HTMLElement | null>(null),
-    'section-5': useRef<HTMLElement | null>(null),
-    'section-6': useRef<HTMLElement | null>(null),
-  };
+const PhoneForm = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [status, setStatus] = useState<'idle' | 'pending' | 'ok' | 'error'>('idle');
+  const [error, setError] = useState<string | null>(null);
+  const [showIframe, setShowIframe] = useState(false);
 
-  const lockRef = useRef(false);
-  const lockTimer = useRef<number | null>(null);
-  const SCROLL_LOCK_MS = 800;
+  setTimeout(() => {
+    setShowIframe(true);
+  }, 300);
 
-  const [activeId, setActiveId] = useState('section-1');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
-  const sections = sectionCard.sections;
+  const onSubmit = async (data: FormValues) => {
+    if (!executeRecaptcha) {
+      setError('reCAPTCHA not yet available');
+      return;
+    }
 
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    setError(null);
+    setStatus('pending');
+    const { name, email, phone, source } = data;
 
-    sections.forEach((section) => {
-      const el = refs[section.id as SectionId].current;
-      if (!el) return;
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 50%',
-        end: 'bottom 50%',
-        onEnter: () => {
-          if (!lockRef.current) setActiveId(section.id);
-        },
-        onEnterBack: () => {
-          if (!lockRef.current) setActiveId(section.id);
-        },
-      });
-    });
+    const token = await executeRecaptcha('form_submit');
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+    const payload = {
+      name,
+      email,
+      phone,
+      message: source,
+      token,
     };
-  }, [sections]);
 
-  const makeScrollTo = (id: string, label: string) => (event: React.MouseEvent) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
-    lockRef.current = true;
-    if (lockTimer.current) clearTimeout(lockTimer.current);
-    lockTimer.current = window.setTimeout(() => {
-      lockRef.current = false;
-    }, SCROLL_LOCK_MS);
+    try {
+      const result = await submitContactForm(payload);
 
-    setActiveId(id);
-    element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-    // GA event for nav click
-    sendGAEvent({
-      event: 'process_nav_click',
-      section_id: id,
-      section_label: label,
-      location: 'process_sectioncard_nav',
-    });
+      if (result.success) {
+        setStatus('ok');
+        reset();
+      } else {
+        setError(result.error || 'Request failed');
+        setStatus('error');
+      }
+    } catch (error: unknown) {
+      if (typeof error === 'object' && error !== null && 'message' in error) {
+        setError(String((error as { message?: unknown }).message));
+      } else {
+        setError('An unexpected error occurred');
+      }
+      setStatus('error');
+    }
   };
+
+  const field =
+    'w-full bg-[#1d1d1d] text-white placeholder-zinc-400 border border-white/30 focus:border-white/60 outline-none rounded-sm px-4 py-4 transition-colors';
 
   return (
-    <div className="flex relative md:flex-row-reverse max-md:flex-col">
-      <div className="hidden pt-10 pb-33 top-20 sticky w-full max-md:top-10 z-11 backdrop-blur-md">
-        <div className="flex sticky w-full justify-around">
-          {sections.map((s, index) => (
-            <ListItem
-              key={s.id}
-              section={s.id}
-              label={s.navLabel}
-              active={activeId === s.id}
-              scrollTo={makeScrollTo(s.id, s.navLabel)}
-              last={sections.length === index + 1}
+    <div className="flex justify-around items-center py-20 px-30 max-md:px-3 max-xl:flex-col  mx-auto max-w-[1440] min-h-[860px]">
+      <div className="flex flex-col w-full">
+        <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-5 w-full" noValidate>
+          <div>
+            <input
+              aria-label="Name"
+              placeholder={phoneFormData.form.placeholders.name}
+              className={field}
+              {...register('name')}
             />
-          ))}
-        </div>
-      </div>
+            {errors.name && (
+              <p className="mt-1 text-sm text-left text-red-400">{errors.name.message}</p>
+            )}
+          </div>
 
-      <div className="flex justify-start top-30 sticky w-[33.3%] h-fit pl-11 max-md:hidden">
-        <div className="flex flex-col gap-6.5 justify-start items-start sticky">
-          <div className="flex text-[24px]">{sectionCard.sideTitle}</div>
-          {sections.map((section, index) => (
-            <ListItem
-              key={section.id}
-              section={section.id}
-              label={section.navLabel}
-              active={activeId === section.id}
-              scrollTo={makeScrollTo(section.id, section.navLabel)}
-              last={sections.length === index + 1}
+          <div>
+            <input
+              aria-label="Email"
+              placeholder={phoneFormData.form.placeholders.email}
+              className={field}
+              type="email"
+              {...register('email')}
             />
-          ))}
-        </div>
-      </div>
+            {errors.email && (
+              <p className="mt-1 text-sm text-left text-red-400">{errors.email.message}</p>
+            )}
+          </div>
 
-      <div className="flex col-span-2 flex-col w-[66.6%] pt-40 max-md:pt-7 max-md:w-full">
-        {sections.map((section) => {
-          const isActive = activeId === section.id;
-          const ref = refs[section.id as SectionId];
+          <div>
+            <input
+              aria-label="Phone number"
+              placeholder={phoneFormData.form.placeholders.phone}
+              className={field}
+              {...register('phone')}
+            />
+            {errors.phone && (
+              <p className="mt-1 text-sm text-left text-red-400">{errors.phone.message}</p>
+            )}
+          </div>
 
-          if (section.id === 'section-1') {
-            return (
-              <motion.section
-                key={section.id}
-                id={section.id}
-                ref={ref}
-                className="border-b relative border-zinc-200 border-solid pb-33"
-              >
-                <SectionBg active={isActive} />
-
-                <div className="relative z-10">
-                  <div className="pl-7 text-[24px]">{section.title}</div>
-                  <div className="flex items-center pt-7 max-lg:flex-col">
-                    <div className="relative w-[300px] h-[185px] ml-[35px] max-lg:m-0">
-                      <Image
-                        src={section.images?.[0]?.src || ''}
-                        alt={section.images?.[0]?.alt || ''}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 300px"
-                      />
-                    </div>
-                    <div className="relative w-[160px] h-[158px] ml-18 max-lg:ml-0 max-lg:mt-10">
-                      <Image
-                        src={section.images?.[1]?.src || ''}
-                        alt={section.images?.[1]?.alt || ''}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 160px"
-                      />
-                    </div>
-                  </div>
-                  <div className="pt-7 pl-7 text-[14px]">{section.lead}</div>
-                  <div className="pt-12 pl-7 max-w-[610px] text-[16px]">{section.text}</div>
-                </div>
-              </motion.section>
-            );
-          }
-
-          if (section.id === 'section-2') {
-            return (
-              <motion.section
-                key={section.id}
-                id={section.id}
-                ref={ref}
-                className="flex relative col-span-2 flex-col pt-63 pb-40 pl-11 border-b-[2px] border-zinc-200 border-solid max-xl:px-5"
-              >
-                <SectionBg active={isActive} />
-                <div className="relative z-10">
-                  <div className="text-[24px] font-semibold">{section.title}</div>
-                  <div className="flex items-center pt-10 max-xl:flex-col">
-                    <div className="flex flex-col items-center pl-5 max-xl:p-0">
-                      <div className="flex flex-col relative w-[220px] h-[170px]">
-                        <Image
-                          src={section.images?.[0]?.src || ''}
-                          alt={section.images?.[0]?.alt || ''}
-                          fill
-                          sizes="(max-width: 1280px) 100vw, 220px"
-                        />
-                      </div>
-                      <div className="flex relative pt-2 text-[14px]">
-                        {section.images?.[0]?.alt}
-                      </div>
-                    </div>
-                    <div className="flex flex-col pl-32 items-center max-xl:pl-0 max-xl:pt-5">
-                      <div className="flex relative w-[138px] h-[170px]">
-                        <Image
-                          src={section.images?.[1]?.src || ''}
-                          alt={section.images?.[1]?.alt || ''}
-                          fill
-                          sizes="(max-width: 1280px) 100vw, 138px"
-                        />
-                      </div>
-                      <div className="flex relative pt-2 text-[14px]">
-                        {section.images?.[1]?.alt}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex pt-12 max-w-[640px]">{section.text}</div>
-                </div>
-              </motion.section>
-            );
-          }
-
-          if (section.id === 'section-3') {
-            return (
-              <motion.section
-                key={section.id}
-                id={section.id}
-                ref={ref}
-                className="flex relative flex-col pt-68 pb-30 border-b-[2px] border-zinc-200 border-solid max-xl:px-5 max-xl:items-center"
-              >
-                <SectionBg active={isActive} />
-                <div className="relative z-10">
-                  <div className="text-[24px] font-semibold pl-11">{section.title}</div>
-                  <div className="flex max-xl:flex-col justify-center items-center">
-                    <div className="flex relative w-[325px] h-[300px] mt-10 ml-17 max-xl:w-full max-xl:m-0">
-                      <Image
-                        src={section.images?.[0]?.src || ''}
-                        alt={section.images?.[0]?.alt || ''}
-                        fill
-                        sizes="(max-width: 1280px) 100vw, 325px"
-                      />
-                    </div>
-                    <div className="flex flex-col pl-16 pt-16 max-xl:p-0">
-                      <div className="flex text-[14px] max-xl:hidden">{section.lead}</div>
-                      <div className="flex text-[16px] max-w-[318px] pt-9">{section.text}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.section>
-            );
-          }
-
-          if (section.id === 'section-4') {
-            return (
-              <motion.section
-                key={section.id}
-                id={section.id}
-                ref={ref}
-                className="flex relative flex-col pt-48 pb-22 border-b-[2px] border-zinc-200 border-solid max-xl:px-5"
-              >
-                <SectionBg active={isActive} />
-                <div className="relative z-10">
-                  <div className="text-[24px] pl-[40px] font-semibold">{section.title}</div>
-                  <div className="flex flex-col pt-5">
-                    <div className="relative w-full h-[265px]">
-                      <Image
-                        src={section.images?.[0]?.src || ''}
-                        alt={section.images?.[0]?.alt || ''}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 66.6vw"
-                      />
-                    </div>
-                    <div className="pt-6 pl-10 text-[14px]">{section.lead}</div>
-                  </div>
-                  <div className="pt-6 pl-10 max-w-[580px]">{section.text}</div>
-                </div>
-              </motion.section>
-            );
-          }
-
-          if (section.id === 'section-5') {
-            return (
-              <motion.section
-                key={section.id}
-                id={section.id}
-                ref={ref}
-                className="flex relative pt-20 pb-42 border-b-[2px] border-zinc-200 border-solid max-xl:justify-center max-xl:px-5"
-              >
-                <SectionBg active={isActive} />
-                <div className="flex relative pt-49 z-10 xl:pl-21 max-xl:flex-col max-xl:justify-center">
-                  <div className="flex flex-col">
-                    <div className="flex flex-col">
-                      <div className="text-[24px]/[26px] font-semibold">{section.title}</div>
-                      <div className="pt-4 text-[14px] max-xl:pr-10">{section.lead}</div>
-                    </div>
-                    <div className="pt-23 max-w-[770px] max-xl:max-w-[500px]">{section.text}</div>
-                  </div>
-                  <div className="relative w-full mt-5 h-[290px]">
-                    <Image
-                      src={section.images?.[0]?.src || ''}
-                      alt={section.images?.[0]?.alt || ''}
-                      fill
-                      sizes="(max-width: 1280px) 100vw, 50vw"
-                    />
-                  </div>
-                </div>
-              </motion.section>
-            );
-          }
-
-          return (
-            <motion.section
-              key={section.id}
-              id={section.id}
-              ref={ref}
-              className="relative pt-20 border-b-[2px] border-zinc-200 border-solid"
+          <div className="relative">
+            <select
+              aria-label="How did you find us?"
+              className={`${field} appearance-none pr-10`}
+              defaultValue=""
+              {...register('source')}
             >
-              <SectionBg active={isActive} />
-              <div className="flex flex-col justify-between items-center relative z-10 pt-23 pb-33">
-                {section.blocks?.map((block) => (
-                  <div key={block.title} className="flex max-lg:flex-col max-lg:items-center">
-                    <div className="flex flex-col pt-5">
-                      <div className="text-[14px] font-semibold">{block.title}</div>
-                      <div className="pt-5 max-w-[350px] text-[14px]">{block.text}</div>
-                    </div>
-                    <div className="relative w-[130px] h-[170px] ml-13 mt-5 max-lg:ml-0">
-                      <Image
-                        src={block.image?.src || ''}
-                        alt={block.image?.alt || ''}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 130px"
-                      />
-                    </div>
-                  </div>
-                ))}
+              <option value="" disabled>
+                {phoneFormData.form.placeholders.source}
+              </option>
+              {phoneFormData.form.sources.map((item) => (
+                <option key={item}>{item}</option>
+              ))}
+            </select>
+
+            <span
+              aria-hidden
+              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400"
+            >
+              ▾
+            </span>
+          </div>
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full uppercase font-semibold py-4 rounded-sm bg-[#c44237] hover:bg-[#b53a30] disabled:opacity-60"
+          >
+            {isSubmitting ? phoneFormData.form.button.loading : phoneFormData.form.button.default}
+          </button>
+
+          {status === 'ok' && (
+            <p className="text-sm text-green-400">{phoneFormData.form.messages.success}</p>
+          )}
+          {status === 'error' && <p className="text-sm text-red-400">{error}</p>}
+        </form>
+
+        <div
+          className="flex w-full px-6 justify-around max-md:flex-col"
+          style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 300px' }}
+        >
+          {phoneFormData.contacts.map((item) => (
+            <div key={item.type} className="flex mt-3 max-md:mt-4">
+              <div className="flex relative">
+                <Image
+                  src={item.icon}
+                  alt={item.type}
+                  width={23}
+                  height={23}
+                  className="w-auto h-auto"
+                />
               </div>
-            </motion.section>
-          );
-        })}
+              <div className="flex flex-col pl-3">
+                <div>{item.label}</div>
+                {item.href ? (
+                  <a href={item.href} className="text-lemon-green">
+                    {item.value}
+                  </a>
+                ) : (
+                  <div className="text-lemon-green">{item.value}</div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex relative w-full max-xl:justify-center max-xl:pt-10 max-sm:px-2">
+        {showIframe && (
+          <iframe
+            src={phoneFormData.map.src}
+            width={phoneFormData.map.width}
+            className={phoneFormData.map.heightClass}
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        )}
       </div>
     </div>
   );
 };
 
-const SectionBg = ({ active }: { active: boolean }) => (
-  <AnimatePresence>
-    {active && (
-      <motion.div
-        key="grad"
-        aria-hidden
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, var(--terra-black) 30%, #141C4D 100%)',
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.7, ease: 'easeInOut' }}
-      />
-    )}
-  </AnimatePresence>
-);
-
-const ListItem = ({ section, label, active, scrollTo, last }: ListItemProps) => {
-  const href = `#${section}`;
-  return (
-    <Link
-      href={href}
-      onClick={scrollTo}
-      className="flex relative max-sm:text-[14px] text-[18px]/[23px] max-md:flex-col justify-center"
-    >
-      <span className="flex-none relative mr-3 flex h-[23px] w-[23px] items-center justify-center rounded-full border border-white/70">
-        <AnimatePresence mode="wait">
-          {active && (
-            <motion.span
-              key={section}
-              className="h-[20px] w-[20px] rounded-full bg-blue-900"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-            />
-          )}
-        </AnimatePresence>
-      </span>
-      <div className="max-md:pr-2 max-md:rotate-90">
-        <div className="max-md:absolute max-md:top-[-20px] max-md:left-[30px] max-sm:leading-[15px] max-sm:top-[-10px]">
-          {label}
-        </div>
-      </div>
-
-      {!last && (
-        <div className="max-md:hidden absolute left-[8px] top-[30px]">
-          <Image src="/process/arrow-down.svg" height={11} width={8} alt="Arrow" />
-        </div>
-      )}
-    </Link>
-  );
-};
-
-export default SectionCard;
+export default PhoneForm;

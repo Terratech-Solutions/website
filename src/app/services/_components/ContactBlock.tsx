@@ -2,7 +2,7 @@
 
 import { sendGAEvent } from '@/app/utils/ga';
 import ConsultationButtons from '@/components/ui/consultation-buttons/ConsultationButtons';
-import Link from 'next/link';
+import contact from '@/data/contact.json';
 
 interface ContactBlockProps {
   showBackground?: boolean;
@@ -28,8 +28,8 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
         >
           Get in touch for a consultation
         </h2>
-        <Link
-          href="/contact"
+        <a
+          href={`tel:${contact.phone}`}
           className="
             mb-10 px-7 py-3 bg-true-red text-white font-semibold rounded-lg
             transition hover:bg-red-600 focus:outline-none
@@ -38,14 +38,14 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
           "
           onClick={() => {
             sendGAEvent({
-              event: 'contact_us_click',
-              button_text: 'Contact Us',
+              event: 'call_us_click',
+              button_text: 'Call Us',
               location: 'contact_block_section',
             });
           }}
         >
-          Contact Us
-        </Link>
+          Call Us!
+        </a>
         <div className="w-[80%]">
           <ConsultationButtons />
         </div>

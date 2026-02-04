@@ -1,7 +1,7 @@
 import { buildPageMetadata, localBusinessSchema, SITE_NAME, websiteSchema } from '@/app/metadata';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { Header } from '@/components/layout/Header/Header';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
