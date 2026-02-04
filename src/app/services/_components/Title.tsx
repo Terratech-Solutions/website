@@ -1,6 +1,5 @@
 import contactData from '@/data/contact.json';
 import Image from 'next/image';
-import Link from 'next/link';
 
 type Contact = {
   type: string;

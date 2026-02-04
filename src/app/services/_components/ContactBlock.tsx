@@ -44,7 +44,7 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
             });
           }}
         >
-          Call Us!
+          Call Us
         </a>
         <div className="w-[80%]">
           <ConsultationButtons />
