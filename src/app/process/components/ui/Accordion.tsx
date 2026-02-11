@@ -168,7 +168,6 @@ const Accordion = ({
                             animate={isActive ? 'active' : 'inactive'}
                             exit={{ opacity: 0, display: 'none' }}
                           >
-                            {isActive ? 'active' : 'inactive'}
                             {content}
                           </motion.div>
                         </div>

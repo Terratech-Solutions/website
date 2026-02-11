@@ -1,95 +1,8 @@
 {
   "meta": {
-    "title": "Sinkhole & Void Filling Experts | Terratech",
+    "title": "Erosion & Slope Repair. Stabilized | Terratech",
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
     "path": "/services/slope"
-  },
-  "advanced": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": "Advanced 3D\nGround Imaging"
-    },
-    "points": [
-      "Early Detection",
-      "Precision & Safety",
-      "Minimal Disruption",
-      "Customized Solutions"
-    ],
-    "image": {
-      "src": "/services/sinkholes-2.png",
-      "alt": "Graphic 1",
-      "width": 860,
-      "height": 483
-    }
-  },
-  "sinkhole": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "highlight": "Sinkhole",
-        "rest": "Formation Process"
-      }
-    },
-    "stages": [
-      {
-        "label": "Stage 1",
-        "image": {
-          "src": "/services/stage-1.png",
-          "alt": "Stage 1",
-          "width": 321,
-          "height": 480
-        }
-      },
-      {
-        "label": "Stage 2",
-        "image": {
-          "src": "/services/stage-2.png",
-          "alt": "Stage 2",
-          "width": 321,
-          "height": 480
-        }
-      },
-      {
-        "label": "Stage 3",
-        "image": {
-          "src": "/services/stage-3.png",
-          "alt": "Stage 3",
-          "width": 321,
-          "height": 480
-        }
-      }
-    ]
-  },
-  "solution": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "main": "Our Solution",
-        "highlight": "Without",
-        "after": "Excavation"
-      },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any\nsinkhole faster and cheaper than traditional remediation."
-    },
-    "images": [
-      {
-        "src": "/services/slider-1.png",
-        "alt": "Slider 1",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-2.png",
-        "alt": "Slider 2",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-3.png",
-        "alt": "Slider 3",
-        "width": 330,
-        "height": 435
-      }
-    ]
   },
   "title": {
     "background": {
@@ -98,11 +11,11 @@
     },
     "text": {
       "title": {
-        "lines": ["Sinkhole &", "Void Filling", "Experts", "."],
-        "highlight": "Experts",
+        "lines": ["Erosion &", "Slope Repair.", "Stabilized"],
+        "highlight": ["Stabilized"],
         "highlightColor": "text-true-red"
       },
-      "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
+      "subtitle": "Cost-effective solutions for erosion and slope repair with minimal downtime."
     },
     "cta": {
       "freeQuote": {
@@ -111,53 +24,95 @@
       }
     },
     "image": {
-      "src": "/services/sinkholes.png",
+      "src": "/services/slope/slope-main.png",
       "alt": "Scan 1",
-      "width": 740,
-      "height": 415
+      "width": 600,
+      "height": 200
     }
   },
-  "warnings": {
+  "erosionRepair": {
     "section": {
-      "sectionLabel": "Innovative Solutions",
+      "sectionLabel": "Informed Methodology",
       "title": {
-        "main": "Early",
-        "highlight": "Warning Signs",
-        "after": "of a Sinkhole"
+        "lines": ["Erosion Repair for", "Critical Infrastructure."],
+        "highlight": ["Critical", "Infrastructure"],
+        "highlightColor": "text-lemon-green"
       },
-      "description": "Along with on site assessment and detailed visual observation of the area, Terratech’s 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
+      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
     },
-    "items": [
-      {
-        "title": "Rapidly Appearing Holes",
-        "iconSrc": "/services/sinkholes/rapidly.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
-      },
-      {
-        "title": "Buckling Concrete or Asphalt",
-        "iconSrc": "/services/sinkholes/buckling.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
-      },
-      {
-        "title": "Standing Surface Water",
-        "iconSrc": "/services/sinkholes/standing.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
-      },
-      {
-        "title": "Cracks Forming in the Ground",
-        "iconSrc": "/services/sinkholes/cracks.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
-      },
-      {
-        "title": "Ground Depressions",
-        "iconSrc": "/services/sinkholes/ground.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+    "image": {
+      "src": "/services/slope/erosion-repair.png",
+      "alt": "Graphic 1",
+      "width": 1000,
+      "height": 483
+    }
+  },
+  "accordionData": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Rapid Slope", "Stabilization"],
+        "highlight": [],
+        "highlightColor": "text-true-red"
       }
-    ]
+    },
+    "points": [
+      {
+        "title": "Early Detection",
+        "description": "Problems are identified before slope failure becomes visible, allowing fix before damage spreads, and cost escalates."
+      },
+      {
+        "title": "Precision & Safety",
+        "description": "Stabilization is applied only where it is needed, reducing unnecessary work, costs and allowing quick and non-invasive procedures while improving safety and confidence in the final result."
+      },
+      {
+        "title": "Minimal Disruption",
+        "description": "Stabilization is restored with limited surface impact, helping you keep roads, properties and operations functioning during repair process."
+      },
+      {
+        "title": "Customized Solutions",
+        "description": "Each solution is designed around your site's specific conditions, delivering long-term stability without delays."
+      }
+    ],
+    "image": {
+      "src": "/services/slope/slope.png",
+      "alt": "Graphic 1",
+      "width": 600,
+      "height": 300
+    }
+  },
+  "stopErosion": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["How to Stop", "Erosion"],
+        "highlight": ["Erosion"],
+        "highlightColor": "text-lemon-green"
+      },
+      "description": "Approximately 43% of public roadways in the United States remain in poor or mediocre condition, contributing to a massive national maintenance backlog. These deteriorating surfaces don't just damage vehicles; they represent a critical failure in the underlying soil stability that traditional asphalt patches cannot solve. \n\nOur polyurethane injection technology addresses the root of the problem by stabilizing the base and lifting sunken slabs with surgical precision, offering a faster and more cost-effective alternative to full road replacement. By choosing advanced chemical grouting, municipalities and private contractors can directly combat the rising costs of infrastructure decay, ensuring our 4-million-mile road network stays safe and functional for years to come."
+    },
+    "image": {
+      "src": "/services/slope/stop-erosion.png",
+      "alt": "Graphic 1",
+      "width": 1400,
+      "height": 580
+    }
+  },
+  "identifyProblem": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["identify the", "Problem"],
+        "highlight": ["Problem"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+    },
+    "image": {
+      "src": "/services/slope/layers.png",
+      "alt": "Graphic 1",
+      "width": 960,
+      "height": 683
+    }
   }
 }

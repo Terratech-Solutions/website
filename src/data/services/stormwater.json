@@ -1,95 +1,8 @@
 {
   "meta": {
-    "title": "Sinkhole & Void Filling Experts | Terratech",
+    "title": "Stormwater & Drainage Solutions | Terratech",
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
     "path": "/services/stormwater"
-  },
-  "advanced": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": "Advanced 3D\nGround Imaging"
-    },
-    "points": [
-      "Early Detection",
-      "Precision & Safety",
-      "Minimal Disruption",
-      "Customized Solutions"
-    ],
-    "image": {
-      "src": "/services/sinkholes-2.png",
-      "alt": "Graphic 1",
-      "width": 860,
-      "height": 483
-    }
-  },
-  "sinkhole": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "highlight": "Sinkhole",
-        "rest": "Formation Process"
-      }
-    },
-    "stages": [
-      {
-        "label": "Stage 1",
-        "image": {
-          "src": "/services/stage-1.png",
-          "alt": "Stage 1",
-          "width": 321,
-          "height": 480
-        }
-      },
-      {
-        "label": "Stage 2",
-        "image": {
-          "src": "/services/stage-2.png",
-          "alt": "Stage 2",
-          "width": 321,
-          "height": 480
-        }
-      },
-      {
-        "label": "Stage 3",
-        "image": {
-          "src": "/services/stage-3.png",
-          "alt": "Stage 3",
-          "width": 321,
-          "height": 480
-        }
-      }
-    ]
-  },
-  "solution": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "main": "Our Solution",
-        "highlight": "Without",
-        "after": "Excavation"
-      },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any\nsinkhole faster and cheaper than traditional remediation."
-    },
-    "images": [
-      {
-        "src": "/services/slider-1.png",
-        "alt": "Slider 1",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-2.png",
-        "alt": "Slider 2",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-3.png",
-        "alt": "Slider 3",
-        "width": 330,
-        "height": 435
-      }
-    ]
   },
   "title": {
     "background": {
@@ -98,11 +11,15 @@
     },
     "text": {
       "title": {
-        "lines": ["Sinkhole &", "Void Filling", "Experts", "."],
-        "highlight": "Experts",
+        "lines": [
+          "Stormwater",
+          "& Drainage",
+          "Solutions"
+        ],
+        "highlight": ["Solutions"],
         "highlightColor": "text-true-red"
       },
-      "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
+      "subtitle": "We provide innovative solutions for concrete stabilization and infrastructure repair."
     },
     "cta": {
       "freeQuote": {
@@ -111,53 +28,123 @@
       }
     },
     "image": {
-      "src": "/services/sinkholes.png",
+      "src": "/services/stormwater/stormwater.png",
       "alt": "Scan 1",
-      "width": 740,
-      "height": 415
+      "width": 800,
+      "height": 460
     }
   },
-  "warnings": {
+  "preventBreakdown": {
     "section": {
       "sectionLabel": "Innovative Solutions",
       "title": {
-        "main": "Early",
-        "highlight": "Warning Signs",
-        "after": "of a Sinkhole"
+        "lines": ["Prevent Breakdown", "from Within"],
+        "highlight": ["Prevent", "Breakdown"],
+        "highlightColor": "text-true-red"
       },
-      "description": "Along with on site assessment and detailed visual observation of the area, Terratech’s 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
+      "description": "Along with on site assessment and detailed visual observation of the area, Terratech's 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
     },
-    "items": [
+    "image": {
+      "src": "/services/stormwater/prevent-breakdown.png",
+      "alt": "Graphic 2",
+      "width": 700,
+      "height": 400
+    }
+  },
+  "root": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Addressing the", "Root Cause"],
+        "highlight": ["Root", "Cause"],
+        "highlightColor": "text-lemon-green"
+      }
+    },
+    "stages": [
       {
-        "title": "Rapidly Appearing Holes",
-        "iconSrc": "/services/sinkholes/rapidly.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "label": "Slab of road with a pothole and sinkhole forming",
+        "image": {
+          "src": "/services/stormwater/root-1.png",
+          "alt": "Stage 1",
+          "width": 400,
+          "height": 294
+        },
+        "title": "Compaction Grouting",
+        "text": "This technique uses a low-mobility, thick grout injected under high pressure to displace and densify loose granular soils, increase bearing capacity, and fill voids."
       },
       {
-        "title": "Buckling Concrete or Asphalt",
-        "iconSrc": "/services/sinkholes/buckling.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "label": "Foam applied and cured to help stabilize the unstable layer below ",
+        "image": {
+          "src": "/services/stormwater/root-2.png",
+          "alt": "Stage 2",
+          "width": 400,
+          "height": 350
+        },
+        "title": "Permeation Grouting",
+        "text": "This process injects low-viscosity grout into soil without disturbing its natural structure, filling the pores to increase bearing capacity and reduce permeability. It is suitable for granular soils like sand and gravel."
       },
       {
-        "title": "Standing Surface Water",
-        "iconSrc": "/services/sinkholes/standing.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
-      },
-      {
-        "title": "Cracks Forming in the Ground",
-        "iconSrc": "/services/sinkholes/cracks.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
-      },
-      {
-        "title": "Ground Depressions",
-        "iconSrc": "/services/sinkholes/ground.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "label": "Layer is stabilized, foam is cured, and the storm drain is insalled",
+        "image": {
+          "src": "/services/stormwater/root-3.png",
+          "alt": "Stage 3",
+          "width": 400,
+          "height": 294
+        },
+        "title": "Chemical (polymer) Grouting",
+        "text": "This involves injecting a chemical solution, such as an expanding polymer or grout, to consolidate or lift concrete slabs and stabilize soil. Expanding polymer fills voids and compacts soil."
       }
     ]
+  },
+  "repair": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Repair Outside & Inside"],
+        "highlight": [],
+        "highlightColor": "text-true-red"
+      }
+    },
+    "points": [
+      {
+        "title": "Early Detection",
+        "description": "Issues are identified both below the surface and within the structure, allowing repairs to address the full problem. Not just what is visible for the outside."
+      },
+      {
+        "title": "Precision & Safety",
+        "description": "Repairs are performed at the most effective access point, inside or out, reducing risk, cost, and damage while ensuring the problem is corrected and fixed at it's source."
+      },
+      {
+        "title": "Minimal Disruption",
+        "description": "Stabilization is restored with limited surface impact, helping you keep roads, properties and operations functioning during repair process."
+      },
+      {
+        "title": "Customized Solutions",
+        "description": "Each solution is designed around your site's specific conditions, delivering long-term stability without delays."
+      }
+    ],
+    "image": {
+      "src": "/services/stormwater/repair.png",
+      "alt": "Graphic 1",
+      "width": 700,
+      "height": 300
+    }
+  },
+  "reinforce": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Reinforce & Mitigate", "Loose Soil"],
+        "highlight": ["Loose", "Soil"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+    },
+    "image": {
+      "src": "/services/stormwater/Stormwater-Remediation.mp4",
+      "alt": "Graphic 1",
+      "width": 860,
+      "height": 483
+    }
   }
 }

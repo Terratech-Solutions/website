@@ -1,3 +1,6 @@
+'use client';
+
+import { sendGTMEvent } from '@/app/utils/gtm';
 import SectionAnchorLabel from '@/components/ui/SectionAnchorLabel';
 import { whyUs } from '@/data/home.json';
 import Image from 'next/image';
@@ -30,12 +33,20 @@ const WhyUs = () => {
                 />
               </div>
               <p className="text-[24px] min-h-[70px] font-medium md-min-h-[114px]">{item.title}</p>
-              <p className="mt-5 text-[18px] lg:text-[2`0px]">{item.description}</p>
+              <p className="mt-5 text-[18px] lg:text-[20px]">{item.description}</p>
             </div>
 
             <Link
               href={item.href}
               className="text-[25px] max-sm:text-[18px] mt-6 hover:text-concrete text-[#87acc6]"
+              onClick={() => {
+                sendGTMEvent({
+                  event: 'whyus_cta_click',
+                  button_text: item.cta,
+                  location: 'whyus_section',
+                  card_title: item.title,
+                });
+              }}
             >
               {item.cta}
             </Link>

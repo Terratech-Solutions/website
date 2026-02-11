@@ -4,111 +4,6 @@
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
     "path": "/services/sinkholes"
   },
-  "advanced": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": "Advanced 3D\nGround Imaging"
-    },
-    "points": [
-      {
-        "title": "Early Detection",
-        "description": "Identify potential sinkholes before they become critical threats using advanced subsurface scanning technology."
-      },
-      {
-        "title": "Precision & Safety",
-        "description": "Accurate mapping and monitoring ensure structural integrity and protect lives with millimeter-level precision."
-      },
-      {
-        "title": "Minimal Disruption",
-        "description": "Non-invasive imaging methods allow continuous monitoring without interrupting daily operations or infrastructure use."
-      },
-      {
-        "title": "Customized Solutions",
-        "description": "Tailored assessment strategies designed specifically for your site conditions and risk management needs."
-      }
-    ],
-    "image": {
-      "src": "/services/sinkholes-2.png",
-      "alt": "Graphic 1",
-      "width": 860,
-      "height": 483
-    }
-  },
-  "sinkhole": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "highlight": "Sinkhole",
-        "rest": "Formation Process"
-      }
-    },
-    "stages": [
-      {
-        "label": "Stage 1",
-        "image": {
-          "src": "/services/stage-1.png",
-          "alt": "Stage 1",
-          "width": 321,
-          "height": 480
-        },
-        "title": "Compaction Grouting",
-        "text": "This technique uses a low-mobility, thick grout injected under high pressure to displace and densify loose granular soils, increase bearing capacity, and fill voids."
-      },
-      {
-        "label": "Stage 2",
-        "image": {
-          "src": "/services/stage-2.png",
-          "alt": "Stage 2",
-          "width": 321,
-          "height": 480
-        },
-        "title": "Permeation Grouting",
-        "text": "This process injects low-viscosity grout into soil without disturbing its natural structure, filling the pores to increase bearing capacity and reduce permeability. It is suitable for granular soils like sand and gravel."
-      },
-      {
-        "label": "Stage 3",
-        "image": {
-          "src": "/services/stage-3.png",
-          "alt": "Stage 3",
-          "width": 321,
-          "height": 480
-        },
-        "title": "Chemical (polymer) Grouting",
-        "text": "This involves injecting a chemical solution, such as an expanding polymer or grout, to consolidate or lift concrete slabs and stabilize soil. Expanding polymer fills voids and compacts soil."
-      }
-    ]
-  },
-  "solution": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "main": "Our Solution",
-        "highlight": "Without",
-        "after": "Excavation"
-      },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any\nsinkhole faster and cheaper than traditional remediation."
-    },
-    "images": [
-      {
-        "src": "/services/slider-1.png",
-        "alt": "Slider 1",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-2.png",
-        "alt": "Slider 2",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-3.png",
-        "alt": "Slider 3",
-        "width": 330,
-        "height": 435
-      }
-    ]
-  },
   "title": {
     "background": {
       "from": "#131313",
@@ -116,11 +11,11 @@
     },
     "text": {
       "title": {
-        "lines": ["Sinkhole &", "Void Filling", "Experts", "."],
-        "highlight": "Experts",
+        "lines": ["Sinkhole &", "Void Filling", "Experts"],
+        "highlight": ["Experts"],
         "highlightColor": "text-true-red"
       },
-      "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
+      "subtitle": "Rapid, non-invasive stabilization to address subsurface voids before they escalate."
     },
     "cta": {
       "freeQuote": {
@@ -129,21 +24,38 @@
       }
     },
     "image": {
-      "src": "/services/sinkholes.png",
+      "src": "/services/sinkholes/sinkholes.png",
       "alt": "Scan 1",
-      "width": 740,
-      "height": 415
+      "width": 800,
+      "height": 460
+    }
+  },
+  "longTermSolutions": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Long-Term Solutions", "Without Excavation"],
+        "highlight": ["Without"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Sinkholes form when erosion or water movement removes subsurface soil, creating voids beneath the surface. As support is lost, the ground above can settle or collapse without visible warning."
+    },
+    "image": {
+      "src": "/services/sinkholes/sinkhole.mp4",
+      "alt": "Graphic 1",
+      "width": 460,
+      "height": 483
     }
   },
   "warnings": {
     "section": {
       "sectionLabel": "Innovative Solutions",
       "title": {
-        "main": "Early",
-        "highlight": "Warning Signs",
-        "after": "of a Sinkhole"
+        "lines": ["Early Warning Signs", "of a Sinkhole"],
+        "highlight": ["Warning", "Signs"],
+        "highlightColor": "text-true-red"
       },
-      "description": "Along with on site assessment and detailed visual observation of the area, Terratech’s 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
+      "description": "Along with on site assessment and detailed visual observation of the area, Terratech's 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
     },
     "items": [
       {
@@ -175,6 +87,122 @@
         "iconSrc": "/services/sinkholes/ground.svg",
         "iconWidth": 70,
         "iconHeight": 70
+      }
+    ]
+  },
+  "sinkhole": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Sinkhole", "Formation Process"],
+        "highlight": ["Formation"],
+        "highlightColor": "text-lemon-green"
+      }
+    },
+    "stages": [
+      {
+        "label": "Early Sinkhole Formation is Invisible",
+        "image": {
+          "src": "/services/sinkholes/stage-1.png",
+          "alt": "Stage 1",
+          "width": 321,
+          "height": 480
+        },
+        "title": "Compaction Grouting",
+        "text": "This technique uses a low-mobility, thick grout injected under high pressure to displace and densify loose granular soils, increase bearing capacity, and fill voids."
+      },
+      {
+        "label": "Progression Increases Risk of Collapse",
+        "image": {
+          "src": "/services/sinkholes/stage-2.png",
+          "alt": "Stage 2",
+          "width": 321,
+          "height": 480
+        },
+        "title": "Permeation Grouting",
+        "text": "This process injects low-viscosity grout into soil without disturbing its natural structure, filling the pores to increase bearing capacity and reduce permeability. It is suitable for granular soils like sand and gravel."
+      },
+      {
+        "label": "Injected Polyurethane Stops Degradation",
+        "image": {
+          "src": "/services/sinkholes/stage-3.png",
+          "alt": "Stage 3",
+          "width": 321,
+          "height": 480
+        },
+        "title": "Chemical (polymer) Grouting",
+        "text": "This involves injecting a chemical solution, such as an expanding polymer or grout, to consolidate or lift concrete slabs and stabilize soil. Expanding polymer fills voids and compacts soil."
+      }
+    ]
+  },
+  "accordionData": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Advanced 3D", "Ground Imaging"],
+        "highlight": [],
+        "highlightColor": "text-true-red"
+      }
+    },
+    "points": [
+      {
+        "title": "Early Risk Identification",
+        "description": "Identify voids, weak soils, moisture anomalies, and hidden instability early in the process—before they impact budgets or schedules."
+      },
+      {
+        "title": "Non-Invasive Assessment",
+        "description": "Scanning is non-invasive and requires no excavation, enabling assessment without shutting down traffic or operations."
+      },
+      {
+        "title": "High-Confidence Data",
+        "description": "High-accuracy scans map underground conditions with millimeter-level detail, reducing guesswork and minimizing risk for crews, assets, and adjacent infrastructure."
+      },
+      {
+        "title": "Data-Driven Repair Planning",
+        "description": "Accurate subsurface data allows repair plans to be tailored to real site conditions—eliminating costly surprises and ensuring the right solution the first time."
+      }
+    ],
+    "image": {
+      "src": "/services/sinkholes/layers.png",
+      "alt": "Graphic 1",
+      "width": 700,
+      "height": 300
+    }
+  },
+  "solution": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Stabilizing Substrate.", "Step By Step."],
+        "highlight": ["Step", "By", "Step"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "TerraTech stabilizes subsurface voids and weak soils beneath roadways without excavation, restoring support while keeping the surface intact."
+    },
+    "images": [
+      {
+        "src": "/services/sinkholes/s-diagram-1.png",
+        "alt": "Slider 1",
+        "width": 400,
+        "height": 480
+      },
+      {
+        "src": "/services/sinkholes/s-diagram-2.png",
+        "alt": "Slider 2",
+        "width": 400,
+        "height": 480
+      },
+      {
+        "src": "/services/sinkholes/s-diagram-3.png",
+        "alt": "Slider 3",
+        "width": 400,
+        "height": 480
+      },
+      {
+        "src": "/services/sinkholes/s-diagram-4.png",
+        "alt": "Slider 4",
+        "width": 400,
+        "height": 480
       }
     ]
   }

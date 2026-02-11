@@ -1,5 +1,6 @@
 'use client';
 
+import { sendGTMEvent } from '@/app/utils/gtm';
 import { techniques } from '@/data/home.json';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -27,6 +28,14 @@ const TechniqueItem = ({ href, title, description, iconSrc }: Technique) => {
         <Link
           className="flex text-[11px]/[150%] font-light underline underline-offset-4 decoration-true-red"
           href={href}
+          onClick={() => {
+            sendGTMEvent({
+              event: 'technique_read_more_click',
+              button_text: 'Read More',
+              location: 'techniques_section',
+              technique_title: title,
+            });
+          }}
         >
           Read More
         </Link>

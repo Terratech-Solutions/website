@@ -1,7 +1,7 @@
 import { buildPageMetadata, localBusinessSchema, SITE_NAME, websiteSchema } from '@/app/metadata';
 import { Footer } from '@/components/layout/Footer/Footer';
 import { Header } from '@/components/layout/Header/Header';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { ReactNode } from 'react';
@@ -13,7 +13,8 @@ export const metadata: Metadata = buildPageMetadata({
   path: '/',
 });
 
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 export default function RootLayout({
   children,
@@ -23,7 +24,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-terra-black">
       <body className={`antialiased bg-terra-black`}>
-        {Boolean(gaId) && <GoogleAnalytics gaId={gaId!} />}
+        {Boolean(gtmId) && <GoogleTagManager gtmId="GTM-XYZ" />}
+        {Boolean(clarityId) && (
+          <Script id="clarity-script" strategy="afterInteractive">
+            {`
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${clarityId}");
+            `}
+          </Script>
+        )}
         <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(websiteSchema)}
         </Script>

@@ -34,12 +34,12 @@
       "title": "Home",
       "items": [
         { "label": "Home", "href": "/" },
+        { "label": "The Process", "href": "/process" },
         { "label": "Sinkholes", "href": "/services/sinkholes" },
         { "label": "Stormwater infrastructure", "href": "/services/stormwater" },
         { "label": "Roadway Repair", "href": "/services/roadway" },
-        { "label": "Structural Stabilization", "href": "/services/structural" },
         { "label": "Slope Stabilization", "href": "/services/slope" },
-        { "label": "3d scanning and detection", "href": "/services/scanning" },
+        { "label": "Infrastructure Repair", "href": "/services/infrastructure" },
         { "label": "About Us", "href": "/about" },
         { "label": "Contact", "href": "/contact" }
       ]

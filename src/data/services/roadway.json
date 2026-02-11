@@ -1,95 +1,8 @@
 {
   "meta": {
-    "title": "Sinkhole & Void Filling Experts | Terratech",
+    "title": "Fixing Roads with Minimal Interruptions. | Terratech",
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
-    "path": "/services/sinkholes"
-  },
-  "advanced": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": "Advanced 3D\nGround Imaging"
-    },
-    "points": [
-      "Early Detection",
-      "Precision & Safety",
-      "Minimal Disruption",
-      "Customized Solutions"
-    ],
-    "image": {
-      "src": "/services/sinkholes-2.png",
-      "alt": "Graphic 1",
-      "width": 860,
-      "height": 483
-    }
-  },
-  "sinkhole": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "highlight": "Sinkhole",
-        "rest": "Formation Process"
-      }
-    },
-    "stages": [
-      {
-        "label": "Stage 1",
-        "image": {
-          "src": "/services/stage-1.png",
-          "alt": "Stage 1",
-          "width": 321,
-          "height": 480
-        }
-      },
-      {
-        "label": "Stage 2",
-        "image": {
-          "src": "/services/stage-2.png",
-          "alt": "Stage 2",
-          "width": 321,
-          "height": 480
-        }
-      },
-      {
-        "label": "Stage 3",
-        "image": {
-          "src": "/services/stage-3.png",
-          "alt": "Stage 3",
-          "width": 321,
-          "height": 480
-        }
-      }
-    ]
-  },
-  "solution": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "main": "Our Solution",
-        "highlight": "Without",
-        "after": "Excavation"
-      },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any\nsinkhole faster and cheaper than traditional remediation."
-    },
-    "images": [
-      {
-        "src": "/services/slider-1.png",
-        "alt": "Slider 1",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-2.png",
-        "alt": "Slider 2",
-        "width": 330,
-        "height": 435
-      },
-      {
-        "src": "/services/slider-3.png",
-        "alt": "Slider 3",
-        "width": 330,
-        "height": 435
-      }
-    ]
+    "path": "/services/roadway"
   },
   "title": {
     "background": {
@@ -98,11 +11,11 @@
     },
     "text": {
       "title": {
-        "lines": ["Sinkhole &", "Void Filling", "Experts", "."],
-        "highlight": "Experts",
+        "lines": ["Fixing Roads with", "Minimal", "Interruptions"],
+        "highlight": ["Minimal", "Interruptions"],
         "highlightColor": "text-true-red"
       },
-      "subtitle": "We provide innovative solutions for\nconcrete stabilization and infrastructure repair."
+      "subtitle": "Stabilizing undermined pavement without excavation or extended lane closures."
     },
     "cta": {
       "freeQuote": {
@@ -111,52 +24,102 @@
       }
     },
     "image": {
-      "src": "/services/sinkholes.png",
+      "src": "/services/roadway/roadway.png",
       "alt": "Scan 1",
-      "width": 740,
-      "height": 415
+      "width": 660,
+      "height": 440
     }
   },
-  "warnings": {
+  "repairSolutions": {
     "section": {
       "sectionLabel": "Innovative Solutions",
       "title": {
-        "main": "Early",
-        "highlight": "Warning Signs",
-        "after": "of a Sinkhole"
+        "lines": ["Non-Invasive", "Solutions for", "Roadway Repair."],
+        "highlight": ["Non-Invasive", "Roadway", "Repair"],
+        "highlightColor": "text-true-red"
       },
-      "description": "Along with on site assessment and detailed visual observation of the area, Terratech’s 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
+      "description": "Along with on site assessment and detailed visual observation of the area, Terratech's 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
     },
-    "items": [
+    "image": {
+      "src": "/services/roadway/Roadway-animation-11.mp4",
+      "alt": "Repair Solutions",
+      "width": 860,
+      "height": 483
+    }
+  },
+  "answer": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["The Answer to Constant", "Asphalt Patches"],
+        "highlight": [],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Repeated asphalt patching addresses surface distress while underlying soil instability remains unresolved. As base support continues to weaken, cracking, settlement, and ride-quality issues return, often within the same maintenance cycle.\n\nPolymer injection stabilizes roadways from below by restoring base support and filling subsurface voids without full-depth excavation. This approach extends pavement service life, reduces repeat maintenance cycles, minimizes lane closures and traffic disruption, and lowers total lifecycle cost compared to reconstruction.\n\nBy correcting the root cause of roadway failure, <span class=\"text-true-red underline\">polymer injection provides a durable alternative to continual surface repairs.</span>"
+    },
+    "image": {
+      "src": "/services/roadway/sinkhole-formation.png",
+      "alt": "Graphic 1",
+      "width": 1200,
+      "height": 383
+    }
+  },
+  "accordionData": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Reducing Repair", "Time & Disruption"],
+        "highlight": [],
+        "highlightColor": "text-true-red"
+      }
+    },
+    "points": [
       {
-        "title": "Rapidly Appearing Holes",
-        "iconSrc": "/services/sinkholes/rapidly.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "title": "Early Detection",
+        "description": "Subsurface voids, soil loss, and base instability are identified before surface failures worsen. Early insight allows repairs to be planned proactively rather than reacting after pavement distress becomes visible."
       },
       {
-        "title": "Buckling Concrete or Asphalt",
-        "iconSrc": "/services/sinkholes/buckling.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "title": "Precision & Safety",
+        "description": "Targeted assessment and controlled injection reduce uncertainty during repair. Crews address only compromised areas, limiting exposure to adjacent utilities, structures, and active traffic."
       },
       {
-        "title": "Standing Surface Water",
-        "iconSrc": "/services/sinkholes/standing.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "title": "Minimal Disruption",
+        "description": "Non-invasive stabilization eliminates the need for excavation or full-depth pavement removal. Roads can often remain open or partially open during work, reducing impacts to traffic flow and public access."
       },
       {
-        "title": "Cracks Forming in the Ground",
-        "iconSrc": "/services/sinkholes/cracks.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "title": "Customized Solutions",
+        "description": "Each roadway presents different soil conditions, loading demands, and failure mechanisms. Repair strategies are tailored to site-specific data, ensuring the appropriate level of stabilization without overbuilding the solution."
+      }
+    ],
+    "image": {
+      "src": "/services/roadway/fix-roadways.png",
+      "alt": "Graphic 1",
+      "width": 500,
+      "height": 250
+    }
+  },
+  "solution": {
+    "section": {
+      "sectionLabel": "Informed Methodology",
+      "title": {
+        "lines": ["Our Solution", "Without Excavation"],
+        "highlight": ["Without"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "TerraTech stabilizes subsurface voids and weak soils beneath roadways without excavation, restoring support while keeping the surface intact."
+    },
+    "images": [
+      {
+        "src": "/services/roadway/solution-1.png",
+        "alt": "Slider 1",
+        "width": 600,
+        "height": 480
       },
       {
-        "title": "Ground Depressions",
-        "iconSrc": "/services/sinkholes/ground.svg",
-        "iconWidth": 70,
-        "iconHeight": 70
+        "src": "/services/roadway/solution-2.png",
+        "alt": "Slider 2",
+        "width": 600,
+        "height": 480
       }
     ]
   }

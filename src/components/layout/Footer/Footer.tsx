@@ -1,5 +1,6 @@
 'use client';
 
+import { sendGTMEvent } from '@/app/utils/gtm';
 import footerData from '@/data/footer.json';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -9,6 +10,34 @@ import { usePathname } from 'next/navigation';
 export function Footer() {
   const { contacts, socials, navSections } = footerData;
   const pathname = usePathname();
+
+  const handleNavClick = (item: { href: string; label: string }) => {
+    sendGTMEvent({
+      event: 'footer_nav_click',
+      href: item.href,
+      label: item.label,
+      location: 'footer_nav_section',
+    });
+  };
+
+  const handleSocialClick = (social: { href: string; label: string }) => {
+    sendGTMEvent({
+      event: 'footer_social_click',
+      href: social.href,
+      label: social.label,
+      location: 'footer_socials_section',
+    });
+  };
+
+  const handleContactClick = (contact: { type: string; href: string; value: string }) => {
+    sendGTMEvent({
+      event: 'footer_contact_click',
+      contact_type: contact.type,
+      href: contact.href,
+      value: contact.value,
+      location: 'footer_contacts_section',
+    });
+  };
 
   return (
     <footer className="bg-foreground min-h-[500px] max-sm:h-full pb-5">
@@ -31,7 +60,9 @@ export function Footer() {
               <li key={contact.type}>
                 <p className="font-bold text-blue-500 text-lg">{contact.type}</p>
                 {contact.href ? (
-                  <Link href={contact.href}>{contact.value}</Link>
+                  <Link href={contact.href} onClick={() => handleContactClick(contact)}>
+                    {contact.value}
+                  </Link>
                 ) : (
                   <p className="whitespace-pre-line">{contact.value}</p>
                 )}
@@ -43,7 +74,11 @@ export function Footer() {
                 <li className="font-bold text-blue-500 text-lg">Socials</li>
                 {socials.map((social) => (
                   <li key={social.label}>
-                    <Link target="_blank" href={social.href}>
+                    <Link
+                      target="_blank"
+                      href={social.href}
+                      onClick={() => handleSocialClick(social)}
+                    >
                       {social.label}
                     </Link>
                   </li>
@@ -59,7 +94,9 @@ export function Footer() {
                   className={clsx({ 'text-blue-500 text-lg font-bold': pathname === item.href })}
                   key={item.href}
                 >
-                  <Link href={item.href}>{item.label}</Link>
+                  <Link href={item.href} onClick={() => handleNavClick(item)}>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>

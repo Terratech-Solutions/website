@@ -1,8 +1,31 @@
+'use client';
+
+import { sendGTMEvent } from '@/app/utils/gtm';
+import contactData from '@/data/contact.json';
 import { injection } from '@/data/process.json';
-import Link from 'next/link';
+
+type Contact = {
+  type: string;
+  icon: string;
+  label: string;
+  value: string;
+  href?: string;
+};
 
 const Injection = () => {
   const { background, title, subtitle, cta } = injection;
+
+  const contacts: Contact[] = contactData.phoneFormData.contacts;
+  const phoneContact = contacts.find((c) => c.type === 'Phone');
+
+  const handleCtaClick = () => {
+    sendGTMEvent({
+      event: 'process_injection_cta_click',
+      cta_id: 'freeQuote',
+      cta_label: cta.freeQuote.content,
+      location: 'process_injection_section',
+    });
+  };
 
   return (
     <section
@@ -19,12 +42,13 @@ const Injection = () => {
 
         <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line">{subtitle}</p>
         <div className="mt-10 flex gap-4 max-sm:flex-col max-sm:items-center">
-          <Link
-            href={cta.freeQuote.href}
+          <a
+            href={phoneContact?.href || '#'}
             className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+            onClick={handleCtaClick}
           >
             <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
-          </Link>
+          </a>
         </div>
       </div>
     </section>
