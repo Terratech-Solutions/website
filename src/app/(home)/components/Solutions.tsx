@@ -6,7 +6,7 @@ const Solutions = () => {
 
   return (
     <section className="md:pt-33.5 font-sans md:px-23.5 px-10 max-w-[1440] mx-auto">
-      <div className="grid grid-cols-40 max-xl:grid-cols-1 border-solid border-y-3 border-terra-dash">
+      {/*<div className="grid grid-cols-40 max-xl:grid-cols-1 border-solid border-y-3 border-terra-dash">
         <div className="col-span-22 pt-24 max-xl:pb-5">
           <div className="text-[30px]/[150%] lg:text-[44px] font-semibold whitespace-pre-line">
             {intro.title}
@@ -16,9 +16,9 @@ const Solutions = () => {
         <div className="flex col-span-18 relative w-full h-[200px] md:h-[445px]">
           <Image src={intro.image.src} alt={intro.image.alt} fill className="object-cover" />
         </div>
-      </div>
+      </div>*/}
 
-      <div className="border-solid border-b-3 border-terra-dash">
+      <div className="border-solid border-b-3 border-t-3 border-terra-dash">
         <p className="pt-15 text-[30px]/[150%] lg:text-[44px] font-semibold">{whyChoose.title}</p>
         <div className="flex max-xl:flex-col max-xl:items-baseline max-xl:gap-3 pt-10 pb-18 text-[18px] md:text-[27px] justify-between">
           {whyChoose.items.map((item) => (
