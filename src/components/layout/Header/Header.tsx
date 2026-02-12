@@ -9,6 +9,7 @@ export function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(true);
+  const [hideHeader, setHideHeader] = useState(false);
 
   const handleDropdownEnter = () => setOpenDropdown(true);
   const handleDropdownLeave = () => setOpenDropdown(false);
@@ -16,6 +17,7 @@ export function Header() {
 
   const dropdownRef = useRef<HTMLLIElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -38,8 +40,33 @@ export function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const lastScrollY = lastScrollYRef.current;
+
+      if (currentScrollY <= 20) {
+        setHideHeader(false);
+      } else if (currentScrollY > lastScrollY) {
+        setHideHeader(true);
+      } else if (currentScrollY < lastScrollY) {
+        setHideHeader(false);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header ref={navbarRef} className="fixed inset-x-0 top-0 z-50 px-10 max-md:px-2">
+    <header
+      ref={navbarRef}
+      className={`fixed inset-x-0 top-0 z-50 px-10 max-md:px-2 transition-transform duration-300 ${
+        hideHeader && !openMenu ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
       <div className="flex items-center justify-between mt-4 md:mt-10.5 backdrop-blur-md rounded-md">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 font-semibold text-gray-900">
