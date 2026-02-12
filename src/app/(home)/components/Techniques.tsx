@@ -14,13 +14,19 @@ type Technique = {
 
 const TechniqueItem = ({ href, title, description, iconSrc }: Technique) => {
   return (
-    <div className="flex flex-col border-b border-solid border-concrete pb-14">
-      <div className="grid grid-flow-row-dense pt-24 pr-17 max-sm:pr-0">
-        <div className="mb-8 flex justify-between gap-1">
+    <div className="flex flex-col border-b border-solid border-concrete pb-14 pt-10">
+      <div className="grid grid-flow-row-dense bg-linear-to-b from-[#111316] to-[#111216] px-8 py-8 pr-17 max-sm:pr-8 rounded-sm">
+        <div className="mb-8 flex justify-between gap-4">
           <p className="flex items-center justify-center text-[24px]/[150%] lg:text-[28px] font-normal whitespace-pre-line">
             {title}
           </p>
-          <Image src={iconSrc} alt={title} width={79} height={79} className="w-auto h-auto" />
+          <Image
+            src={iconSrc}
+            alt={title}
+            width={128}
+            height={128}
+            className="w-[70px] h-[70px] shrink-0"
+          />
         </div>
 
         <p className="mb-6 text-[17px]/[100%] font-light">{description}</p>
