@@ -62,6 +62,20 @@ const Techniques = () => {
             ))}
           </div>
         </div>
+
+        <Link
+          href="/contact"
+          className="mt-10 inline-flex px-7 py-3 bg-true-red text-white font-semibold rounded-lg transition hover:bg-red-600 focus:outline-none"
+          onClick={() => {
+            sendGTMEvent({
+              event: 'techniques_contact_click',
+              button_text: 'Contact Us',
+              location: 'techniques_section',
+            });
+          }}
+        >
+          Contact Us
+        </Link>
       </div>
     </section>
   );
