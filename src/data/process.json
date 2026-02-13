@@ -21,10 +21,7 @@
       "to": "#1D1D1D"
     },
     "title": {
-      "lines": [
-        "Polymer Injection,",
-        "<span class='text-true-red'>Simplified</span>"
-      ]
+      "lines": ["Polymer Injection,", "<span class='text-true-red'>Simplified</span>"]
     },
     "subtitle": "A straightforward process for identifying subsurface issues and stabilizing infrastructure from below.",
     "cta": {
@@ -71,12 +68,6 @@
         "navLabel": "Site Assessment",
         "title": "Seeing Beneath the Surface",
         "images": [
-          {
-            "src": "/process/innovative/radar.jpg",
-            "alt": "Surface 1",
-            "width": 125,
-            "height": 132
-          },
           {
             "src": "/process/innovative/radar_updated_2.png",
             "alt": "Surface 2",

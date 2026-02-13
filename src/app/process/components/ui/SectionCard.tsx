@@ -132,14 +132,16 @@ const SectionCard = () => {
                         alt={section.images?.[0]?.alt || ''}
                       />
                     </div>
-                    <div className="relative ml-18 max-lg:ml-0 max-lg:mt-10">
-                      <Image
-                        src={section.images?.[1]?.src || ''}
-                        alt={section.images?.[1]?.alt || ''}
-                        width={section.images?.[1]?.width}
-                        height={section.images?.[1]?.height}
-                      />
-                    </div>
+                    {section.images?.[1] && (
+                      <div className="relative ml-18 max-lg:ml-0 max-lg:mt-10">
+                        <Image
+                          src={section.images[1].src}
+                          alt={section.images[1].alt}
+                          width={section.images[1].width}
+                          height={section.images[1].height}
+                        />
+                      </div>
+                    )}
                   </div>
                   <div className="pt-7 pl-7 text-[14px]">{section.lead}</div>
                   <div className="pt-12 pl-7 max-w-[610px] text-[16px]">{section.text}</div>
