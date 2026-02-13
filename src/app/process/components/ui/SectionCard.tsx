@@ -216,9 +216,14 @@ const SectionCard = () => {
                           muted
                           playsInline
                           preload="metadata"
+                          onEnded={(event) => {
+                            event.currentTarget.currentTime = 0;
+                            void event.currentTarget.play();
+                          }}
                           aria-label="Pillar animation"
                           poster={section.images?.[0]?.src || undefined}
                         >
+                          <source src="/video/Pillar_animation_alpha.webm" type="video/webm" />
                           <source src="/video/Pillar_animation.mp4" type="video/mp4" />
                         </video>
                       </div>
@@ -324,9 +329,14 @@ const SectionCard = () => {
                       muted
                       playsInline
                       preload="metadata"
+                      onEnded={(event) => {
+                        event.currentTarget.currentTime = 0;
+                        void event.currentTarget.play();
+                      }}
                       aria-label="Scanning animation"
                       poster={section.image?.src || undefined}
                     >
+                      <source src="/video/Scanning_Animation_alpha.webm" type="video/webm" />
                       <source src="/video/Scanning_Animation.mp4" type="video/mp4" />
                     </video>
                   </div>
