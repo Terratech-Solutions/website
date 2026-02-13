@@ -111,13 +111,13 @@
   "whyUs": {
     "section": {
       "sectionLabel": "Why Terratech",
-      "title": "Key Advantages of Polymer Injection",
-      "subtitle": "Engineered solutions that seal infiltration, stabilize soils, and extend the service\nlife of stormwater and structural assets—without excavation."
+      "title": "The TerraTech Difference: Polymer Injection",
+      "subtitle": "A modern way to stabilize critical infrastructure with less disruption."
     },
     "cards": [
       {
-        "title": "No Excavation, Minimal Downtime",
-        "description": "Injection occurs through small ports from the surface. Most assets remain accessible, enablling faster return-to-service.",
+        "title": "Reduced Project Cost",
+        "description": "Polymer injection is, on average, 50% more cost efficient than traditional efforts like excavation and slab-jacking.",
         "iconSrc": "/home/why-us/advantages-1.svg",
         "iconWidth": 95,
         "iconHeight": 95,
@@ -125,8 +125,8 @@
         "cta": "Learn More"
       },
       {
-        "title": "Seal Infiltration & Stabilize Solls",
-        "description": "Expanding polymer forms a barrier around detects and densifies adjacent solls to reduce undermining and washouts.",
+        "title": "Minimal Downtime",
+        "description": "With no excavation or heavy equipment required, many projects are completed in hours rather than days or weeks.",
         "iconSrc": "/home/why-us/advantages-2.svg",
         "iconWidth": 95,
         "iconHeight": 95,
@@ -134,8 +134,8 @@
         "cta": "Learn More"
       },
       {
-        "title": "Precise & Scalable",
-        "description": "Metered delivery targets joints, voids, and seams with control-from manholes and culverts to long pipe runs.",
+        "title": "Long-Lasting",
+        "description": "TerraTech’s unique eco-friendly polymer formulation provides lasting support to meaningfully extend the life of essential infrastructure.",
         "iconSrc": "/home/why-us/advantages-3.svg",
         "iconWidth": 95,
         "iconHeight": 95,
@@ -143,8 +143,8 @@
         "cta": "Learn More"
       },
       {
-        "title": "Long-Lasting & Cost-Conscious",
-        "description": "Durable, lightweight materials reduce load on compromised solls and help strech maintenance budgets.",
+        "title": "Precise & Scalable",
+        "description": "Advanced assessment and injection techniques allow repairs to be precisely targeted—or scaled—to match site conditions and project scope.",
         "iconSrc": "/home/why-us/advantages-4.svg",
         "iconWidth": 95,
         "iconHeight": 95,
