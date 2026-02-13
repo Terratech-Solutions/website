@@ -206,24 +206,28 @@ const SectionCard = () => {
                 <SectionBg active={isActive} />
                 <div className="relative z-10">
                   <div className="text-[24px] font-semibold pl-11">{section.title}</div>
-                  <div className="flex max-xl:flex-col justify-center items-center">
-                    <div className="flex relative mt-10 ml-17 max-xl:w-full max-xl:m-0">
-                      <video
-                        className="h-auto w-full max-w-[420px]"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="metadata"
-                        aria-label="Pillar animation"
-                        poster={section.images?.[0]?.src || undefined}
-                      >
-                        <source src="/video/Pillar_animation.mp4" type="video/mp4" />
-                      </video>
+                  <div className="flex max-xl:flex-col justify-center items-start gap-12 max-xl:gap-8">
+                    <div className="flex flex-col mt-10 ml-17 max-xl:w-full max-xl:m-0">
+                      <div className="flex relative">
+                        <video
+                          className="h-[356px] w-auto max-w-full object-contain"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          preload="metadata"
+                          aria-label="Pillar animation"
+                          poster={section.images?.[0]?.src || undefined}
+                        >
+                          <source src="/video/Pillar_animation.mp4" type="video/mp4" />
+                        </video>
+                      </div>
+                      <div className="pt-6 text-[14px] max-w-[318px]">{section.lead}</div>
                     </div>
                     <div className="flex flex-col pl-16 pt-16 max-xl:p-0">
-                      <div className="flex text-[14px] max-xl:hidden">{section.lead}</div>
-                      <div className="flex text-[16px] max-w-[318px] pt-9">{section.text}</div>
+                      <div className="flex text-[16px] max-w-[318px] pt-9 max-xl:pt-0">
+                        {section.text}
+                      </div>
                     </div>
                   </div>
                 </div>
