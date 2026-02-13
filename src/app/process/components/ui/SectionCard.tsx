@@ -249,6 +249,7 @@ const SectionCard = () => {
                   <div className="flex flex-col pt-5">
                     <div className="relative w-full">
                       <Image
+                        className="-ml-[82px]"
                         width={section.images?.[0]?.width}
                         height={section.images?.[0]?.height}
                         src={section.images?.[0]?.src || ''}
@@ -316,12 +317,18 @@ const SectionCard = () => {
                     ))}
                   </div>
                   <div className="relative w-full mt-5">
-                    <Image
-                      width={section.image?.width}
-                      height={section.image?.height}
-                      src={section.image?.src || ''}
-                      alt={section.image?.alt || ''}
-                    />
+                    <video
+                      className="h-[300px] w-auto max-w-full object-contain"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      aria-label="Scanning animation"
+                      poster={section.image?.src || undefined}
+                    >
+                      <source src="/video/Scanning_Animation.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
               </motion.section>
