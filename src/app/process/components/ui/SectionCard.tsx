@@ -208,12 +208,18 @@ const SectionCard = () => {
                   <div className="text-[24px] font-semibold pl-11">{section.title}</div>
                   <div className="flex max-xl:flex-col justify-center items-center">
                     <div className="flex relative mt-10 ml-17 max-xl:w-full max-xl:m-0">
-                      <Image
-                        width={section.images?.[0]?.width}
-                        height={section.images?.[0]?.height}
-                        src={section.images?.[0]?.src || ''}
-                        alt={section.images?.[0]?.alt || ''}
-                      />
+                      <video
+                        className="h-auto w-full max-w-[420px]"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        aria-label="Pillar animation"
+                        poster={section.images?.[0]?.src || undefined}
+                      >
+                        <source src="/video/Pillar_animation.mp4" type="video/mp4" />
+                      </video>
                     </div>
                     <div className="flex flex-col pl-16 pt-16 max-xl:p-0">
                       <div className="flex text-[14px] max-xl:hidden">{section.lead}</div>
