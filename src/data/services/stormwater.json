@@ -11,15 +11,11 @@
     },
     "text": {
       "title": {
-        "lines": [
-          "Stormwater",
-          "& Drainage",
-          "Solutions"
-        ],
+        "lines": ["Stormwater & Drainage", "Solutions"],
         "highlight": ["Solutions"],
         "highlightColor": "text-true-red"
       },
-      "subtitle": "We provide innovative solutions for concrete stabilization and infrastructure repair."
+      "subtitle": "Our storm drain stabilization solutions stop soil loss and structural failure before they turn into expensive emergency repairs."
     },
     "cta": {
       "freeQuote": {
@@ -38,8 +34,8 @@
     "section": {
       "sectionLabel": "Innovative Solutions",
       "title": {
-        "lines": ["Prevent Breakdown", "from Within"],
-        "highlight": ["Prevent", "Breakdown"],
+        "lines": ["Catch Damage", "Before Collapse"],
+        "highlight": ["Catch", "Damage"],
         "highlightColor": "text-true-red"
       },
       "description": "Along with on site assessment and detailed visual observation of the area, Terratech's 3D Scanning techniques and analysis can show advanced warning signs for informed remediation."
@@ -100,7 +96,7 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["Repair Outside & Inside"],
+        "lines": ["The Stormdrain Repair Process"],
         "highlight": [],
         "highlightColor": "text-true-red"
       }
@@ -108,7 +104,7 @@
     "points": [
       {
         "title": "Early Detection",
-        "description": "Issues are identified both below the surface and within the structure, allowing repairs to address the full problem. Not just what is visible for the outside."
+        "description": "Issues are identified both below the surface and within the structure, allowing holistic repair-not just what's visible."
       },
       {
         "title": "Precision & Safety",
