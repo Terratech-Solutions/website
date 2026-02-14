@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Erosion & Slope Repair. Stabilized | Terratech",
+    "title": "Erosion & Slope Stabilization | Terratech",
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
     "path": "/services/slope"
   },
@@ -11,8 +11,8 @@
     },
     "text": {
       "title": {
-        "lines": ["Erosion &", "Slope Repair.", "Stabilized"],
-        "highlight": ["Stabilized"],
+        "lines": ["Erosion &", "Slope", "Stabilization"],
+        "highlight": ["Stabilization"],
         "highlightColor": "text-true-red"
       },
       "subtitle": "Cost-effective solutions for erosion and slope repair with minimal downtime."
@@ -34,11 +34,11 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["Erosion Repair for", "Critical Infrastructure."],
-        "highlight": ["Critical", "Infrastructure"],
+        "lines": ["The Hidden Danger of", "Slope Erosion"],
+        "highlight": [],
         "highlightColor": "text-lemon-green"
       },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+      "description": "Water movement across slopes and gradients causes rapid deterioration of soil conditions. This poses a unique problem for bridges, roadways, dams, and other infrastructure that polymer injections are uniquely suited to address."
     },
     "image": {
       "src": "/services/slope/erosion-repair.png",
@@ -51,7 +51,7 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["Rapid Slope", "Stabilization"],
+        "lines": ["How We Stop", "Erosion"],
         "highlight": [],
         "highlightColor": "text-true-red"
       }
@@ -59,19 +59,19 @@
     "points": [
       {
         "title": "Early Detection",
-        "description": "Problems are identified before slope failure becomes visible, allowing fix before damage spreads, and cost escalates."
+        "description": "Problems are identified before slope failure becomes visible, damage spreads, and cost escalates. (EARLY DETECTION)"
       },
       {
         "title": "Precision & Safety",
-        "description": "Stabilization is applied only where it is needed, reducing unnecessary work, costs and allowing quick and non-invasive procedures while improving safety and confidence in the final result."
+        "description": "We use an eco-friendly poly-foam. It's durable, up to 50% more cost effective, and incredibly precise. (Precision & Safety)"
       },
       {
         "title": "Minimal Disruption",
-        "description": "Stabilization is restored with limited surface impact, helping you keep roads, properties and operations functioning during repair process."
+        "description": "Integrity is restored with limited surface impact, helping you keep roads, properties, and operations functioning during the repair process. (Minimal Disruption)"
       },
       {
-        "title": "Customized Solutions",
-        "description": "Each solution is designed around your site's specific conditions, delivering long-term stability without delays."
+        "title": "Designed for You",
+        "description": "Each solution is 100% custom and designed for your project scope. (Customized Solutions)"
       }
     ],
     "image": {
@@ -102,8 +102,8 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["identify the", "Problem"],
-        "highlight": ["Problem"],
+        "lines": ["Six Layers of Stabilization"],
+        "highlight": [],
         "highlightColor": "text-true-red"
       },
       "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."

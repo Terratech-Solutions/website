@@ -7,9 +7,6 @@ import Script from 'next/script';
 
 // Lazy load below-the-fold components for better initial page load
 const AccordionWithImage = dynamic(() => import('@/app/services/_components/AccordionWithImage'));
-const BigImageWithDescription = dynamic(
-  () => import('@/app/services/_components/BigImageWithDescription'),
-);
 const ImageWithDescriptionCol = dynamic(
   () => import('@/app/services/_components/ImageWithDescriptionCol'),
 );
@@ -28,7 +25,6 @@ const Sinkholes = () => {
       <Title {...page.title} />
       <ImageWithDescriptionCol {...page.erosionRepair} />
       <AccordionWithImage {...page.accordionData} />
-      <BigImageWithDescription {...page.stopErosion} />
       <ImageWithDescriptionCol {...page.identifyProblem} />
       <ContactBlock />
     </>
