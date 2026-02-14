@@ -108,7 +108,7 @@
       },
       {
         "title": "Precision & Safety",
-        "description": "Repairs are performed at the most effective access point, inside or out, reducing risk, cost, and damage while ensuring the problem is corrected and fixed at it's source."
+        "description": "Repairs are performed at the most effective access point, reducing risk, cost, and damage while ensuring the problem is solved."
       },
       {
         "title": "Minimal Disruption",
@@ -116,7 +116,7 @@
       },
       {
         "title": "Customized Solutions",
-        "description": "Each solution is designed around your site's specific conditions, delivering long-term stability without delays."
+        "description": "Each solution is 100% custom and designed for your project scope."
       }
     ],
     "image": {
@@ -130,11 +130,11 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["Reinforce & Mitigate", "Loose Soil"],
-        "highlight": ["Loose", "Soil"],
+        "lines": ["Stopping Water Intrusion", "From the Ground Up"],
+        "highlight": [],
         "highlightColor": "text-true-red"
       },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+      "description": "Polymer foam is injected under standing water to create a raised, non-permeable barrier that stops erosion and further damage."
     },
     "image": {
       "src": "/services/stormwater/Stormwater-Remediation.mp4",
