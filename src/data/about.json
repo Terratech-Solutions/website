@@ -23,7 +23,7 @@
         "href": "/process"
       }
     }
-    },
+  },
   "community": {
     "sectionLabel": "OUR MISSION & VISION",
     "title": {
@@ -75,7 +75,8 @@
     },
     "paragraphs": [
       "After years in the construction industry, we founded TerraTech Solutions with a simple goal: to build a company that makes a lasting impact—on people, on projects, and on the planet.",
-      "Rather than being just another construction firm, we envisioned something different: a construction technology company. By combining our hands-on expertise with innovation, we’re redefining what it means to build with precision, durability, and sustainability."
+      "Instead of tearing out and rebuilding, we repair from below using eco-friendly poly-foam.",
+      "Our solutions are more than a quick, they’re durable, cost-effective solutions that last for generations."
     ],
     "image": {
       "src": "/about/started.jpg",
