@@ -39,12 +39,12 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
           onClick={() => {
             sendGTMEvent({
               event: 'call_us_click',
-              button_text: 'Call Us',
+              button_text: 'Call Us now',
               location: 'contact_block_section',
             });
           }}
         >
-          Call Us
+          Call Us now
         </a>
         <div className="w-[80%]">
           <ConsultationButtons />
