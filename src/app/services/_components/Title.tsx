@@ -1,5 +1,6 @@
 import contactData from '@/data/contact.json';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Contact = {
   type: string;
@@ -33,7 +34,7 @@ type TitleProps = {
   };
 };
 
-const Title = ({ background, text, image, cta }: TitleProps) => {
+const Title = ({ background, text, image }: TitleProps) => {
   const highlights = Array.isArray(text.title.highlight)
     ? text.title.highlight
     : [text.title.highlight];
@@ -84,8 +85,14 @@ const Title = ({ background, text, image, cta }: TitleProps) => {
               href={phoneContact?.href || '#'}
               className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
             >
-              <span className="pr-2">{cta.freeQuote.content}</span> &rarr;
+              <span className="pr-2">Call Us now</span> &rarr;
             </a>
+            <Link
+              href="/process"
+              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:w-full"
+            >
+              Learn About Our Process
+            </Link>
           </div>
         </div>
 

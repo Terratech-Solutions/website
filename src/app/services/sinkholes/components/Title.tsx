@@ -1,10 +1,20 @@
 import { sendGTMEvent } from '@/app/utils/gtm';
+import contactData from '@/data/contact.json';
 import { title } from '@/data/services/sinkholes.json';
 import Image from 'next/image';
-import Link from 'next/link';
+
+type Contact = {
+  type: string;
+  icon: string;
+  label: string;
+  value: string;
+  href?: string;
+};
 
 const Title = () => {
   const { background, text, image, cta } = title;
+  const contacts: Contact[] = contactData.phoneFormData.contacts;
+  const phoneContact = contacts.find((c) => c.type === 'Phone');
 
   return (
     <section
@@ -32,20 +42,21 @@ const Title = () => {
             {text.subtitle}
           </p>
           <div className="mt-10 flex gap-4 max-sm:flex-col max-sm:items-center">
-            <Link
-              href={cta.freeQuote.href}
+            <a
+              href={phoneContact?.href || cta.freeQuote.href}
               onClick={() => {
                 sendGTMEvent({
                   event: 'click_free_quote',
                   value: 1,
-                  button_text: cta.freeQuote.content,
+                  button_text: 'Call Us now',
                   location: 'hero_section',
                   cta_type: 'free_quote',
                 });
               }}
+              className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
             >
-              <span>{cta.freeQuote.content}</span>
-            </Link>
+              <span>Call Us now</span>
+            </a>
           </div>
         </div>
 

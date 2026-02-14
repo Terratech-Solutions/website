@@ -13,7 +13,7 @@ type Contact = {
 };
 
 const Injection = () => {
-  const { background, title, subtitle, cta } = injection;
+  const { background, title, subtitle } = injection;
 
   const contacts: Contact[] = contactData.phoneFormData.contacts;
   const phoneContact = contacts.find((c) => c.type === 'Phone');
@@ -22,7 +22,7 @@ const Injection = () => {
     sendGTMEvent({
       event: 'process_injection_cta_click',
       cta_id: 'freeQuote',
-      cta_label: cta.freeQuote.content,
+      cta_label: 'Call Us now',
       location: 'process_injection_section',
     });
   };
@@ -47,7 +47,7 @@ const Injection = () => {
             className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
             onClick={handleCtaClick}
           >
-            <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
+            <span className="pr-2">Call Us now</span>&rarr;
           </a>
         </div>
       </div>
