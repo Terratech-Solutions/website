@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Fixing Roads with Minimal Interruptions. | Terratech",
+    "title": "DOT & Roadway Repair | Terratech",
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
     "path": "/services/roadway"
   },
@@ -11,8 +11,8 @@
     },
     "text": {
       "title": {
-        "lines": ["Fixing Roads with", "Minimal", "Interruptions"],
-        "highlight": ["Minimal", "Interruptions"],
+        "lines": ["DOT\u00A0&\u00A0Roadway", "Repair"],
+        "highlight": ["Repair"],
         "highlightColor": "text-true-red"
       },
       "subtitle": "Stabilizing undermined pavement without excavation or extended lane closures."
@@ -55,7 +55,7 @@
         "highlight": [],
         "highlightColor": "text-true-red"
       },
-      "description": "Repeated asphalt patching addresses surface distress while underlying soil instability remains unresolved. As base support continues to weaken, cracking, settlement, and ride-quality issues return, often within the same maintenance cycle.\n\nPolymer injection stabilizes roadways from below by restoring base support and filling subsurface voids without full-depth excavation. This approach extends pavement service life, reduces repeat maintenance cycles, minimizes lane closures and traffic disruption, and lowers total lifecycle cost compared to reconstruction.\n\nBy correcting the root cause of roadway failure, <span class=\"text-true-red underline\">polymer injection provides a durable alternative to continual surface repairs.</span>"
+      "description": "The days of more patch than road is over. Deal with the root cause-under the pavement-and strengthen the soil with polymer injections. With stabilized soil, say goodbye to cracked, settled, bumpy asphalt, without disruption or long-term upkeep."
     },
     "image": {
       "src": "/services/roadway/sinkhole-formation.png",
@@ -102,8 +102,8 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["Our Solution", "Without Excavation"],
-        "highlight": ["Without"],
+        "lines": ["Fixed in Days,", "Not Months"],
+        "highlight": [],
         "highlightColor": "text-true-red"
       },
       "description": "TerraTech stabilizes subsurface voids and weak soils beneath roadways without excavation, restoring support while keeping the surface intact."

@@ -31,7 +31,7 @@ const Solution = () => {
             </div>
           ))}
         </div>
-        <div className="whitespace-pre-line mt-4 md:mt-6 text-start text-base sm:text-lg md:text-xl text-neutral-200 max-w-full md:max-w-2xl ml-0 md:ml-auto">
+        <div className="whitespace-pre-line mt-10 md:mt-14 text-start text-base sm:text-lg md:text-[18px]/[150%] text-neutral-200 w-full max-w-none ml-0">
           {section.description}
         </div>
       </div>
