@@ -139,7 +139,7 @@
     "section": {
       "sectionLabel": "Informed Methodology",
       "title": {
-        "lines": ["Advanced 3D", "Ground Imaging"],
+        "lines": ["How We See", "Deeper"],
         "highlight": [],
         "highlightColor": "text-true-red"
       }
@@ -147,7 +147,7 @@
     "points": [
       {
         "title": "Early Risk Identification",
-        "description": "Identify voids, weak soils, moisture anomalies, and hidden instability early in the process—before they impact budgets or schedules."
+        "description": "Our process identifies voids, weak soils, moisture anomalies, and hidden instability early in the process—before they impact budgets or schedules."
       },
       {
         "title": "Non-Invasive Assessment",
