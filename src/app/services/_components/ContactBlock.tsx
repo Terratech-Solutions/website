@@ -22,7 +22,7 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
       >
         <h2
           className="
-            text-[36px] font-bold mb-8 leading-tight
+            text-[28px] sm:text-[36px] font-bold mb-8 leading-tight
              sm:mb-5
           "
         >
