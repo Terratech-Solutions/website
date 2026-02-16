@@ -110,16 +110,16 @@
     },
     "images": [
       {
-        "src": "/services/infrastructure/solution-1.png",
-        "alt": "Slider 1",
-        "width": 800,
-        "height": 480
+        "src": "/services/infrastructure/Group_16.png",
+        "alt": "Residential foundation with identified void destabilization",
+        "width": 1144,
+        "height": 489
       },
       {
-        "src": "/services/infrastructure/solution-2.png",
-        "alt": "Slider 2",
-        "width": 800,
-        "height": 480
+        "src": "/services/infrastructure/Group_17.png",
+        "alt": "Residential foundation stabilized by poly-foam void filling",
+        "width": 1139,
+        "height": 489
       }
     ]
   }
