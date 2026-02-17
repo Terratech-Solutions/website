@@ -2,12 +2,13 @@
 
 import { phoneFormData } from '@/data/contact.json';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const PhoneForm = () => {
   const [showIframe, setShowIframe] = useState(false);
   const searchParams = useSearchParams();
+  const router = useRouter();
   const success = searchParams.get('success') === 'true';
 
   useEffect(() => {
@@ -16,6 +17,20 @@ const PhoneForm = () => {
     }, 300);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const myForm = event.target as HTMLFormElement;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => router.push('/contact/success'))
+      .catch((error) => alert(error));
+  };
 
   const field =
     'w-full bg-[#1d1d1d] text-white placeholder-zinc-400 border border-white/30 focus:border-white/60 outline-none rounded-sm px-4 py-4 transition-colors';
@@ -35,7 +50,7 @@ const PhoneForm = () => {
             data-netlify-recaptcha="true"
             className="p-6 space-y-5 w-full"
             noValidate
-            action="/contact/success"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <div>
