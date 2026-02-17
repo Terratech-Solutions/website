@@ -9,9 +9,19 @@ export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
 const Contact = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ContactClient />
-    </Suspense>
+    <>
+      {/* Hidden form for Netlify build detection */}
+      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="phone" />
+        <select name="source"></select>
+      </form>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactClient />
+      </Suspense>
+    </>
   );
 };
 
