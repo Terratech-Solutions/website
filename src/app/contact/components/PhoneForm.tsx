@@ -22,6 +22,7 @@ const PhoneForm = () => {
     event.preventDefault();
     const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm);
+    formData.append('form-name', 'contact'); // Explicitly add form-name
 
     fetch('/', {
       method: 'POST',
