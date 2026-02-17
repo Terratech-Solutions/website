@@ -1,37 +1,42 @@
 'use client';
-}
 
-export default PhoneForm;
 import { phoneFormData } from '@/data/contact.json';
-import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
-import { useState } from 'react';
-
 import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const PhoneForm = () => {
   const [showIframe, setShowIframe] = useState(false);
-  const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : undefined;
-  const success = searchParams?.get('success') === 'true';
+  const searchParams = useSearchParams();
+  const success = searchParams.get('success') === 'true';
 
-  setTimeout(() => {
-    setShowIframe(true);
-  }, 300);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIframe(true);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   const field =
     'w-full bg-[#1d1d1d] text-white placeholder-zinc-400 border border-white/30 focus:border-white/60 outline-none rounded-sm px-4 py-4 transition-colors';
 
   return (
-    <div className="flex justify-around items-center py-20 px-30 max-md:px-3 max-xl:flex-col  mx-auto max-w-[1440] min-h-[860px]">
+    <div className="flex justify-around items-center py-20 px-30 max-md:px-3 max-xl:flex-col mx-auto max-w-[1440px] min-h-[860px]">
       <div className="flex flex-col w-full">
         {success ? (
           <div className="p-6 text-green-400 text-center text-lg font-semibold">
             Thank you for contacting us! We have received your message.
           </div>
         ) : (
-          <form name="contact" method="POST" data-netlify="true" className="p-6 space-y-5 w-full" noValidate action="/contact?success=true">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            className="p-6 space-y-5 w-full"
+            noValidate
+            action="/contact?success=true"
+          >
             <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="redirect" value="/contact?success=true" />
             <div>
               <input
                 aria-label="Name"
@@ -60,10 +65,7 @@ const PhoneForm = () => {
               />
             </div>
             <div className="relative">
-              <select
-                aria-label="How did you find us?"
-                name="source"
-              >
+              <select aria-label="How did you find us?" name="source" className={`${field} appearance-none`}>
                 <option value="" disabled>
                   {phoneFormData.form.placeholders.source}
                 </option>
@@ -86,6 +88,7 @@ const PhoneForm = () => {
             </button>
           </form>
         )}
+
         <div
           className="flex w-full px-6 justify-around max-md:flex-col"
           style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 300px' }}
@@ -93,13 +96,7 @@ const PhoneForm = () => {
           {phoneFormData.contacts.map((item) => (
             <div key={item.type} className="flex mt-3 max-md:mt-4">
               <div className="flex relative">
-                <Image
-                  src={item.icon}
-                  alt={item.type}
-                  width={23}
-                  height={23}
-                  className="w-auto h-auto"
-                />
+                <Image src={item.icon} alt={item.type} width={23} height={23} className="w-auto h-auto" />
               </div>
               <div className="flex flex-col pl-3">
                 <div>{item.label}</div>
@@ -114,19 +111,23 @@ const PhoneForm = () => {
             </div>
           ))}
         </div>
-        <div className="flex relative w-full max-xl:justify-center max-xl:pt-10 max-sm:px-2">
-          {showIframe && (
-            <iframe
-              src={phoneFormData.map.src}
-              width={phoneFormData.map.width}
-              className={phoneFormData.map.heightClass}
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          )}
-        </div>
+      </div>
+
+      <div className="flex relative w-full max-xl:justify-center max-xl:pt-10 max-sm:px-2">
+        {showIframe && (
+          <iframe
+            src={phoneFormData.map.src}
+            width={phoneFormData.map.width}
+            className={phoneFormData.map.heightClass}
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        )}
       </div>
     </div>
   );
+};
+
+export default PhoneForm;
