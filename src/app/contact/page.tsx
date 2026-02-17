@@ -9,12 +9,24 @@ const PhoneForm = dynamic(() => import('@/app/contact/components/PhoneForm'));
 
 export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
+
 const Contact = () => {
   return (
-    <RecaptchaProvider>
-      <Connect />
-      <PhoneForm />
-    </RecaptchaProvider>
+    <>
+      {/* Hidden static Netlify form for build-time detection */}
+      <form name="contact" netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="phone" />
+        <select name="source">
+          <option value="">Source</option>
+        </select>
+      </form>
+      <RecaptchaProvider>
+        <Connect />
+        <PhoneForm />
+      </RecaptchaProvider>
+    </>
   );
 };
 
