@@ -1,5 +1,7 @@
 'use client';
+}
 
+export default PhoneForm;
 import { phoneFormData } from '@/data/contact.json';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
