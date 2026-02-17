@@ -11,14 +11,13 @@ const Contact = () => {
   return (
     <>
       {/* Hidden form for Netlify build detection */}
-      <form name="contact" data-netlify="true" data-netlify-recaptcha="true" data-netlify-honeypot="bot-field" hidden>
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="hidden" name="form-name" value="contact" />
         <input name="bot-field" />
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="text" name="phone" />
         <select name="source"></select>
-        <div data-netlify-recaptcha="true"></div>
       </form>
 
       <Suspense fallback={<div>Loading...</div>}>

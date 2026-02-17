@@ -47,7 +47,6 @@ const PhoneForm = () => {
             name="contact"
             method="POST"
             data-netlify="true"
-            data-netlify-recaptcha="true"
             className="p-6 space-y-5 w-full"
             noValidate
             onSubmit={handleSubmit}
@@ -99,7 +98,7 @@ const PhoneForm = () => {
                 ▾
               </span>
             </div>
-            <div data-netlify-recaptcha="true"></div>
+            
             <button
               type="submit"
               className="w-full uppercase font-semibold py-4 rounded-sm bg-[#c44237] hover:bg-[#b53a30]"
