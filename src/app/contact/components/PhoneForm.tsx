@@ -34,7 +34,7 @@ const PhoneForm = () => {
             data-netlify="true"
             className="p-6 space-y-5 w-full"
             noValidate
-            action="/contact?success=true"
+            action="/contact/success"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div>
