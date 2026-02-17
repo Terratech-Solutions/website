@@ -63,21 +63,11 @@ const PhoneForm = () => {
           <div className="relative">
             <select
               aria-label="How did you find us?"
-              {showIframe && (
-                <iframe
-                  src={phoneFormData.map.src}
-                  width={phoneFormData.map.width}
-                  className={phoneFormData.map.heightClass}
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  allowFullScreen
-                ></iframe>
-              )}
-                            name="source"
-                          >
-                            <option value="" disabled>
-                              {phoneFormData.form.placeholders.source}
-                            </option>
+              name="source"
+            >
+              <option value="" disabled>
+                {phoneFormData.form.placeholders.source}
+              </option>
                             {phoneFormData.form.sources.map((item) => (
                               <option key={item}>{item}</option>
                             ))}
