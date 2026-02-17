@@ -1,3 +1,5 @@
+'use client';
+
 import Connect from '@/app/contact/components/Connect';
 import { buildPageMetadata } from '@/app/metadata';
 import RecaptchaProvider from '@/components/RecaptchaProvider';
