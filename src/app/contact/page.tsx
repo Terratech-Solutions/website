@@ -9,21 +9,26 @@ export const generateMetadata = (): Metadata => buildPageMetadata(page.meta);
 
 
 
+
+// Hidden static Netlify form for build-time detection
+export const HiddenNetlifyForm = () => (
+  <form name="contact" data-netlify="true" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="phone" />
+    <select name="source">
+      <option value="">Source</option>
+    </select>
+  </form>
+);
+
 import dynamic from 'next/dynamic';
 
 const Contact = () => {
   const PhoneForm = dynamic(() => import('@/app/contact/components/PhoneForm'));
   return (
     <>
-      {/* Hidden static Netlify form for build-time detection */}
-      <form name="contact" data-netlify="true" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="text" name="phone" />
-        <select name="source">
-          <option value="">Source</option>
-        </select>
-      </form>
+      <HiddenNetlifyForm />
       <RecaptchaProvider>
         <Connect />
         <PhoneForm />
