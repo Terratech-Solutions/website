@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       {/* Hidden form for Netlify build detection */}
-      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="text" name="phone" />
