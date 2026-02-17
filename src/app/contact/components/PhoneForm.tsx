@@ -22,7 +22,6 @@ const PhoneForm = () => {
     event.preventDefault();
     const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm);
-    formData.append('form-name', 'contact'); // Explicitly add form-name
 
     fetch('/', {
       method: 'POST',
@@ -54,6 +53,9 @@ const PhoneForm = () => {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
             <div>
               <input
                 aria-label="Name"
