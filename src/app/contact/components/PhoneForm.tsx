@@ -27,9 +27,9 @@ const PhoneForm = () => {
             Thank you for contacting us! We have received your message.
           </div>
         ) : (
-        <form name="contact" method="POST" data-netlify="true" className="p-6 space-y-5 w-full" noValidate action="/contact?success=true">
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="redirect" value="/contact?success=true" />
+          <form name="contact" method="POST" data-netlify="true" className="p-6 space-y-5 w-full" noValidate action="/contact?success=true">
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="redirect" value="/contact?success=true" />
           <div>
             <input
               aria-label="Name"
@@ -88,7 +88,7 @@ const PhoneForm = () => {
           >
             {phoneFormData.form.button.default}
           </button>
-        </form>
+          </form>
         )}
         </form>
 
