@@ -88,9 +88,8 @@ const PhoneForm = () => {
           >
             {phoneFormData.form.button.default}
           </button>
-          </form>
+
         )}
-        </form>
 
         <div
           className="flex w-full px-6 justify-around max-md:flex-col"
