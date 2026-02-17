@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <>
       {/* Hidden static Netlify form for build-time detection */}
-      <form name="contact" netlify="true" hidden>
+      <form name="contact" data-netlify="true" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="text" name="phone" />
