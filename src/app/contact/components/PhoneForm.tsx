@@ -5,15 +5,16 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { useState } from 'react';
 
+import { useSearchParams } from 'next/navigation';
+
 const PhoneForm = () => {
-  const [status, setStatus] = useState<'idle' | 'ok' | 'error'>('idle');
-  const [error, setError] = useState<string | null>(null);
   const [showIframe, setShowIframe] = useState(false);
+  const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : undefined;
+  const success = searchParams?.get('success') === 'true';
 
   setTimeout(() => {
     setShowIframe(true);
   }, 300);
-
 
   const field =
     'w-full bg-[#1d1d1d] text-white placeholder-zinc-400 border border-white/30 focus:border-white/60 outline-none rounded-sm px-4 py-4 transition-colors';
@@ -21,8 +22,14 @@ const PhoneForm = () => {
   return (
     <div className="flex justify-around items-center py-20 px-30 max-md:px-3 max-xl:flex-col  mx-auto max-w-[1440] min-h-[860px]">
       <div className="flex flex-col w-full">
-        <form name="contact" method="POST" data-netlify="true" className="p-6 space-y-5 w-full" noValidate>
+        {success ? (
+          <div className="p-6 text-green-400 text-center text-lg font-semibold">
+            Thank you for contacting us! We have received your message.
+          </div>
+        ) : (
+        <form name="contact" method="POST" data-netlify="true" className="p-6 space-y-5 w-full" noValidate action="/contact?success=true">
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="redirect" value="/contact?success=true" />
           <div>
             <input
               aria-label="Name"
@@ -81,10 +88,8 @@ const PhoneForm = () => {
           >
             {phoneFormData.form.button.default}
           </button>
-          {status === 'ok' && (
-            <p className="text-sm text-green-400">{phoneFormData.form.messages.success}</p>
-          )}
-          {status === 'error' && <p className="text-sm text-red-400">{error}</p>}
+        </form>
+        )}
         </form>
 
         <div
