@@ -9,13 +9,13 @@ interface ContactBlockProps {
 }
 
 const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
-  <div className={showBackground ? 'px-4 md:px-13.5 pt-13' : ''}>
+  <div className={showBackground ? 'max-w-[1440px] mx-auto px-10 md:px-23.5 pt-13' : ''}>
     <div
-      className={`flex max-lg:flex-col max-w-[1440px] mx-auto ${showBackground ? 'bg-foreground max-sm:px-4 px-25.5 pt-7 pb-7' : ''}`}
+      className={`flex max-lg:flex-col ${showBackground ? 'pt-7 pb-7' : 'max-w-[1440px] mx-auto'}`}
     >
       <div
         className="
-          bg-black text-white flex flex-col
+          bg-foreground text-white flex flex-col
           max-w-[830px] min-h-[335px] p-[40px]
           sm:max-w-full sm:min-h-0 sm:h-auto
         "

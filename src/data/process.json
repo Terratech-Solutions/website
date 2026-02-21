@@ -8,8 +8,8 @@
     "section": {
       "sectionLabel": "Our Approach",
       "title": {
-        "beforeHighlight": "How It Works",
-        "highlight": "",
+        "beforeHighlight": "",
+        "highlight": "How It Works",
         "afterHighlight": ""
       },
       "description": "Fast, precise, and engineered for lasting stability."
@@ -23,7 +23,7 @@
     "title": {
       "lines": ["Polymer Injection,", "<span class='text-true-red'>Simplified</span>"]
     },
-    "subtitle": "A straightforward process for identifying subsurface issues and stabilizing infrastructure from below.",
+    "subtitle": "A straightforward process for identifying subsurface issues \nand stabilizing infrastructure from below.",
     "cta": {
       "freeQuote": {
         "content": "Get a Free Quote",
@@ -43,19 +43,19 @@
         "id": 1,
         "title": "The Problem",
         "content": "Across the country, aging infrastructure faces hidden threats: leaking stormwater systems, unstable soils, settling concrete, and sinkholes that appear without warning. Traditional repairs mean excavation and downtime, but Terratech delivers engineered polymer injection solutions that restore strength faster, cleaner, and with less disruption. Our client focused approach brings custom solutions for every unique job site.",
-        "image": "/process/innovative/placeholder.svg"
+        "image": "/process/innovative/the-problem.svg"
       },
       {
         "id": 2,
         "title": "Deploying Advanced \nDetection",
         "content": "AI-driven materials discovery dramatically reduces R&D cycles, finding optimal compositions in weeks instead of years.",
-        "image": "/process/innovative/placeholder.svg"
+        "image": "/process/innovative/advanced-detection.svg"
       },
       {
         "id": 3,
         "title": "Detailed Verification & \nAssessment",
         "content": "Automated scale-up pipelines ensure seamless transition from lab to production for faster deployment of new materials.",
-        "image": "/process/innovative/placeholder.svg"
+        "image": "/process/innovative/detailed-assessment.svg"
       }
     ]
   },
@@ -84,7 +84,7 @@
         "title": "Intelligent Subsurface Targeting",
         "images": [
           {
-            "src": "/process/innovative/SW_Diagram_1_1 2.png",
+            "src": "/process/innovative/SW_Diagram_1_1_2.png",
             "alt": "Raw Geotechnical Data",
             "width": 196,
             "height": 158

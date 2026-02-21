@@ -41,7 +41,7 @@ export function Footer() {
 
   return (
     <footer className="bg-foreground min-h-[500px] max-sm:h-full pb-5">
-      <div className="pt-21 max-md:pt-10 flex max-md:flex-col justify-between items-baseline md:px-23.5 px-10">
+      <div className="pt-21 max-md:pt-10 flex max-md:flex-col justify-between items-baseline md:px-23.5 px-10 max-w-[1440px] mx-auto">
         <div className="flex items-baseline">
           <Link href="/" className="flex items-center relative w-[278] h-[62px]">
             <Image

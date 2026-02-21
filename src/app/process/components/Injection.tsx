@@ -3,6 +3,7 @@
 import { sendGTMEvent } from '@/app/utils/gtm';
 import contactData from '@/data/contact.json';
 import { injection } from '@/data/process.json';
+import Image from 'next/image';
 
 type Contact = {
   type: string;
@@ -13,7 +14,7 @@ type Contact = {
 };
 
 const Injection = () => {
-  const { background, title, subtitle } = injection;
+  const { title, subtitle } = injection;
 
   const contacts: Contact[] = contactData.phoneFormData.contacts;
   const phoneContact = contacts.find((c) => c.type === 'Phone');
@@ -28,13 +29,19 @@ const Injection = () => {
   };
 
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{
-        background: `linear-gradient(to bottom, ${background.from}, ${background.to})`,
-      }}
-    >
-      <div className="grid relative grid-flow-row pt-56 max-sm:px-10 pb-30  z-10 max-w-[1440] px-23.5 mx-auto">
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/home/home-top-image.png"
+          alt="Background"
+          fill
+          priority
+          fetchPriority="high"
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
+      <div className="grid relative grid-flow-row pt-56 max-sm:px-10 pb-30 z-10 max-w-[1440] px-23.5 mx-auto">
         <p
           className="text-[78px]/[90px] max-lg:text-[50px]/[70px] max-md:text-[40px]/[65px] max-sm:text-[34px]/[50px] font-normal"
           dangerouslySetInnerHTML={{ __html: title.lines.join('<br />') }}

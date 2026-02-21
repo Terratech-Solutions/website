@@ -107,7 +107,7 @@ const Accordion = ({
                         variants={horizontalVariants2}
                         animate={!isActive ? 'active' : 'inactive'}
                       >
-                        <motion.div className="flex">
+                        <motion.div className="flex p-4">
                           <Image
                             className="w-full h-auto"
                             src={image}
@@ -156,7 +156,7 @@ const Accordion = ({
                             animate={isActive ? 'active' : 'inactive'}
                             exit={{ width: '0%' }}
                           >
-                            <motion.div className="text-[24px] font-light w-[380px]">
+                            <motion.div className="text-[24px] font-light w-[380px] mb-5">
                               {title}
                             </motion.div>
                           </motion.div>

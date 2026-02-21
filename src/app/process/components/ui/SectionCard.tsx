@@ -275,18 +275,18 @@ const SectionCard = () => {
                 key={section.id}
                 id={section.id}
                 ref={ref}
-                className="flex relative pt-20 pb-42 border-b-[2px] border-zinc-200 border-solid max-xl:justify-center max-xl:px-5"
+                className="flex relative pt-20 pb-32 border-b-[2px] border-zinc-200 border-solid max-xl:justify-center max-xl:px-5"
               >
                 <SectionBg active={isActive} />
-                <div className="flex relative pt-49 z-10 xl:pl-21 max-xl:flex-col max-xl:justify-center">
-                  <div className="flex flex-col">
+                <div className="flex relative items-center pt-52 z-10 xl:pl-10 max-xl:flex-col max-xl:justify-center w-full">
+                  <div className="flex flex-col w-[60%] max-xl:w-full">
                     <div className="flex flex-col">
                       <div className="text-[24px]/[26px] font-semibold">{section.title}</div>
-                      <div className="pt-4 text-[14px] max-xl:pr-10">{section.lead}</div>
+                      <div className="pt-4 text-[14px] max-w-[350px] max-xl:pr-10">{section.lead}</div>
                     </div>
-                    <div className="pt-23 max-w-[770px] max-xl:max-w-[500px]">{section.text}</div>
+                    <div className="pt-23 max-w-[450px] max-xl:max-w-[500px]">{section.text}</div>
                   </div>
-                  <div className="relative w-full mt-5">
+                  <div className="relative w-[40%] max-xl:w-full flex justify-end pr-10">
                     <Image
                       width={section.images?.[0]?.width}
                       height={section.images?.[0]?.height}
@@ -305,25 +305,25 @@ const SectionCard = () => {
                 key={section.id}
                 id={section.id}
                 ref={ref}
-                className="flex relative pt-20 pb-42 border-b-[2px] border-zinc-200 border-solid max-xl:justify-center max-xl:px-5"
+                className="flex relative pt-20 pb-20 border-b-[2px] border-zinc-200 border-solid max-xl:justify-center max-xl:px-5"
               >
                 <SectionBg active={isActive} />
-                <div className="flex relative pt-49 z-10 xl:pl-21 max-xl:flex-col max-xl:justify-center w-full">
-                  <div className="flex flex-col  gap-10">
+                <div className="flex relative items-center pt-20 z-10 xl:pl-10 max-xl:flex-col max-xl:justify-center w-full gap-10">
+                  <div className="flex flex-col gap-10 w-[40%] max-xl:w-full">
                     {section.blocks?.map((block) => (
                       <div key={block.title} className="flex max-lg:flex-col max-lg:items-center">
                         <div className="flex flex-col">
                           <div className={`text-[16px] font-semibold ${block?.titleColor}`}>
                             {block.title}
                           </div>
-                          <div className="pt-5 max-w-[350px] text-[14px]">{block.text}</div>
+                          <div className="pt-5 max-w-[300px] text-[14px]">{block.text}</div>
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="relative w-full mt-5">
+                  <div className="relative w-[60%] max-xl:w-full flex justify-center items-center px-10">
                     <video
-                      className="h-[300px] w-auto max-w-full object-contain"
+                      className="h-[500px] w-auto max-w-full object-contain"
                       autoPlay
                       loop
                       muted
