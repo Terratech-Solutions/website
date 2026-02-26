@@ -1,3 +1,5 @@
+'use client';
+
 import { sendGTMEvent } from '@/app/utils/gtm';
 import contactData from '@/data/contact.json';
 import Image from 'next/image';
