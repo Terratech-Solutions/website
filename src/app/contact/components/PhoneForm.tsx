@@ -31,7 +31,10 @@ const PhoneForm = () => {
     })
       .then(() => {
         sendGTMEvent({ event: 'form_submit_success', location: 'contact_page_form' });
-        router.push('/contact/success');
+        // Small delay to allow GTM tag to fire before redirecting
+        setTimeout(() => {
+          router.push('/contact/success');
+        }, 300);
       })
       .catch((error) => alert(error));
   };
@@ -105,7 +108,7 @@ const PhoneForm = () => {
             
             <button
               type="submit"
-              className="w-full uppercase font-semibold py-4 rounded-sm bg-[#c44237] hover:bg-[#b53a30]"
+              className="w-full uppercase font-semibold py-4 rounded-sm bg-[#c44237] hover:bg-[#b53a30] cursor-pointer"
             >
               {phoneFormData.form.button.default}
             </button>
