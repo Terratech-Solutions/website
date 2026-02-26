@@ -29,7 +29,7 @@ const ContactBlock = ({ showBackground = true }: ContactBlockProps) => (
           Get in touch for a consultation
         </h2>
         <a
-          href={`tel:${contact.phone}`}
+          href="tel:+1 980-310-6340"
           className="
             mb-10 px-7 py-3 bg-true-red text-white font-semibold rounded-lg
             transition hover:bg-red-600 focus:outline-none
