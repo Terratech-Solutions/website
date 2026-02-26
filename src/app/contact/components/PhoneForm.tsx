@@ -8,9 +8,10 @@ import { useEffect, useState } from 'react';
 
 const PhoneForm = () => {
   const [showIframe, setShowIframe] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const searchParams = useSearchParams();
   const router = useRouter();
-  const success = searchParams.get('success') === 'true';
+  const success = searchParams.get('success') === 'true' || isSubmitted;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,10 +32,7 @@ const PhoneForm = () => {
     })
       .then(() => {
         sendGTMEvent({ event: 'form_submit_success', location: 'contact_page_form' });
-        // Small delay to allow GTM tag to fire before redirecting
-        setTimeout(() => {
-          router.push('/contact/success');
-        }, 300);
+        setIsSubmitted(true);
       })
       .catch((error) => alert(error));
   };
