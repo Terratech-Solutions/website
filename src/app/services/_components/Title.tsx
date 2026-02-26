@@ -1,3 +1,4 @@
+import { sendGTMEvent } from '@/app/utils/gtm';
 import contactData from '@/data/contact.json';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +12,7 @@ type Contact = {
 };
 
 type TitleProps = {
-  background: { from: string; to: string };
+  background?: { from: string; to: string };
   text: {
     title: {
       lines: string[];
@@ -34,7 +35,7 @@ type TitleProps = {
   };
 };
 
-const Title = ({ background, text, image }: TitleProps) => {
+const Title = ({ text, image }: TitleProps) => {
   const highlights = Array.isArray(text.title.highlight)
     ? text.title.highlight
     : [text.title.highlight];
@@ -55,19 +56,31 @@ const Title = ({ background, text, image }: TitleProps) => {
           </span>
         );
       }
-      return part;
+      return (
+        <span key={index} className="text-white">
+          {part}
+        </span>
+      );
     });
   };
 
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{
-        background: `linear-gradient(to bottom, ${background.from}, ${background.to})`,
-      }}
-    >
-      <div className="flex pt-56 max-lg:flex-col pb-30 z-10 max-w-[1440] mx-auto px-23.5 max-md:px-4 justify-between">
-        <div className="grid relative grid-flow-row">
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/home/home-top-image.png"
+          alt="Background"
+          fill
+          priority
+          fetchPriority="high"
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
+      <div className="flex pt-56 max-lg:flex-col pb-30 z-10 max-w-[1440] mx-auto px-23.5 max-md:px-4 justify-between relative">
+        <div className="grid relative grid-flow-row z-10">
           <p className="text-[78px]/[90px] max-lg:text-[50px]/[70px] max-md:text-[40px]/[65px] max-sm:text-[34px]/[50px] font-normal">
             {text.title.lines.map((line, i) => (
               <span key={i}>
@@ -77,13 +90,21 @@ const Title = ({ background, text, image }: TitleProps) => {
             ))}
           </p>
 
-          <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line max-w-[500px]">
+          <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line max-w-[500px] text-gray-200">
             {text.subtitle}
           </p>
           <div className="mt-10 flex gap-4 max-sm:flex-col max-sm:items-center">
             <a
               href={phoneContact?.href || '#'}
               className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+              onClick={() => {
+                sendGTMEvent({
+                  event: 'service_page_cta_click',
+                  button_text: 'Call Us now',
+                  location: 'service_hero_section',
+                  service_name: text.title.lines.join(' '), // Useful context
+                });
+              }}
             >
               <span className="pr-2">Call Us now</span> &rarr;
             </a>

@@ -18,7 +18,7 @@
       }
     }
   },
-  "phone": "0354321234",
+  "phone": "+1 980-310-6340",
   "phoneFormData": {
     "form": {
       "placeholders": {
@@ -48,21 +48,15 @@
         "type": "Phone",
         "icon": "/contact/phone.svg",
         "label": "Phone",
-        "value": "03 5432 1234",
-        "href": "tel:0354321234"
-      },
-      {
-        "type": "Fax",
-        "icon": "/contact/fax.svg",
-        "label": "Fax",
-        "value": "03 5432 1234"
+        "value": "+1 980-310-6340",
+        "href": "tel:+19803106340"
       },
       {
         "type": "Email",
         "icon": "/contact/email.svg",
         "label": "EMAIL",
-        "value": "info@marcc.com.au",
-        "href": "mailto:info@marcc.com.au"
+        "value": "info@terratechsolutions.net",
+        "href": "mailto:info@terratechsolutions.net"
       }
     ],
     "map": {

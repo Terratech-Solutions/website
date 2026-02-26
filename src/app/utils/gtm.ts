@@ -2,6 +2,6 @@
 
 import { sendGTMEvent as sendEvent } from '@next/third-parties/google';
 
-export function sendGTMEvent(data: Object, dataLayerName?: string) {
+export function sendGTMEvent(data: Record<string, any>, dataLayerName?: string) {
   return sendEvent(data, dataLayerName);
 }

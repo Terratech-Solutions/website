@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-terra-black">
       <body className={`antialiased bg-terra-black`}>
-        {Boolean(gtmId) && <GoogleTagManager gtmId="GTM-XYZ" />}
+        {Boolean(gtmId) && <GoogleTagManager gtmId={gtmId as string} />}
         {Boolean(clarityId) && (
           <Script id="clarity-script" strategy="afterInteractive">
             {`

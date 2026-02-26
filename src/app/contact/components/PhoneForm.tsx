@@ -1,6 +1,7 @@
 'use client';
 
 import { phoneFormData } from '@/data/contact.json';
+import { sendGTMEvent } from '@/app/utils/gtm';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -28,7 +29,10 @@ const PhoneForm = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData as any).toString(),
     })
-      .then(() => router.push('/contact/success'))
+      .then(() => {
+        sendGTMEvent({ event: 'form_submit_success', location: 'contact_page_form' });
+        router.push('/contact/success');
+      })
       .catch((error) => alert(error));
   };
 
@@ -120,7 +124,19 @@ const PhoneForm = () => {
               <div className="flex flex-col pl-3">
                 <div>{item.label}</div>
                 {item.href ? (
-                  <a href={item.href} className="text-lemon-green">
+                  <a
+                    href={item.href}
+                    className="text-lemon-green"
+                    onClick={() => {
+                      sendGTMEvent({
+                        event: 'contact_page_phone_click',
+                        contact_type: item.type,
+                        href: item.href,
+                        value: item.value,
+                        location: 'contact_page_sidebar',
+                      });
+                    }}
+                  >
                     {item.value}
                   </a>
                 ) : (

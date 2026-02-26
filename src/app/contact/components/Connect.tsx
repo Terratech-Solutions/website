@@ -1,5 +1,6 @@
 'use client';
 
+import { sendGTMEvent } from '@/app/utils/gtm';
 import contactData, { connect } from '@/data/contact.json';
 import Image from 'next/image';
 
@@ -40,6 +41,13 @@ const Connect = () => {
           <a
             href={phoneContact?.href || '#'}
             className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+            onClick={() => {
+              sendGTMEvent({
+                event: 'contact_page_cta_click',
+                button_text: cta.freeQuote.content,
+                location: 'contact_page_hero_section',
+              });
+            }}
           >
             <span className="pr-2">{cta.freeQuote.content}</span>&rarr;
           </a>
