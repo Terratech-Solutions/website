@@ -16,7 +16,7 @@ const SetsUp = () => {
             className="flex 2xl:w-[382px] xl:w-[350px] min-h-[516px] w-[280px] max-lg:w-[382px] max-lg:mb-4 bg-[#191D20] rounded-[10px]"
           >
             <div className="flex flex-col w-full h-full 2xl:p-16 xl:p-12 p-3 items-center rounded-[10px] max-lg:p-16">
-              <p className="text-[30px]/[52px]">{card.heading}</p>
+              <p className="text-[24px]/[36px] xl:text-[28px]/[44px] 2xl:text-[30px]/[52px] whitespace-nowrap">{card.heading}</p>
               <div className="relative w-[75px] h-[75px] mb-12.5 mt-8 shrink-0">
                 <Image src={card.image.src} alt={card.image.alt} fill sizes="75px" />
               </div>
