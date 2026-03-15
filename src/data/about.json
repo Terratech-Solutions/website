@@ -41,7 +41,7 @@
       "highlight": "Lasts"
     },
     "paragraphs": [
-      "We saw an opportunity to change how construction materials and processes impact both the environment and long-term performance. Our proprietary materials deliver greater durability, environmental efficiency, and lower lifetime costs than leading brands.",
+      "We saw an opportunity to change how the construction process impacts the environment, long-term performance, and repairs. Our process delivers greater durability, environmental efficiency, and lower lifetime costs than anyone else.",
       "We’re constantly researching, testing, and improving — because innovation isn’t a trend. It’s who we are."
     ],
     "imageAlt": "Innovation image",
@@ -54,12 +54,12 @@
       {
         "heading": "Our Focus",
         "image": { "src": "/about/our-focus.svg", "alt": "Our Focus" },
-        "text": "We don’t just build, we innovate. Our team leverages modern technology to enhance every phase of construction, from material selection to final inspection."
+        "text": "We don’t just build, we innovate. Our team leverages modern technology to enhance every phase of the construction process."
       },
       {
         "heading": "Our Experience",
         "image": { "src": "/about/our-experience.svg", "alt": "Our Experience" },
-        "text": "With over 17 years of combined expertise, we’ve managed projects ranging from crawlspaces and foundations to full-scale renovations & concrete repair."
+        "text": "With over two decades of combined experience, we’ve handled projects of every size and complexity."
       },
       {
         "heading": "Our Commitment",
@@ -74,9 +74,9 @@
       "highlight": "started"
     },
     "paragraphs": [
-      "After years in the construction industry, we founded TerraTech Solutions with a simple goal: to build a company that makes a lasting impact—on people, on projects, and on the planet.",
-      "Instead of tearing out and rebuilding, we repair from below using eco-friendly poly-foam.",
-      "Our solutions are more than a quick, they’re durable, cost-effective solutions that last for generations."
+      "After years in the construction industry, we founded TerraTech Solutions with a simple goal: to build a company that makes a lasting impact on people, on projects, and on the planet.",
+      "Instead of full removal and reconstruction, we repair exactly what needs to be fixed from below the surface.",
+      "Our solutions are more than a quick fix, they’re durable, cost-effective solutions that last for generations."
     ],
     "image": {
       "src": "/about/started.jpg",

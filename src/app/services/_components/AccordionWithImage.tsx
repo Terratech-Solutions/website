@@ -54,7 +54,7 @@ const AccordionWithImage = ({ section, points, image }: AccordionWithImageProps)
               />
             ))}
           </div>
-          <div className="flex justify-center mt-10 lg:mt-0">
+          <div className="flex justify-center mt-10 lg:mt-0 lg:pl-6">
             <Image
               src={image.src}
               alt={image.alt}

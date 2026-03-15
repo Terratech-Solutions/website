@@ -7,7 +7,8 @@ const Solution = () => {
   const { section, images } = solution;
 
   return (
-    <div className="max-w-[1440px] mx-auto px-8 sm:px-10 md:px-10 lg:px-23.5 pt-10 md:pt-16 lg:pt-20 pb-10 md:pb-16 lg:pb-20">
+    <div className="px-4 md:px-13.5 pt-13">
+    <div className="max-w-[1440px] mx-auto px-10 md:px-23.5 pt-7 pb-20">
       <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
       <div className="flex flex-col pt-6 md:pt-10">
         <div className="text-[28px]/[36px] sm:text-[40px]/[50px] md:text-[60px]/[80px] font-semibold whitespace-pre-line">
@@ -15,6 +16,7 @@ const Solution = () => {
             lines={section.title.lines}
             highlight={section.title.highlight}
             highlightColor={section.title.highlightColor}
+            lineColors={section.title.lineColors}
           />
         </div>
         <div className="flex flex-col md:flex-row gap-6 md:gap-10 pt-8 md:pt-16 lg:pt-20">
@@ -35,6 +37,7 @@ const Solution = () => {
           {section.description}
         </div>
       </div>
+    </div>
     </div>
   );
 };

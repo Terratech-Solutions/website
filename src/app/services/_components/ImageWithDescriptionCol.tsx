@@ -20,6 +20,7 @@ type ImageWithDescriptionProps = {
     alt: string;
     width: number;
     height: number;
+    cropHeight?: number;
   };
 };
 
@@ -40,21 +41,21 @@ const ImageWithDescriptionCol = ({ section, image }: ImageWithDescriptionProps) 
                   highlightColor={section.title.highlightColor}
                 />
               </div>
-              <div className="flex justify-center w-full mt-4">
-                <div className="max-w-[600px] sm:max-w-full">
+              <div className="flex justify-center w-full mt-10">
+                <div className="max-w-[600px] sm:max-w-full w-full" style={image.cropHeight ? { overflow: 'hidden', maxHeight: image.cropHeight } : undefined}>
                   <Image
                     src={image.src}
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
                     loading="lazy"
-                    className="h-auto object-contain"
-                    style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+                    className={image.cropHeight ? 'w-full object-cover' : 'h-auto object-contain'}
+                    style={image.cropHeight ? { width: '100%', height: image.cropHeight, objectFit: 'cover', objectPosition: 'center', display: 'block' } : { maxWidth: '100%', height: 'auto', display: 'block' }}
                     priority={false}
                   />
                 </div>
               </div>
-              <div className="whitespace-pre-line mt-2 md:mt-3 text-lg sm:text-xl md:text-2xl text-neutral-200 max-w-full text-left">
+              <div className="whitespace-pre-line mt-10 text-lg sm:text-xl md:text-2xl text-neutral-200 max-w-full text-left">
                 {section.description}
               </div>
             </div>

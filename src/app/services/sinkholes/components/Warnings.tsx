@@ -7,7 +7,7 @@ const Warnings = () => {
   const { section, items } = warnings;
 
   return (
-    <section className="px-4 md:px-13.5 max-sm:pt-10 pt-33">
+    <section className="px-4 md:px-13.5 max-sm:pt-6 pt-13">
       <div className="flex max-lg:flex-col max-w-[1440] mx-auto bg-foreground max-sm:px-4 px-23.5 pt-7 pb-7">
         <div className="flex flex-col flex-auto justify-between items-stretch">
           <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>

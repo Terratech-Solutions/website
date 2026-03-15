@@ -14,8 +14,8 @@ type Technique = {
 
 const TechniqueItem = ({ href, title, description, iconSrc }: Technique) => {
   return (
-    <div className="flex flex-col border-b border-solid border-concrete pb-14 pt-10">
-      <div className="grid grid-flow-row-dense bg-linear-to-b from-[#111316] to-[#111216] px-8 py-8 pr-17 max-sm:pr-8 rounded-sm">
+    <div className="flex flex-col h-full border-b border-solid border-concrete pb-14 pt-10">
+      <div className="flex flex-col h-full bg-linear-to-b from-[#111316] to-[#111216] px-8 py-8 pr-17 max-sm:pr-8 rounded-sm">
         <div className="mb-8 flex justify-between gap-4">
           <p className="flex items-center justify-center text-[24px]/[150%] lg:text-[28px] font-normal whitespace-pre-line">
             {title}
@@ -32,7 +32,7 @@ const TechniqueItem = ({ href, title, description, iconSrc }: Technique) => {
         <p className="mb-6 text-[17px]/[100%] font-light">{description}</p>
 
         <Link
-          className="flex text-[11px]/[150%] font-light underline underline-offset-4 decoration-true-red"
+          className="flex mt-auto text-[11px]/[150%] font-light underline underline-offset-4 decoration-true-red"
           href={href}
           onClick={() => {
             sendGTMEvent({

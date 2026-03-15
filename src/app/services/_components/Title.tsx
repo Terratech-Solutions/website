@@ -83,7 +83,7 @@ const Title = ({ text, image }: TitleProps) => {
 
       <div className="flex pt-56 max-lg:flex-col pb-30 z-10 max-w-[1440] mx-auto px-23.5 max-md:px-4 justify-between relative">
         <div className="grid relative grid-flow-row z-10">
-          <p className="text-[78px]/[90px] max-lg:text-[50px]/[70px] max-md:text-[40px]/[65px] max-sm:text-[34px]/[50px] font-normal">
+          <p className="text-[62px]/[74px] max-lg:text-[46px]/[60px] max-md:text-[36px]/[55px] max-sm:text-[30px]/[44px] font-normal">
             {text.title.lines.map((line, i) => (
               <span key={i}>
                 {highlightWords(line)}

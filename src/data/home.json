@@ -8,8 +8,8 @@
     "title": "Get in touch for a consultation"
   },
   "expertise": {
-    "title": "Backed by engineering expertise.",
-    "description": "Over 20 years of combined engineering and field \nexperience in soil stabilization and polymer injection across multiple regions.",
+    "title": "backed by industry expertise",
+    "description": "Over 20 years of combined field experience in soil stabilization across multiple regions.",
     "image": {
       "src": "/home/expertise/road.jpg",
       "alt": "Engineering expertise"
@@ -21,7 +21,7 @@
       "part2": "What's Beneath",
       "part3": "Critical Infrastructure"
     },
-    "value": "Polymer injection solutions for \n concrete stabilization and infrastructure repair.",
+    "value": "Solutions for infrastructure repair",
     "cta": {
       "freeQuote": {
         "content": "Call Us now",
@@ -70,16 +70,16 @@
     },
     "items": [
       {
-        "title": "Concrete Lifting and Stabilization",
-        "description": "Lift and level settled slabs with minimal disruption.",
+        "title": "Commercial & Industrial\nConcrete Lifting",
+        "description": "Lift, level, and stabilize any slab with minimal disruption.",
         "iconSrc": "/home/techniques/lifting.svg",
-        "href": "/services/sinkholes"
+        "href": "/services/concrete-lifting"
       },
       {
         "title": "Sinkhole Remediation",
         "description": "Fill voids quickly to stabilize collapsing ground.",
         "iconSrc": "/home/techniques/sinkhole.svg",
-        "href": "/services/structural"
+        "href": "/services/sinkholes"
       },
       {
         "title": "Roadway Repair",
@@ -103,20 +103,20 @@
         "title": "3D Scanning and Detection",
         "description": "Advanced scanning locates voids for precise repairs.",
         "iconSrc": "/home/techniques/scanning.svg",
-        "href": "/services/scanning"
+        "href": "/process"
       }
     ]
   },
   "whyUs": {
     "section": {
       "sectionLabel": "Why Terratech",
-      "title": "The TerraTech Difference: Polymer Injection",
-      "subtitle": "A modern way to stabilize critical infrastructure with less disruption."
+      "title": "The TerraTech Difference",
+      "subtitle": "Stabilize critical infrastructure with no disruption"
     },
     "cards": [
       {
         "title": "Reduced Project Cost",
-        "description": "Polymer injection is, on average, 50% more cost efficient than traditional efforts like excavation and slab-jacking.",
+        "description": "On average, 50% more cost efficient than traditional methods",
         "iconSrc": "/home/why-us/advantages-1.svg",
         "iconWidth": 95,
         "iconHeight": 95,
@@ -134,7 +134,7 @@
       },
       {
         "title": "Long-Lasting",
-        "description": "TerraTech’s unique eco-friendly polymer formulation provides lasting support to meaningfully extend the life of essential infrastructure.",
+        "description": "TerraTech provides lasting support to meaningfully extend the life of essential infrastructure.",
         "iconSrc": "/home/why-us/advantages-3.svg",
         "iconWidth": 95,
         "iconHeight": 95,
@@ -143,7 +143,7 @@
       },
       {
         "title": "Precise & Scalable",
-        "description": "Advanced assessment and injection techniques allow repairs to be precisely targeted—or scaled—to match site conditions and project scope.",
+        "description": "Advanced assessment and repair techniques allows for us to be precisely targeted—or scaled—to match site conditions and project scope.",
         "iconSrc": "/home/why-us/advantages-4.svg",
         "iconWidth": 95,
         "iconHeight": 95,

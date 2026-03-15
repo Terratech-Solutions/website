@@ -25,7 +25,7 @@ type BigImageWithDescriptionProps = {
 };
 
 const BigImageWithDescription = ({ section, image }: BigImageWithDescriptionProps) => (
-  <div className="px-4 md:px-13.5 pt-7 md:pt-13">
+  <div className="px-4 md:px-13.5 pt-13">
     <div className="flex flex-col lg:flex-row max-w-[1440px] mx-auto bg-foreground px-6 sm:px-10 md:px-23.5 pt-7 pb-7">
       <div className="flex flex-col flex-auto justify-between items-stretch w-full">
         <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>

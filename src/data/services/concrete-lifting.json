@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Commercial & Industrial Concrete Lifting | Terratech",
+    "description": "TerraTech specializes in commercial and industrial concrete lifting using advanced polymer injection technology. Lift, level, and stabilize any slab with minimal disruption.",
+    "path": "/services/concrete-lifting"
+  },
+  "title": {
+    "background": {
+      "from": "#131313",
+      "to": "#1D1D1D"
+    },
+    "text": {
+      "title": {
+        "lines": ["Commercial &", "Industrial Concrete Lifting"],
+        "highlight": ["Industrial", "Concrete", "Lifting"],
+        "highlightColor": "text-true-red"
+      },
+      "subtitle": "Lift, level, and stabilize any concrete slab with minimal disruption."
+    },
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      }
+    },
+    "image": {
+      "src": "/process/innovative/SS_sup_3.png",
+      "alt": "Concrete lifting",
+      "width": 352,
+      "height": 359
+    }
+  },
+  "effectiveRepair": {
+    "section": {
+      "sectionLabel": "Innovative Solutions",
+      "title": {
+        "lines": ["Lift, Level, and", "Stabilize Any", "Concrete Slab"],
+        "highlight": ["Lift,", "Level,"],
+        "highlightColor": "text-true-red",
+        "lineColors": ["", "text-lemon-green", ""]
+      },
+      "description": "We lift and stabilize commercial and industrial concrete across storage tanks, foundation slabs, warehouse floors, and critical equipment pads including transformers, generators, and emergency systems.\n\nOn the infrastructure side, we repair spillways, roadways, and bridge approaches with precision and minimal disruption."
+    },
+    "image": {
+      "src": "/services/infrastructure/sinkhole.png",
+      "alt": "Graphic 1",
+      "width": 860,
+      "height": 483
+    }
+  },
+  "reinforceMitigate": {
+    "section": {
+      "sectionLabel": "Keep Running",
+      "title": {
+        "lines": ["Keep Your", "Facilities Running"],
+        "highlight": ["Running"],
+        "highlightColor": "text-lemon-green"
+      },
+      "description": "Keep your facilities running while the repair is happening. We can fix the issues in place without the need to shut down operations. Keep everything running and let us handle the rest."
+    },
+    "image": {
+      "src": "/services/concrete-lifting/vladislav-glukhotko-RBwk0EcQ1bs-unsplash.jpg",
+      "alt": "Facilities running during repair",
+      "width": 6000,
+      "height": 3376,
+      "cropHeight": 420
+    }
+  },
+  "crumbling": {
+    "section": {
+      "sectionLabel": "Our Approach",
+      "title": {
+        "lines": ["Our Data Driven", "Approach"],
+        "highlight": ["Data", "Driven"],
+        "highlightColor": "text-lemon-green"
+      }
+    },
+    "points": [
+      {
+        "title": "Precise Monitoring",
+        "description": "Our data driven approach allows us to monitor movement, exact pressures, and degree changes all at once. We can restore everything to the way it was, but better."
+      },
+      {
+        "title": "Out of Tolerance?",
+        "description": "No problem, let us move it back into place for you. We will identify the root cause of the issue, not just level your problem. We take every input into account to make sure our lift is to your level of expectation."
+      },
+      {
+        "title": "No Demolition Required",
+        "description": "Don't shut down, demolish, or start over ever again. Your slabs are in good shape, it's just everything else around it."
+      },
+      {
+        "title": "Customized Solutions",
+        "description": "Each solution is 100% custom and designed for your project scope."
+      }
+    ],
+    "image": {
+      "src": "/process/innovative/radar_updated_2.png",
+      "alt": "Surface 2",
+      "width": 700,
+      "height": 348
+    }
+  },
+  "solution": {
+    "section": {
+      "sectionLabel": "Our Solution",
+      "title": {
+        "lines": ["Don't Shut Down.", "Don't Demolish.", "Don't Start Over."],
+        "highlight": [],
+        "highlightColor": "text-true-red",
+        "lineColors": ["text-white", "text-lemon-green", "text-true-red"]
+      },
+      "description": "Your slabs are in good shape. Let TerraTech repair your concrete in place—saving you from relocation, closures, or a lengthy construction project."
+    },
+    "image": {
+      "src": "/services/concrete-lifting/marcin-jozwiak-oh0DITWoHi4-unsplash.jpg",
+      "alt": "Industrial facility concrete floor",
+      "width": 700,
+      "height": 467
+    }
+  }
+}

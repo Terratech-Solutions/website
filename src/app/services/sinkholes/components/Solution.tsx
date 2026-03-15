@@ -23,6 +23,7 @@ const Solution = () => {
   const { section, images } = solution;
 
   return (
+    <div className="px-4 md:px-13.5 pt-13">
     <div
       className="max-w-[1440px] mx-auto px-10 md:px-23.5 pt-20 pb-20"
       style={{
@@ -117,6 +118,7 @@ const Solution = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

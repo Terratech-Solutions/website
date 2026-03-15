@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { AnimatePresence, motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MouseEvent, useLayoutEffect, useRef, useState } from 'react';
+import { MouseEvent, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 interface ListItemProps {
   section: string;
@@ -28,11 +28,19 @@ const SectionCard = () => {
     'section-6': useRef<HTMLElement | null>(null),
   };
 
+  const pillarVideoRef = useRef<HTMLVideoElement>(null);
+
   const lockRef = useRef(false);
   const lockTimer = useRef<number | null>(null);
   const SCROLL_LOCK_MS = 800;
 
   const [activeId, setActiveId] = useState('section-1');
+
+  useEffect(() => {
+    if (pillarVideoRef.current) {
+      pillarVideoRef.current.playbackRate = 2.0;
+    }
+  }, []);
 
   const sections = sectionCard.sections;
 
@@ -143,7 +151,7 @@ const SectionCard = () => {
                       </div>
                     )}
                   </div>
-                  <div className="pt-7 pl-7 text-[14px]">{section.lead}</div>
+                  <div className="pt-7 pl-7 text-[14px] text-lemon-green">{section.lead}</div>
                   <div className="pt-12 pl-7 max-w-[610px] text-[16px]">{section.text}</div>
                 </div>
               </motion.section>
@@ -160,7 +168,7 @@ const SectionCard = () => {
               >
                 <SectionBg active={isActive} />
                 <div className="relative z-10">
-                  <div className="text-[24px] font-semibold">{section.title}</div>
+                  <div className="text-[24px] font-semibold pb-4">{section.title}</div>
                   <div className="flex items-center pt-10 max-xl:flex-col">
                     <div className="flex flex-col items-center pl-5 max-xl:p-0">
                       <div className="flex flex-col relative">
@@ -171,7 +179,7 @@ const SectionCard = () => {
                           alt={section.images?.[0]?.alt || ''}
                         />
                       </div>
-                      <div className="flex relative pt-2 text-[14px]">
+                      <div className="flex relative pt-8 text-[14px] text-lemon-green">
                         {section.images?.[0]?.alt}
                       </div>
                     </div>
@@ -184,7 +192,7 @@ const SectionCard = () => {
                           alt={section.images?.[1]?.alt || ''}
                         />
                       </div>
-                      <div className="flex relative pt-2 text-[14px]">
+                      <div className="flex relative pt-8 text-[14px] text-lemon-green">
                         {section.images?.[1]?.alt}
                       </div>
                     </div>
@@ -210,6 +218,7 @@ const SectionCard = () => {
                     <div className="flex flex-col mt-10 ml-17 max-xl:w-full max-xl:m-0">
                       <div className="flex relative">
                         <video
+                          ref={pillarVideoRef}
                           className="h-[356px] w-auto max-w-full object-contain"
                           autoPlay
                           loop
@@ -227,9 +236,9 @@ const SectionCard = () => {
                           <source src="/video/Pillar_animation.mp4" type="video/mp4" />
                         </video>
                       </div>
-                      <div className="pt-6 text-[14px] max-w-[318px]">{section.lead}</div>
+                      <div className="pt-6 text-[14px] text-lemon-green max-w-[318px]">{section.lead}</div>
                     </div>
-                    <div className="flex flex-col pl-16 pt-16 max-xl:p-0">
+                    <div className="flex flex-col pl-4 pr-8 pt-16 max-xl:p-0">
                       <div className="flex text-[16px] max-w-[318px] pt-9 max-xl:pt-0">
                         {section.text}
                       </div>
@@ -261,7 +270,7 @@ const SectionCard = () => {
                         alt={section.images?.[0]?.alt || ''}
                       />
                     </div>
-                    <div className="pt-6 pl-10 text-[14px]">{section.lead}</div>
+                    <div className="pt-6 pl-10 text-[14px] text-lemon-green">{section.lead}</div>
                   </div>
                   <div className="pt-6 pl-10 max-w-[580px]">{section.text}</div>
                 </div>
@@ -281,10 +290,10 @@ const SectionCard = () => {
                 <div className="flex relative items-center pt-52 z-10 xl:pl-10 max-xl:flex-col max-xl:justify-center w-full">
                   <div className="flex flex-col w-[60%] max-xl:w-full">
                     <div className="flex flex-col">
-                      <div className="text-[24px]/[26px] font-semibold">{section.title}</div>
-                      <div className="pt-4 text-[14px] max-w-[350px] max-xl:pr-10">{section.lead}</div>
+                      <div className="text-[24px]/[26px] font-semibold pb-4">{section.title}</div>
+                      <div className="pt-4 text-[14px] text-lemon-green max-w-[350px] max-xl:pr-10">{section.lead}</div>
                     </div>
-                    <div className="pt-23 max-w-[450px] max-xl:max-w-[500px]">{section.text}</div>
+                    <div className="pt-8 max-w-[450px] max-xl:max-w-[500px] pr-20">{section.text}</div>
                   </div>
                   <div className="relative w-[40%] max-xl:w-full flex justify-end pr-10">
                     <Image
@@ -308,7 +317,9 @@ const SectionCard = () => {
                 className="flex relative pt-20 pb-20 border-b-[2px] border-zinc-200 border-solid max-xl:justify-center max-xl:px-5"
               >
                 <SectionBg active={isActive} />
-                <div className="flex relative items-center pt-20 z-10 xl:pl-10 max-xl:flex-col max-xl:justify-center w-full gap-10">
+                <div className="flex flex-col relative pt-20 z-10 xl:pl-10 w-full">
+                  <div className="text-[18px] font-semibold whitespace-nowrap pb-8">{section.title}</div>
+                  <div className="flex items-center max-xl:flex-col max-xl:justify-center w-full gap-10">
                   <div className="flex flex-col gap-10 w-[40%] max-xl:w-full">
                     {section.blocks?.map((block) => (
                       <div key={block.title} className="flex max-lg:flex-col max-lg:items-center">
@@ -323,7 +334,7 @@ const SectionCard = () => {
                   </div>
                   <div className="relative w-[60%] max-xl:w-full flex justify-center items-center px-10">
                     <video
-                      className="h-[500px] w-auto max-w-full object-contain"
+                      className="h-[350px] w-auto max-w-full object-contain"
                       autoPlay
                       loop
                       muted
@@ -339,6 +350,7 @@ const SectionCard = () => {
                       <source src="/video/Scanning_Animation_alpha.webm" type="video/webm" />
                       <source src="/video/Scanning_Animation.mp4" type="video/mp4" />
                     </video>
+                  </div>
                   </div>
                 </div>
               </motion.section>

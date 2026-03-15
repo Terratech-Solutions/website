@@ -7,7 +7,7 @@ const SetsUp = () => {
   return (
     <section className="flex flex-col pt-25 max-md:pt-4 pb-20 px-23.5 max-sm:px-10 max-w-[1440] mx-auto">
       <p className="text-[25px]/[52px] font-extrabold mb-8 text-[#819baf]">{sectionLabel}</p>
-      <p className="text-[44px]/[52px] mb-8">{title}</p>
+      <p className="text-[44px]/[52px] mb-16">{title}</p>
 
       <div className="flex justify-between max-lg:flex-col max-lg:items-center">
         {cards.map((card) => (

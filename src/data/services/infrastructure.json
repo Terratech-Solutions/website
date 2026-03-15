@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Solutions for Critical Infrastructure | Terratech",
+    "title": "Solutions for Foundation Repair | Terratech",
     "description": "Terratech specializes in sinkhole and void filling solutions using advanced 3D ground imaging and eco-friendly poly-foam technology for safe and efficient remediation without excavation.",
     "path": "/services/infrastructure"
   },
@@ -11,8 +11,8 @@
     },
     "text": {
       "title": {
-        "lines": ["Solutions", "for Critical", "Infrastructure"],
-        "highlight": ["Critical", "Infrastructure"],
+        "lines": ["Solutions", "for Foundation", "Repair"],
+        "highlight": ["Foundation", "Repair"],
         "highlightColor": "text-true-red"
       },
       "subtitle": "We provide reliable solutions to keep structures stable and secure."
@@ -49,13 +49,13 @@
   },
   "reinforceMitigate": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Foundation Repair",
       "title": {
         "lines": ["How Foundations", "Degrade"],
-        "highlight": [],
-        "highlightColor": "text-lemon-green"
+        "highlight": ["Degrade"],
+        "highlightColor": "text-true-red"
       },
-      "description": "Polymer ensures efficient stabilization with minimal disruption."
+      "description": "Most foundations are failing due to soil issues. These can easily be addressed and repaired without the need for excavation. TerraTech is able to identify, diagnose, and make custom repair solutions for any structure. If the structure itself is in good condition why would we dig it up. Let TerraTech repair it in place saving you from relocation or a lengthy construction project"
     },
     "image": {
       "src": "/services/infrastructure/sinkhole.png",
@@ -66,29 +66,29 @@
   },
   "crumbling": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Applications",
       "title": {
-        "lines": ["Commercial Infrastructure Applications"],
-        "highlight": [],
+        "lines": ["Commercial Infrastructure", "Applications"],
+        "highlight": ["Infrastructure"],
         "highlightColor": "text-true-red"
       }
     },
     "points": [
       {
         "title": "Early Detection",
-        "description": "Early signs of structural breakdown are identified before visible damage spreads, helping you address problems, saving you time, money and risk.(EARLY DETECTION)"
+        "description": "Early signs of structural breakdown are identified before visible damage spreads, helping you address problems, saving you time, money and risk."
       },
       {
         "title": "Precision & Safety",
-        "description": "Repairs target the specific areas of deterioration, improving safety and performance without unnecessary removal. (Precision & Safety)"
+        "description": "Repairs target the specific areas of deterioration, improving safety and performance without unnecessary removal."
       },
       {
         "title": "Minimal Disruption",
-        "description": "Stabilization is completed with limited impact to structures and operations. Allowing infrastructure to remain functional during repairs. (Minimal Disruption)"
+        "description": "Stabilization is completed with limited impact to structures and operations. Allowing infrastructure to remain functional during repairs."
       },
       {
         "title": "Customized Solutions",
-        "description": "Each solution is 100% custom and designed for your project scope.(Customized Solutions)"
+        "description": "Each solution is 100% custom and designed for your project scope."
       }
     ],
     "image": {
@@ -100,13 +100,13 @@
   },
   "solution": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Residential Use",
       "title": {
         "lines": ["Residential Applications"],
-        "highlight": [],
+        "highlight": ["Residential"],
         "highlightColor": "text-true-red"
       },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
+      "description": "Injections instead of full excavation saves the surrounding environment, which reduces costs and downtime."
     },
     "images": [
       {

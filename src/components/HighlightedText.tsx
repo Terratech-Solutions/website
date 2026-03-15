@@ -2,12 +2,18 @@ type HighlightedTextProps = {
   lines: string[];
   highlight: string[] | string;
   highlightColor: string;
+  lineColors?: string[];
 };
 
-const HighlightedText = ({ lines, highlight, highlightColor }: HighlightedTextProps) => {
+const HighlightedText = ({ lines, highlight, highlightColor, lineColors }: HighlightedTextProps) => {
   const highlights = Array.isArray(highlight) ? highlight : [highlight];
 
   const highlightWords = (line: string, lineIndex: number) => {
+    const lineColor = lineColors?.[lineIndex];
+    if (lineColor) {
+      return <span className={lineColor}>{line}</span>;
+    }
+
     const parts = line.split(/(\s+)/);
 
     return parts.map((part, partIndex) => {

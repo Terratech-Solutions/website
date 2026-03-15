@@ -32,11 +32,11 @@
   },
   "erosionRepair": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Slope Erosion",
       "title": {
         "lines": ["The Hidden Danger of", "Slope Erosion"],
-        "highlight": [],
-        "highlightColor": "text-lemon-green"
+        "highlight": ["Slope", "Erosion"],
+        "highlightColor": "text-true-red"
       },
       "description": "Water movement across slopes and gradients causes rapid deterioration of soil conditions. This poses a unique problem for bridges, roadways, dams, and other infrastructure that polymer injections are uniquely suited to address."
     },
@@ -49,29 +49,29 @@
   },
   "accordionData": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Our Approach",
       "title": {
         "lines": ["How We Stop", "Erosion"],
-        "highlight": [],
-        "highlightColor": "text-true-red"
+        "highlight": ["Stop"],
+        "highlightColor": "text-lemon-green"
       }
     },
     "points": [
       {
         "title": "Early Detection",
-        "description": "Problems are identified before slope failure becomes visible, damage spreads, and cost escalates. (EARLY DETECTION)"
+        "description": "Problems are identified before slope failure becomes visible, damage spreads, and cost escalates."
       },
       {
-        "title": "Precision & Safety",
-        "description": "We use an eco-friendly poly-foam. It's durable, up to 50% more cost effective, and incredibly precise. (Precision & Safety)"
+        "title": "Precision",
+        "description": "our solutions target the exact locations of the issue saving you from a full removal or excavation."
       },
       {
         "title": "Minimal Disruption",
-        "description": "Integrity is restored with limited surface impact, helping you keep roads, properties, and operations functioning during the repair process. (Minimal Disruption)"
+        "description": "Integrity is restored with limited surface impact, helping you keep roads, properties, and operations functioning during the repair process."
       },
       {
         "title": "Designed for You",
-        "description": "Each solution is 100% custom and designed for your project scope. (Customized Solutions)"
+        "description": "Each solution is 100% custom and designed for your project scope."
       }
     ],
     "image": {
@@ -83,7 +83,7 @@
   },
   "stopErosion": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "The Solution",
       "title": {
         "lines": ["How to Stop", "Erosion"],
         "highlight": ["Erosion"],
@@ -96,23 +96,6 @@
       "alt": "Graphic 1",
       "width": 1400,
       "height": 580
-    }
-  },
-  "identifyProblem": {
-    "section": {
-      "sectionLabel": "Informed Methodology",
-      "title": {
-        "lines": ["Six Layers of Stabilization"],
-        "highlight": [],
-        "highlightColor": "text-true-red"
-      },
-      "description": "The use of eco-friendly poly-foam technology stabilizes any sinkhole faster and cheaper than traditional remediation."
-    },
-    "image": {
-      "src": "/services/slope/layers.png",
-      "alt": "Graphic 1",
-      "width": 960,
-      "height": 683
     }
   }
 }

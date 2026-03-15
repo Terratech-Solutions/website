@@ -49,7 +49,7 @@
   },
   "root": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Root Cause",
       "title": {
         "lines": ["Addressing the", "Root Cause"],
         "highlight": ["Root", "Cause"],
@@ -88,16 +88,16 @@
           "height": 294
         },
         "title": "Chemical (polymer) Grouting",
-        "text": "As erosion continues, voids expand and the surrounding soil loses its ability to carry load. This weakens the surface above, increasing the likelihood of sudden settlement or collapse under normal use."
+        "text": "subsurface is stabilized, leak is stopped, and the storm drain is working again."
       }
     ]
   },
   "repair": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Repair Process",
       "title": {
-        "lines": ["The Stormdrain Repair Process"],
-        "highlight": [],
+        "lines": ["The Storm Drain Repair Process"],
+        "highlight": ["Storm", "Drain"],
         "highlightColor": "text-true-red"
       }
     },
@@ -112,7 +112,7 @@
       },
       {
         "title": "Minimal Disruption",
-        "description": "Stabilization is restored with limited surface impact, helping you keep roads, properties and operations functioning during repair process."
+        "description": "Structure are stabilized in place with limited surface impact, helping you keep roads, properties and operations functioning before, during, and after the repair process."
       },
       {
         "title": "Customized Solutions",
@@ -128,11 +128,11 @@
   },
   "reinforce": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Void Filling",
       "title": {
         "lines": ["Stopping Water Intrusion", "From the Ground Up"],
-        "highlight": [],
-        "highlightColor": "text-true-red"
+        "highlight": ["Stopping"],
+        "highlightColor": "text-lemon-green"
       },
       "description": "Polymer foam is injected under standing water to create a raised, non-permeable barrier that stops erosion and further damage."
     },

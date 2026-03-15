@@ -16,7 +16,7 @@ const Approach = () => {
       <div className="flex flex-col pt-10">
         <div className="text-[50px]/[60px] whitespace-pre-line">
           {section.title.beforeHighlight}{' '}
-          <span className="text-lemon-green">{section.title.highlight}</span>{' '}
+          <span className="text-true-red">{section.title.highlight}</span>{' '}
           {section.title.afterHighlight}
         </div>
 

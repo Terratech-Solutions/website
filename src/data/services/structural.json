@@ -6,7 +6,7 @@
   },
   "advanced": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "3D Ground Imaging",
       "title": "Advanced 3D\nGround Imaging"
     },
     "points": [
@@ -24,7 +24,7 @@
   },
   "sinkhole": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Sinkhole Formation",
       "title": {
         "highlight": "Sinkhole",
         "rest": "Formation Process"
@@ -62,7 +62,7 @@
   },
   "solution": {
     "section": {
-      "sectionLabel": "Informed Methodology",
+      "sectionLabel": "Our Solution",
       "title": {
         "main": "Our Solution",
         "highlight": "Without",

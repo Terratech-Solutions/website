@@ -21,7 +21,7 @@
       "to": "#1D1D1D"
     },
     "title": {
-      "lines": ["Polymer Injection,", "<span class='text-true-red'>Simplified</span>"]
+      "lines": ["Your Repair,", "<span class='text-true-red'>Simplified</span>"]
     },
     "subtitle": "A straightforward process for identifying subsurface issues \nand stabilizing infrastructure from below.",
     "cta": {
@@ -35,26 +35,26 @@
     "section": {
       "sectionLabel": "Innovative Solutions",
       "title": "<span class='text-lemon-green'>Our Process</span>",
-      "description": "We rapidly assess structural issues using state of the art early detection methods. We deploy advanced 3D scanning, provide substantive analysis, and conduct in depth reporting.",
+      "description": "We rapidly assess issues using state of the art early detection methods. We deploy advanced 3D scanning, provide substantive analysis, and conduct in depth reporting.",
       "badgeIcon": "/process/innovative/cross.svg"
     },
     "tabs": [
       {
         "id": 1,
         "title": "The Problem",
-        "content": "Across the country, aging infrastructure faces hidden threats: leaking stormwater systems, unstable soils, settling concrete, and sinkholes that appear without warning. Traditional repairs mean excavation and downtime, but Terratech delivers engineered polymer injection solutions that restore strength faster, cleaner, and with less disruption. Our client focused approach brings custom solutions for every unique job site.",
+        "content": "Across the country, aging infrastructure faces hidden threats: leaking stormwater systems, unstable soils, settling structures, and sinkholes that appear without warning. Traditional repairs mean excavation, downtime, and closures, but Terratech delivers custom solutions that restore strength faster, cleaner, and with less disruption. Our client focused approach brings solutions for every unique job site.",
         "image": "/process/innovative/the-problem.svg"
       },
       {
         "id": 2,
         "title": "Deploying Advanced \nDetection",
-        "content": "AI-driven materials discovery dramatically reduces R&D cycles, finding optimal compositions in weeks instead of years.",
+        "content": "Expert and AI-driven discovery dramatically reduces diagnostic time while finding optimal compositions in hours instead of months.",
         "image": "/process/innovative/advanced-detection.svg"
       },
       {
         "id": 3,
         "title": "Detailed Verification & \nAssessment",
-        "content": "Automated scale-up pipelines ensure seamless transition from lab to production for faster deployment of new materials.",
+        "content": "Rapid client focused diagnostic pipelines ensure seamless transition from the jobsite to clean data and reporting.",
         "image": "/process/innovative/detailed-assessment.svg"
       }
     ]
@@ -76,7 +76,7 @@
           }
         ],
         "lead": "3D scanning and detection tools map voids, instability, and weak strata.",
-        "text": "Using advanced scanning technologies, we identify subsurface anomalies that compromise stability—without excavation or disruption."
+        "text": "Using advanced scanning and diagnostic technologies, we identify anomalies without excavation or disruption."
       },
       {
         "id": "section-2",
@@ -125,8 +125,8 @@
             "height": 356
           }
         ],
-        "lead": "High-density polymer expands underground, compacting and stabilizing soil.",
-        "text": "Injected at precise depths and pressures, our engineered polymers displace voids, restore load paths, and reinforce weak strata. Controlled expansion allows us to lift, level, or stabilize structures depending on project needs."
+        "lead": "High-density polymer expands underground, compacting, stabilizing, and strengthening soil.",
+        "text": "Injected at precise depths and pressures, our engineered polymers fill all voids, restore load paths, and reinforce weak strata. Controlled expansion allows us to lift, level, or stabilize structures depending on project needs."
       },
       {
         "id": "section-5",
@@ -155,14 +155,14 @@
         },
         "blocks": [
           {
-            "title": "Immediate Results",
+            "title": "Rapid Cure",
             "titleColor": "text-true-red",
-            "text": "Polymer cures in minutes, restoring load-bearing strength so roads and facilities reopen with minimal downtime."
+            "text": "Cure time in seconds, restoring load-bearing strength so roads and facilities reopen with minimal downtime."
           },
           {
-            "title": "Proof You Can Act On",
+            "title": "Clean Reporting",
             "titleColor": "text-lemon-green",
-            "text": "Concise reports combine test data and injection logs into clear, defensible documentation—without the clutter of traditional engineering reports."
+            "text": "Concise reports combine test data and injection logs into clear, defensible documentation—without the clutter of traditional reporting."
           }
         ]
       }

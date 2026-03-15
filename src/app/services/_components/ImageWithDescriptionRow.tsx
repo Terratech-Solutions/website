@@ -9,6 +9,7 @@ type ImageWithDescriptionRowProps = {
       lines: string[];
       highlight: string[] | string;
       highlightColor: string;
+      lineColors?: string[];
     };
     description: string;
   };
@@ -22,7 +23,7 @@ type ImageWithDescriptionRowProps = {
 
 const ImageWithDescriptionRow = ({ section, image }: ImageWithDescriptionRowProps) => {
   return (
-    <section className="px-4 md:px-13.5 max-sm:pt-10 pt-33">
+    <section className="px-4 md:px-13.5 max-sm:pt-6 pt-13">
       <div className="flex max-lg:flex-col max-w-[1440px] mx-auto max-sm:px-4 px-23.5 pt-7 pb-7">
         <div className="flex flex-col flex-auto justify-between items-stretch">
           <SectionAnchorLabel>{section.sectionLabel}</SectionAnchorLabel>
@@ -33,6 +34,7 @@ const ImageWithDescriptionRow = ({ section, image }: ImageWithDescriptionRowProp
                   lines={section.title.lines}
                   highlight={section.title.highlight}
                   highlightColor={section.title.highlightColor}
+                  lineColors={section.title.lineColors}
                 />
               </div>
               <div className="text-[16px] md:text-[18px] max-w-[480px] pt-15">

@@ -7,10 +7,11 @@
       "label": "Services",
       "children": [
         { "href": "/services/sinkholes", "label": "Sinkholes" },
-        { "href": "/services/stormwater", "label": "Stormwater infrastructure" },
+        { "href": "/services/stormwater", "label": "Stormwater Infrastructure" },
         { "href": "/services/roadway", "label": "Roadway Repair" },
         { "href": "/services/slope", "label": "Slope Stabilization" },
-        { "href": "/services/infrastructure", "label": "Infrastructure Repair" }
+        { "href": "/services/concrete-lifting", "label": "Concrete Lifting" },
+        { "href": "/services/infrastructure", "label": "Foundation Repair" }
       ]
     },
     { "href": "/about", "label": "About" }
