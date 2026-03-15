@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import Script from 'next/script';
 
 // Lazy load below-the-fold components for better initial page load
-const Solution = dynamic(() => import('@/app/services/infrastructure/components/Solution'));
+const Solution = dynamic(() => import('@/app/services/foundation-repair/components/Solution'));
 const VideoWithDescriptionRow = dynamic(
   () => import('@/app/services/_components/VideoWithDescriptionRow'),
 );

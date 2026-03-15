@@ -39,7 +39,7 @@
         { "label": "Stormwater infrastructure", "href": "/services/stormwater" },
         { "label": "Roadway Repair", "href": "/services/roadway" },
         { "label": "Slope Stabilization", "href": "/services/slope" },
-        { "label": "Infrastructure Repair", "href": "/services/infrastructure" },
+        { "label": "Foundation Repair", "href": "/services/foundation-repair" },
         { "label": "About Us", "href": "/about" },
         { "label": "Contact", "href": "/contact" }
       ]

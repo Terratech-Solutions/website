@@ -78,15 +78,15 @@ const VideoWithDescriptionRow = ({ section, image }: VideoWithDescriptionRowProp
               muted
               playsInline
               onLoadedMetadata={(e) => {
-                e.currentTarget.currentTime = 1;
+                e.currentTarget.currentTime = 2;
               }}
               onTimeUpdate={(e) => {
                 const v = e.currentTarget;
-                v.style.opacity = v.currentTime >= 1 ? '1' : '0';
+                v.style.opacity = v.currentTime >= 2 ? '1' : '0';
               }}
               onEnded={(e) => {
                 e.currentTarget.style.opacity = '0';
-                e.currentTarget.currentTime = 1;
+                e.currentTarget.currentTime = 2;
                 void e.currentTarget.play();
               }}
               style={{
