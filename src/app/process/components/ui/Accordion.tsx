@@ -188,8 +188,8 @@ const Accordion = ({
                 className="absolute top-[5%] right-0 bottom-auto left-auto -z-1"
                 src={image}
                 alt={title}
-                width={300}
-                height={300}
+                width={225}
+                height={225}
               />
               <div className="text-[90px]/[79px]">0{id}</div>
               <div className="text-[28px]/[32px] pt-5">{title}</div>

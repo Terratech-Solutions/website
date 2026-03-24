@@ -50,7 +50,7 @@ const ImageWithDescriptionRow = ({ section, image }: ImageWithDescriptionRowProp
             width={image.width}
             height={image.height}
             loading="lazy"
-            style={{ display: 'block', height: `${image.height}px` }}
+            className="w-full h-auto max-lg:max-w-full"
           />
         </div>
       </div>

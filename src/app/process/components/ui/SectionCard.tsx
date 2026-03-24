@@ -334,7 +334,7 @@ const SectionCard = () => {
                   </div>
                   <div className="relative w-[60%] max-xl:w-full flex justify-center items-center px-10">
                     <video
-                      className="h-[350px] w-auto max-w-full object-contain"
+                      className="h-[350px] max-sm:h-auto max-sm:w-full w-auto max-w-full object-contain"
                       autoPlay
                       loop
                       muted
