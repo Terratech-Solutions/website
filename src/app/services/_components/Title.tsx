@@ -92,19 +92,19 @@ const Title = ({ text, image }: TitleProps) => {
             ))}
           </p>
 
-          <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line max-w-[500px] text-gray-200">
+          <p className="text-[22px]/[150%] font-light mt-7.5 whitespace-pre-line max-w-[650px] text-gray-200">
             {text.subtitle}
           </p>
-          <div className="mt-10 flex gap-4 max-sm:flex-col max-sm:items-center">
+          <div className="mt-10 flex gap-3 max-sm:flex-col max-sm:items-center">
             <a
               href={phoneContact?.href || '#'}
-              className="bg-true-red hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
+              className="bg-true-red hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg max-sm:w-full"
               onClick={() => {
                 sendGTMEvent({
                   event: 'service_page_cta_click',
                   button_text: 'Call Us now',
                   location: 'service_hero_section',
-                  service_name: text.title.lines.join(' '), // Useful context
+                  service_name: text.title.lines.join(' '),
                 });
               }}
             >
@@ -112,7 +112,7 @@ const Title = ({ text, image }: TitleProps) => {
             </a>
             <Link
               href="/process"
-              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all flex items-center justify-center space-x-2 max-sm:w-full"
+              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all flex items-center justify-center space-x-2 max-sm:w-full"
             >
               Learn About Our Process
             </Link>

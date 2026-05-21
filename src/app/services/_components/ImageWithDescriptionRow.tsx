@@ -37,7 +37,7 @@ const ImageWithDescriptionRow = ({ section, image }: ImageWithDescriptionRowProp
                   lineColors={section.title.lineColors}
                 />
               </div>
-              <div className="text-[16px] md:text-[18px] max-w-[480px] pt-15">
+              <div className="text-[16px] md:text-[18px] max-w-[480px] pt-15 whitespace-pre-line">
                 {section.description}
               </div>
             </div>

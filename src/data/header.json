@@ -11,7 +11,8 @@
         { "href": "/services/roadway", "label": "Roadway Repair" },
         { "href": "/services/slope", "label": "Slope Stabilization" },
         { "href": "/services/concrete-lifting", "label": "Concrete Lifting" },
-        { "href": "/services/foundation-repair", "label": "Foundation Repair" }
+        { "href": "/services/foundation-repair", "label": "Foundation Repair" },
+        { "href": "/services/pond-repair", "label": "Pond Repair" }
       ]
     },
     { "href": "/about", "label": "About" }

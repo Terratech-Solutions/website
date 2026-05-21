@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Pond Repair & Remediation | Terratech",
+    "description": "TerraTech specializes in pond repair and remediation including leaking drain structures, pipe joints, hydrostatic pressure leaks, slope stabilization, and spillway repair using advanced polymer injection.",
+    "path": "/services/pond-repair"
+  },
+  "title": {
+    "background": {
+      "from": "#131313",
+      "to": "#1D1D1D"
+    },
+    "text": {
+      "title": {
+        "lines": ["Pond Repair &", "Remediation"],
+        "highlight": ["Remediation"],
+        "highlightColor": "text-true-red"
+      },
+      "subtitle": "Targeted repair for leaking ponds, detention basins, and earth dams without excavation or dewatering."
+    },
+    "cta": {
+      "freeQuote": {
+        "content": "Get a Free Quote",
+        "href": "/contact"
+      }
+    },
+    "image": {
+      "src": "/services/pond-repair/hero.png",
+      "alt": "Pond repair and remediation",
+      "width": 1000,
+      "height": 580
+    }
+  },
+  "drainStructures": {
+    "section": {
+      "sectionLabel": "Drain Repair",
+      "title": {
+        "lines": ["Leaking Drain", "Structures & Inlets"],
+        "highlight": ["Drain", "Structures"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Drain structures and inlets are among the most common failure points in pond systems. Deteriorating seals, joint separation, and cracked concrete allow water to escape the basin and erode surrounding soil.\n\nPolymer injection seals these structures from the inside, stopping active leaks without draining the pond or excavating the surrounding ground."
+    },
+    "image": {
+      "src": "/services/pond-repair/drain-structure.png",
+      "alt": "Leaking drain structure repair",
+      "width": 700,
+      "height": 460
+    }
+  },
+  "leakingPipes": {
+    "section": {
+      "sectionLabel": "Pipe Repair",
+      "title": {
+        "lines": ["Leaking Pipes", "& Pipe Joints"],
+        "highlight": ["Pipes", "Pipe Joints"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Pipe joints are a primary source of undetected water loss in pond and detention systems. As joints shift or seals degrade, leaks develop that undermine embankments and compromise structural integrity.\n\nOur chemical grouting process targets these joints with precision, sealing the leak path at its source and restoring containment without excavation."
+    },
+    "image": {
+      "src": "/services/pond-repair/Pipe_Joints.mp4",
+      "alt": "Leaking pipe and pipe joint repair animation",
+      "width": 860,
+      "height": 483
+    }
+  },
+  "hydrostaticLeaks": {
+    "section": {
+      "sectionLabel": "Hydrostatic Leaks",
+      "title": {
+        "lines": ["Hydrostatic Pressure", "Leaks Through Basins", "& Earth Dams"],
+        "highlight": ["Hydrostatic", "Pressure"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Sustained hydrostatic pressure forces water through cracks in pond basins and earth dam embankments. Over time, these paths widen and carry soil outward, weakening the structure from within.\n\nPermeation grouting seals these pathways and stops active seepage before it leads to embankment failure."
+    },
+    "image": {
+      "src": "/services/pond-repair/Hydro_1.mp4",
+      "alt": "Hydrostatic pressure leak repair animation",
+      "width": 860,
+      "height": 483
+    }
+  },
+  "slopeStabilization": {
+    "section": {
+      "sectionLabel": "Slope Repair",
+      "title": {
+        "lines": ["Slope Stabilization", "& Erosion Prevention"],
+        "highlight": ["Stabilization"],
+        "highlightColor": "text-lemon-green"
+      }
+    },
+    "points": [
+      {
+        "title": "Early Assessment",
+        "description": "Slope and embankment conditions are evaluated before visible failure occurs, allowing targeted intervention before erosion spreads or structural integrity is lost."
+      },
+      {
+        "title": "Precision Injection",
+        "description": "Polymer is delivered at the exact depth and location needed to stabilize weakened soil layers, targeting the root cause rather than surface symptoms."
+      },
+      {
+        "title": "Minimal Disruption",
+        "description": "Slopes and embankments are reinforced in place with no heavy equipment, excavation, or dewatering required."
+      },
+      {
+        "title": "Designed for Your Site",
+        "description": "Every pond and dam has a unique slope profile. Each solution is custom-engineered to match the specific conditions and containment requirements of your site."
+      }
+    ],
+    "image": {
+      "src": "/services/pond-repair/slope-stabilization.png",
+      "alt": "Slope stabilization and erosion prevention",
+      "width": 600,
+      "height": 400
+    }
+  },
+  "spillwayRepair": {
+    "section": {
+      "sectionLabel": "Spillway Repair",
+      "title": {
+        "lines": ["Spillway Repair:", "Concrete & Rip Rap"],
+        "highlight": ["Spillway"],
+        "highlightColor": "text-true-red"
+      },
+      "description": "Spillway structures take the full force of overflow events. Cracked concrete, displaced rip rap, and eroded soil beneath the apron create conditions for rapid structural failure during high-water periods.\n\nTerraTech restores spillway integrity through concrete repair, rip rap stabilization, and void filling, keeping your overflow structure functional without full reconstruction."
+    },
+    "image": {
+      "src": "/services/pond-repair/spillway-repair.png",
+      "alt": "Spillway concrete and rip rap repair",
+      "width": 1000,
+      "height": 500
+    }
+  }
+}
