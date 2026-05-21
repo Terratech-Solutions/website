@@ -87,6 +87,15 @@ const PhoneForm = () => {
                 required
               />
             </div>
+            <div>
+              <textarea
+                aria-label="Tell us about your project or issue"
+                placeholder={phoneFormData.form.placeholders.situation}
+                className={`${field} resize-none min-h-[120px]`}
+                name="situation"
+                required
+              />
+            </div>
             <div className="relative">
               <select aria-label="How did you find us?" name="source" className={`${field} appearance-none`}>
                 <option value="" disabled>
